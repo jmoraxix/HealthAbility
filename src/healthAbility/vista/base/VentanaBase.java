@@ -33,18 +33,18 @@ public class VentanaBase extends JFrame {
 	Dimension tamTotal = HealthAbility.getTamPantalla();
 			
 	public VentanaBase(){
-		//Declaracion b�sica de la venta
+		//Declaracion basica de la venta
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 	    setSize(tamTotal.width, tamTotal.height);
-	    setTitle("Sistema de admisi�n de estudiantes");
+	    setTitle("Health Ability");
 	    setExtendedState(MAXIMIZED_BOTH);
-	    Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("imgsLogo.png"));
+	    Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../vista/imagenes/logo_principal_icono.png"));
 	    setIconImage(icon);
 	    
-	    //Menu
-        MenuAdministrador barraMenu = new MenuAdministrador();
-        setJMenuBar(barraMenu);
+//	    //Menu
+//        MenuAdministrador barraMenu = new MenuAdministrador();
+//        setJMenuBar(barraMenu);
         
       //Inicializar ventana
         try {
@@ -56,19 +56,19 @@ public class VentanaBase extends JFrame {
 	
 	private void InicializarVentana() throws Exception 
 	{
-        JPanel principal_1 = new JPanel(); 
-        principal_1.setForeground(SystemColor.controlHighlight);
+        JPanel principal = new JPanel(); 
+        principal.setForeground(SystemColor.controlHighlight);
         try {
-            URL imagen = HealthAbility.class.getResource("verde2_Principal.jpg");
+            URL imagen = HealthAbility.class.getResource("vista/imagenes/verde2_Principal.jpg");
             BufferedImage img = ImageIO.read(imagen);
             BgBorder borde = new BgBorder( img );
-            principal_1.setBorder(borde);
+            principal.setBorder(borde);
         } catch (Exception e) {
         }
-        this.setContentPane(principal_1);
-        principal_1.setLayout(null);
+        this.setContentPane(principal);
+        principal.setLayout(null);
         
-        JLabel titulo = new JLabel("Sistema de admisi�n de estudiantes");
+        JLabel titulo = new JLabel("Health Ability");
         titulo.setForeground(SystemColor.menu);
         titulo.setFont(new Font("Georgia", titulo.getFont().getStyle() | Font.BOLD, titulo.getFont().getSize() + 34));
         getContentPane().add(titulo);
