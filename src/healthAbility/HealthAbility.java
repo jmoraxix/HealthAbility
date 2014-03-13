@@ -7,6 +7,9 @@
  */
 package healthAbility;
 
+import healthAbility.vista.Login;
+import healthAbility.vista.MenuPrincipal;
+
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -21,7 +24,9 @@ import javax.swing.UIManager;
 public class HealthAbility {
 	
 	//Pantallas principales
-		
+	protected static Login login;
+	protected static MenuPrincipal menu;
+	
 	//Pantallas de menu
 		
 	//Pantallas emergentes
@@ -42,10 +47,10 @@ public class HealthAbility {
 	    catch (Exception e){
         }
 
-//		login = new Login();
-//		login.setBounds(0, 0, tamTotal.width, tamTotal.height);
-//		login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-//      login.setVisible(true);
+		login = new Login();
+		login.setBounds(0, 0, tamPantalla.width, tamPantalla.height);
+		login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		login.setVisible(true);
 
 	}
 
@@ -63,6 +68,14 @@ public class HealthAbility {
 
 	public static Font getLetraTexto2() {
 		return letraTexto2;
+	}
+
+	public static Login getVentanaLogin() {
+		return login;
+	}
+
+	public static MenuPrincipal getVentanaMenu() {
+		return menu;
 	}
 
 }
