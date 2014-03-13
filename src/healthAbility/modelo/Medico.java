@@ -1,10 +1,14 @@
 /**
- * 
+ * Primer Proyecto POO
+ * José David Mora Loría
+ * 2014004856
+ * Diego Delgado Cerdas
+ * 2013099268
  */
-package modelo;
+package healthAbility.modelo;
 
 /**
- * @author Diego & Jose
+ * @author Diego
  *
  */
 public class Medico {
@@ -94,7 +98,7 @@ public class Medico {
        mensaje += "Cedula: " + getCedula() + "\n";
        mensaje +="Correo "+ getCorreo()+"\n";
        mensaje += "Especialidad" + getEspecialidad() + "\n";
-       mensaje += "Tel�fono: " + getTelefono() + "\n";
+       mensaje += "Tel�fono: " + getTelefono() + "\n";
 
        return mensaje;
    }

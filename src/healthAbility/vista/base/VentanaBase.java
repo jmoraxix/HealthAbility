@@ -1,7 +1,9 @@
 /**
- * José David Mora Loría
+ * Primer Proyecto POO
+ * JosÃ© David Mora LorÃ­a
  * 2014004856
- * 12/03/2014
+ * Diego Delgado Cerdas
+ * 2013099268
  */
 package healthAbility.vista.base;
 
@@ -31,11 +33,11 @@ public class VentanaBase extends JFrame {
 	Dimension tamTotal = HealthAbility.getTamPantalla();
 			
 	public VentanaBase(){
-		//Declaracion básica de la venta
+		//Declaracion bï¿½sica de la venta
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
 	    setSize(tamTotal.width, tamTotal.height);
-	    setTitle("Sistema de admisión de estudiantes");
+	    setTitle("Sistema de admisiï¿½n de estudiantes");
 	    setExtendedState(MAXIMIZED_BOTH);
 	    Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("imgsLogo.png"));
 	    setIconImage(icon);
@@ -66,7 +68,7 @@ public class VentanaBase extends JFrame {
         this.setContentPane(principal_1);
         principal_1.setLayout(null);
         
-        JLabel titulo = new JLabel("Sistema de admisión de estudiantes");
+        JLabel titulo = new JLabel("Sistema de admisiï¿½n de estudiantes");
         titulo.setForeground(SystemColor.menu);
         titulo.setFont(new Font("Georgia", titulo.getFont().getStyle() | Font.BOLD, titulo.getFont().getSize() + 34));
         getContentPane().add(titulo);

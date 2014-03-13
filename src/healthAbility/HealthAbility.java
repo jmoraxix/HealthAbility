@@ -1,9 +1,9 @@
 /**
  * Primer Proyecto POO
- * José David Mora Loría
+ * JosÃ© David Mora LorÃ­a
  * 2014004856
- * Diego Delgado 
- * 
+ * Diego Delgado Cerdas
+ * 2013099268
  */
 package healthAbility;
 
@@ -34,7 +34,7 @@ public class HealthAbility {
 
 	
 	public static void main(String[] args) {
-		//LookAndFeel de la aplicación
+		//LookAndFeel de la aplicaciï¿½n
 		JFrame.setDefaultLookAndFeelDecorated(true);
 	    try {
 	        UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");

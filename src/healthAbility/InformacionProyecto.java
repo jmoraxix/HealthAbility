@@ -1,7 +1,9 @@
 /**
- * José David Mora Loría
+ * Primer Proyecto POO
+ * JosÃ© David Mora LorÃ­a
  * 2014004856
- * 12/03/2014
+ * Diego Delgado Cerdas
+ * 2013099268
  */
 package healthAbility;
 
@@ -39,19 +41,19 @@ public class InformacionProyecto extends VentanaEmergente
 		Version.setBounds(171, 70, 450, 58);
 		getContentPane().add(Version);
 		
-		JLabel Colegio = new JLabel("Instituto Tecnológico de Costa Rica");
+		JLabel Colegio = new JLabel("Instituto Tecnolï¿½gico de Costa Rica");
 		Colegio.setHorizontalAlignment(SwingConstants.CENTER);
 		Colegio.setFont(new Font("Consolas", Font.BOLD, 18));
 		Colegio.setBounds(151, 118, 443, 50);
 		getContentPane().add(Colegio);
 		
-		JLabel Expo12 = new JLabel("Ingeniería en Computación");
+		JLabel Expo12 = new JLabel("Ingenierï¿½a en Computaciï¿½n");
 		Expo12.setHorizontalAlignment(SwingConstants.CENTER);
 		Expo12.setFont(new Font("Consolas", Font.BOLD, 18));
 		Expo12.setBounds(151, 165, 451, 42);
 		getContentPane().add(Expo12);
 		
-		JLabel Departamento = new JLabel("Programación Orientada a Objetos");
+		JLabel Departamento = new JLabel("Programaciï¿½n Orientada a Objetos");
 		Departamento.setHorizontalAlignment(SwingConstants.CENTER);
 		Departamento.setFont(new Font("Consolas", Font.BOLD, 18));
 		Departamento.setBounds(151, 205, 450, 42);

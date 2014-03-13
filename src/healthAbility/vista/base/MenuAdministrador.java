@@ -1,7 +1,9 @@
 /**
- * José David Mora Loría
+ * Primer Proyecto POO
+ * JosÃ© David Mora LorÃ­a
  * 2014004856
- * 12/03/2014
+ * Diego Delgado Cerdas
+ * 2013099268
  */
 package healthAbility.vista.base;
 
