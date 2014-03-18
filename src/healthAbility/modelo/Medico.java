@@ -13,6 +13,7 @@ package healthAbility.modelo;
  */
 public class Medico {
 
+	/****VARIABLES****/
 	private String nombre;
 	private String apellido1;
 	private String apellido2;
@@ -20,6 +21,9 @@ public class Medico {
 	private String correo;
 	private String especialidad;
 	private int telefono;
+	
+	
+	/*****CONSTRUCTOR*****/
 
 	public Medico(String pnombre, String papellido1, String papellido2, 
 			String pcedula, String pcorreo, String pespecialidad, int ptelefono ){
@@ -35,7 +39,7 @@ public class Medico {
 		
 	}
 	
-	
+	/*****GETTERS AND SETTERS*****/
 	
 	public String getNombre() {
 	       return nombre;
@@ -90,6 +94,9 @@ public class Medico {
        this.telefono = telefono;
    }
 
+   
+   
+   /*****TO STRING*****/
    @Override
    public String toString() {
        String mensaje = "";
