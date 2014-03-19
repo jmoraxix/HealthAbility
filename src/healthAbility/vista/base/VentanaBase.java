@@ -12,9 +12,7 @@ import healthAbility.vista.BgBorder;
 
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.Image;
 import java.awt.SystemColor;
-import java.awt.Toolkit;
 import java.awt.image.BufferedImage;
 import java.net.URL;
 
@@ -36,11 +34,11 @@ public class VentanaBase extends JFrame {
 		//Declaracion basica de la venta
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getContentPane().setLayout(null);
-	    setSize(tamTotal.width, tamTotal.height);
+	    setSize(tamTotal.width-200, tamTotal.height-200);
 	    setTitle("Health Ability");
 	    setExtendedState(MAXIMIZED_BOTH);
-	    Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("../vista/imagenes/logo_principal_icono.png"));
-	    setIconImage(icon);
+//	    Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("vista/imagenes/logo_principal.png"));
+//	    setIconImage(icon);
 	    
 //	    //Menu
 //        MenuAdministrador barraMenu = new MenuAdministrador();
@@ -59,7 +57,7 @@ public class VentanaBase extends JFrame {
         JPanel principal = new JPanel(); 
         principal.setForeground(SystemColor.controlHighlight);
         try {
-            URL imagen = HealthAbility.class.getResource("vista/imagenes/verde2_Principal.jpg");
+            URL imagen = HealthAbility.class.getResource("vista/imagenes/fondo_principal_2.jpg");
             BufferedImage img = ImageIO.read(imagen);
             BgBorder borde = new BgBorder( img );
             principal.setBorder(borde);

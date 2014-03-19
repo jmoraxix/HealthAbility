@@ -22,7 +22,6 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
@@ -30,6 +29,7 @@ import javax.swing.SwingConstants;
 /**
  * @author jmora 13/03/2014
  */
+@SuppressWarnings("serial")
 public class MenuPrincipal extends VentanaBase implements ActionListener
 {
 	public static final Dimension tamTotal = HealthAbility.getTamPantalla();
@@ -45,15 +45,9 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 
 	public MenuPrincipal() 
 	{
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		getContentPane().setLayout(null); 
-        setSize(tamTotal.width, tamTotal.height);
-        setTitle("Sistema de admisión de estudiantes");
-        setExtendedState(MAXIMIZED_BOTH);
-        
-    //Salir
+        //Salir
 		JPanel regresar = new JPanel();
-		regresar.setBounds(26, 115, 60, 60);
+		regresar.setBounds(43, 149, 60, 60);
 		regresar.setOpaque(false);
 		try {
         	regresar.setForeground(SystemColor.controlHighlight);
@@ -241,28 +235,28 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnFechas.setBorderPainted(false);
 		fechas.add(btnFechas);
 		
-		JPanel examen = new JPanel();
-		examen.setBounds(1063, 214, 97, 115);
-		examen.setOpaque(false);
+		JPanel cita = new JPanel();
+		cita.setBounds(1063, 214, 97, 115);
+		cita.setOpaque(false);
 		try {
-			examen.setForeground(SystemColor.controlHighlight);
+			cita.setForeground(SystemColor.controlHighlight);
             try {
                 URL imagen = HealthAbility.class.getResource("vista/imagenes/examen.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
-                examen.setBorder(borde);
+                cita.setBorder(borde);
             } catch (Exception e) {
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-		getContentPane().add(examen);
-		examen.setLayout(new BorderLayout(0, 0));
+		getContentPane().add(cita);
+		cita.setLayout(new BorderLayout(0, 0));
 		
 		JButton btnExamen = new JButton("");
 		btnExamen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-//				editarExamen = new EditarExamen();
+//				editarExamen = new Citas();
 //      			editarExamen.setVisible(true); 
 //      			menu.setVisible(false);
 			}
@@ -270,7 +264,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnExamen.setOpaque(false);
 		btnExamen.setContentAreaFilled(false);
 		btnExamen.setBorderPainted(false);
-		examen.add(btnExamen);
+		cita.add(btnExamen);
 		
 		JPanel entrev = new JPanel();
 		entrev.setBounds(303, 447, 97, 115);
@@ -303,33 +297,33 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnEntrev.setContentAreaFilled(false);
 		btnEntrev.setBorderPainted(false);
 		
-		JLabel lblIngresarEstudiante = new JLabel("Ingresar estudiante");
-		lblIngresarEstudiante.setForeground(new Color(0, 0, 128));
-		lblIngresarEstudiante.setHorizontalAlignment(SwingConstants.CENTER);
-		lblIngresarEstudiante.setFont(letraTexto2);
-		lblIngresarEstudiante.setBounds(131, 327, 176, 23);
-		getContentPane().add(lblIngresarEstudiante);
+		JLabel lblIngresarUsuario = new JLabel("Ingresar usuario");
+		lblIngresarUsuario.setForeground(new Color(0, 0, 128));
+		lblIngresarUsuario.setHorizontalAlignment(SwingConstants.CENTER);
+		lblIngresarUsuario.setFont(letraTexto2);
+		lblIngresarUsuario.setBounds(131, 327, 176, 23);
+		getContentPane().add(lblIngresarUsuario);
 		
-		JLabel lblEditarEstudiante = new JLabel("Editar estudiante");
-		lblEditarEstudiante.setForeground(new Color(0, 0, 128));
-		lblEditarEstudiante.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEditarEstudiante.setFont(letraTexto2);
-		lblEditarEstudiante.setBounds(440, 331, 154, 14);
-		getContentPane().add(lblEditarEstudiante);
+		JLabel lblEditarUsuario = new JLabel("Editar usuario");
+		lblEditarUsuario.setForeground(new Color(0, 0, 128));
+		lblEditarUsuario.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEditarUsuario.setFont(letraTexto2);
+		lblEditarUsuario.setBounds(440, 331, 154, 14);
+		getContentPane().add(lblEditarUsuario);
 		
-		JLabel lblEliminarEstudian = new JLabel("Eliminar estudiante");
-		lblEliminarEstudian.setForeground(new Color(0, 0, 128));
-		lblEliminarEstudian.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEliminarEstudian.setFont(letraTexto2);
-		lblEliminarEstudian.setBounds(751, 327, 183, 23);
-		getContentPane().add(lblEliminarEstudian);
+		JLabel lblEliminarUsuario = new JLabel("Eliminar usuario");
+		lblEliminarUsuario.setForeground(new Color(0, 0, 128));
+		lblEliminarUsuario.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEliminarUsuario.setFont(letraTexto2);
+		lblEliminarUsuario.setBounds(751, 327, 183, 23);
+		getContentPane().add(lblEliminarUsuario);
 		
-		JLabel lblEditarExamen = new JLabel("Editar examen");
-		lblEditarExamen.setForeground(new Color(0, 0, 128));
-		lblEditarExamen.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEditarExamen.setFont(letraTexto2);
-		lblEditarExamen.setBounds(1041, 327, 140, 23);
-		getContentPane().add(lblEditarExamen);
+		JLabel lblCitas = new JLabel("Citas");
+		lblCitas.setForeground(new Color(0, 0, 128));
+		lblCitas.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCitas.setFont(letraTexto2);
+		lblCitas.setBounds(1041, 327, 140, 23);
+		getContentPane().add(lblCitas);
 		
 		JLabel lblEditarFechas = new JLabel("Editar fechas");
 		lblEditarFechas.setForeground(new Color(0, 0, 128));

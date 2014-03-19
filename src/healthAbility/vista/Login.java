@@ -10,7 +10,6 @@ package healthAbility.vista;
 import healthAbility.HealthAbility;
 import healthAbility.vista.base.VentanaBase;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Toolkit;
@@ -21,7 +20,6 @@ import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
@@ -41,33 +39,27 @@ public class Login extends VentanaBase
 	protected static String SESION_USUARIO;
 	
 	public Login() 
-	{	
-		JPanel panel = new JPanel();
-		try {
-    		panel.setForeground(Color.WHITE);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-		panel.setBounds(668, 235, 541, 386);
-		getContentPane().add(panel);
-		panel.setLayout(null);
+	{
+		getContentPane().setLayout(null);
 		
 		JLabel tit2 = new JLabel("Bienvenido");
-		tit2.setBounds(148, 35, 180, 42);
-		panel.add(tit2);
-		tit2.setFont(letraTexto1);
+		tit2.setBounds(221, 231, 208, 52);
+		getContentPane().add(tit2);
+		tit2.setFont(new Font("Georgia", Font.PLAIN, 40));
 		
 		JLabel lblUsuario = new JLabel("Usuario:");
-		lblUsuario.setBounds(81, 131, 87, 42);
-		panel.add(lblUsuario);
+		lblUsuario.setBounds(183, 306, 87, 42);
+		getContentPane().add(lblUsuario);
 		lblUsuario.setFont(letraTexto2);
 		
 		JLabel lblContrasena = new JLabel("Contrase\u00F1a:");
-		lblContrasena.setBounds(45, 195, 123, 52);
-		panel.add(lblContrasena);
+		lblContrasena.setBounds(147, 362, 123, 52);
+		getContentPane().add(lblContrasena);
 		lblContrasena.setFont(letraTexto2);
 		
 		uss = new JTextField();
+		uss.setBounds(292, 305, 215, 45);
+		getContentPane().add(uss);
 		uss.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent ke) {
@@ -76,13 +68,13 @@ public class Login extends VentanaBase
 		          }
 			}
 		});
-		uss.setBounds(186, 133, 215, 45);
-		panel.add(uss);
 		uss.setToolTipText("Digite un usuario");
 		uss.setFont(letraTexto2);
 		uss.setColumns(10);
 		
 		contra = new JPasswordField();
+		contra.setBounds(292, 370, 215, 45);
+		getContentPane().add(contra);
 		contra.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent ke) {
@@ -91,13 +83,12 @@ public class Login extends VentanaBase
 		          }
 			}
 		});
-		contra.setBounds(186, 203, 215, 45);
-		panel.add(contra);
 		contra.setToolTipText("Digite una contrase\u00F1a");
 		
 		JButton btnEntrar = new JButton("Entrar");
-		btnEntrar.setBounds(386, 259, 134, 34);
-		panel.add(btnEntrar);
+		btnEntrar.setFont(new Font("Georgia", Font.PLAIN, 18));
+		btnEntrar.setBounds(422, 438, 176, 47);
+		getContentPane().add(btnEntrar);
 		btnEntrar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
