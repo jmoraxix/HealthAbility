@@ -46,5 +46,8 @@ public class CentrosMedicos {
 	public void setUbicacion(Direccion ubicacion) {
 		this.ubicacion = ubicacion;
 	}
+	public Direccion getUbicacion() {
+		return ubicacion;
+	}
 
 }

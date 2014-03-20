@@ -332,7 +332,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		lblEditarFechas.setBounds(581, 573, 168, 23);
 		getContentPane().add(lblEditarFechas);
 		
-		JLabel lblDescargarExpediente = new JLabel("Descargar expediente");
+		JLabel lblDescargarExpediente = new JLabel("Descargar expediente doctor");
 		lblDescargarExpediente.setForeground(new Color(0, 0, 128));
 		lblDescargarExpediente.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDescargarExpediente.setFont(letraTexto2);
