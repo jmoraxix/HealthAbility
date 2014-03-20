@@ -18,6 +18,10 @@ public class Citas {
 	private int hora;
 	private int minutos;
 	private boolean periodo;
+	private Review calificaciones;
+	private Paciente paciente; //**************************DEBATIR SOLUCION**********************************
+	
+	
 	
 	/*****GETTERS AND SETTERS*****/
 	public String getEstado() {
@@ -52,9 +56,20 @@ public class Citas {
 		if(per.equals("am"))
 			this.periodo = true;
 		else
-			this.periodo = false;
-		
+			this.periodo = false;	
 	}
+	public Review getCalificaciones() {
+		return calificaciones;
+	}
+	public void setCalificaciones(Review calificaciones) {
+		this.calificaciones = calificaciones;
+	}
+//	public String getPaciente() {
+//		return paciente;
+//	}
+//	public void setPaciente(String paciente) {
+//		this.paciente = paciente;
+//	}
 	
 
 }

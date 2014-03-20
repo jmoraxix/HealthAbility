@@ -30,7 +30,6 @@ public class Medico {
 	private String[] idiomas;
 	private Educacion[] titulos;
 	private String[] afiliaciones;
-	private Review[] calificaciones;
 	
 	
 	
@@ -103,13 +102,7 @@ public class Medico {
 	}
 	public void setProcedimientos(Procedimiento[] procedimientos) {
 		this.procedimientos = procedimientos;
-	}
-	public Review[] getCalificaciones() {
-		return calificaciones;
-	}
-	public void setCalificaciones(Review[] calificaciones) {
-		this.calificaciones = calificaciones;
-	}
+	}	
 	public BufferedImage getFoto() {
 		return foto;
 	}
