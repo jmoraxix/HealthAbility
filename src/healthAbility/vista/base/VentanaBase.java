@@ -11,14 +11,12 @@ import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
 
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.image.BufferedImage;
 import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -57,7 +55,7 @@ public class VentanaBase extends JFrame {
         JPanel principal = new JPanel(); 
         principal.setForeground(SystemColor.controlHighlight);
         try {
-            URL imagen = HealthAbility.class.getResource("vista/imagenes/fondo_principal_2.jpg");
+            URL imagen = HealthAbility.class.getResource("vista/imagenes/fondo_principal_3.jpg");
             BufferedImage img = ImageIO.read(imagen);
             BgBorder borde = new BgBorder( img );
             principal.setBorder(borde);
@@ -65,11 +63,5 @@ public class VentanaBase extends JFrame {
         }
         this.setContentPane(principal);
         principal.setLayout(null);
-        
-        JLabel titulo = new JLabel("Health Ability");
-        titulo.setForeground(SystemColor.menu);
-        titulo.setFont(new Font("Georgia", titulo.getFont().getStyle() | Font.BOLD, titulo.getFont().getSize() + 34));
-        getContentPane().add(titulo);
-        titulo.setBounds(48, 22, 867, 72);
     }
 }
