@@ -1,3 +1,7 @@
 /bin
 
+
 .settings
+
+/src/healthAblity/vista/imagenes/Thumbs.db
+/diseños/Thumbs.db
