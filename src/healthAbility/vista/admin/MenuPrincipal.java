@@ -5,10 +5,12 @@
  * Diego Delgado Cerdas
  * 2013099268
  */
-package healthAbility.vista;
+package healthAbility.vista.admin;
 
 import healthAbility.HealthAbility;
-import healthAbility.vista.base.VentanaBase;
+import healthAbility.vista.BgBorder;
+import healthAbility.vista.Login;
+import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
 import java.awt.Color;

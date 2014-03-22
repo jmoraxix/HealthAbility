@@ -7,7 +7,7 @@
  */
 package healthAbility;
 
-import healthAbility.vista.base.VentanaEmergente;
+import healthAbility.vista.VentanaEmergente;
 
 import java.awt.Font;
 

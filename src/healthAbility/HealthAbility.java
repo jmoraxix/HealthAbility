@@ -8,7 +8,7 @@
 package healthAbility;
 
 import healthAbility.vista.Login;
-import healthAbility.vista.MenuPrincipal;
+import healthAbility.vista.admin.MenuPrincipal;
 
 import java.awt.Dimension;
 import java.awt.Font;

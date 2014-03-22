@@ -40,16 +40,13 @@ public class Medico {
 	/*****CONSTRUCTOR*****/
 
 	public Medico(String pnombre, String papellido1, String papellido2, 
-			String pcedula, String pcorreo, String pespecialidad, int ptelefono ){
+			String pcedula, String pespecialidad ){
 		
 		this.nombre = pnombre;
 		this.apellido1 = papellido1;
 		this.apellido2 = papellido2;
 		this.cedula = pcedula;
-		this.correo = pcorreo;
 		this.especialidad = pespecialidad;
-		this.telefono = ptelefono;
-		
 		
 	}
 	
@@ -140,19 +137,19 @@ public class Medico {
 		this.afiliaciones = afiliaciones;
 	}
    
-   /*****TO STRING*****/
-   @Override
-   public String toString() {
-       String mensaje = "";
-       mensaje += "Nombre: " + getNombre() + "\n";
-       mensaje += "Apellidos: " + getApellido1() + " " + getApellido2() + "\n";
-       mensaje += "Cedula: " + getCedula() + "\n";
-       mensaje +="Correo "+ getCorreo()+"\n";
-       mensaje += "Especialidad" + getEspecialidad() + "\n";
-       mensaje += "Tel�fono: " + getTelefono() + "\n";
-
-       return mensaje;
-   }
-
+//   /*****TO STRING*****/
+//   @Override
+//   public String toString() {
+//       String mensaje = "";
+//       mensaje += "Nombre: " + getNombre() + "\n";
+//       mensaje += "Apellidos: " + getApellido1() + " " + getApellido2() + "\n";
+//       mensaje += "Cedula: " + getCedula() + "\n";
+//       mensaje +="Correo "+ getCorreo()+"\n";
+//       mensaje += "Especialidad" + getEspecialidad() + "\n";
+//       mensaje += "Tel�fono: " + getTelefono() + "\n";
+//
+//       return mensaje;
+//   }
+//
 
 }

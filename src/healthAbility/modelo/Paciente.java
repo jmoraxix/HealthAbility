@@ -30,13 +30,13 @@ public class Paciente {
 	/*****CONSTRUCTOR*****/
 
 	public Paciente(String pnombre, String papellido1, String papellido2, 
-			String pcedula, String pcorreo, String ppadecimientos ){
+			String pcedula, Date pnacimiento ){
 		
 		this.nombre = pnombre;
 		this.apellido1 = papellido1;
 		this.apellido2 = papellido2;
 		this.cedula = pcedula;
-		this.correo = pcorreo;
+		this.nacimiento = pnacimiento;
 	}
 	
 	/*****GETTERS AND SETTERS*****/
@@ -82,11 +82,9 @@ public class Paciente {
 	public void setApellido2(String apellido2) {
 		this.apellido2 = apellido2;
 	}
-
 	public Date getNacimiento() {
 		return nacimiento;
 	}
-
 	public void setNacimiento(Date nacimiento) {
 		this.nacimiento = nacimiento;
 	}

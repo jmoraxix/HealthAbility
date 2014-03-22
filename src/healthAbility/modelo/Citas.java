@@ -19,9 +19,7 @@ public class Citas {
 	private int minutos;
 	private boolean periodo;
 	private Review calificaciones;
-	private Paciente paciente; //**************************DEBATIR SOLUCION**********************************
-	
-	
+	private String paciente; 
 	
 	/*****GETTERS AND SETTERS*****/
 	public String getEstado() {

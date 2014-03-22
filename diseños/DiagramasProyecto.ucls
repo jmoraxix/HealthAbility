@@ -3,8 +3,8 @@
   realizations="true" associations="true" dependencies="true" nesting-relationships="true">  
   <class id="1" language="java" name="healthAbility.modelo.Medico" project="1PPOO" 
     file="/1PPOO/src/healthAbility/modelo/Medico.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="909" width="265" x="-23" y="-397"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+    <position height="783" width="289" x="-96" y="-334"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
@@ -48,8 +48,8 @@
   </class>  
   <class id="6" language="java" name="healthAbility.modelo.Paciente" project="1PPOO" 
     file="/1PPOO/src/healthAbility/modelo/Paciente.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1067" y="150"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+    <position height="495" width="268" x="936" y="-37"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    

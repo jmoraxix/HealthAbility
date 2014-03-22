@@ -5,7 +5,7 @@
  * Diego Delgado Cerdas
  * 2013099268
  */
-package healthAbility.vista.base;
+package healthAbility.vista.admin;
 
 import healthAbility.HealthAbility;
 import healthAbility.InformacionProyecto;
@@ -26,7 +26,7 @@ import javax.swing.JRadioButtonMenuItem;
  *
  */
 @SuppressWarnings("serial")
-public class MenuAdministrador extends JMenuBar {
+public class BarraMenu extends JMenuBar {
 	
 	private JMenu menu1, mTema, mEdicion, mUsuario, mFases, mVerFases; 	
     private JMenuItem mSalir, mUndo, mRedo, mCrearUss, mEliminarUss, mVerEstadis, mFase1, mFase2, mFase3, mFase4;
@@ -38,7 +38,7 @@ public class MenuAdministrador extends JMenuBar {
 
 	public static final Dimension tamTotal = HealthAbility.getTamPantalla();
 	
-	public MenuAdministrador(){
+	public BarraMenu(){
 	
     menu1 = new JMenu("Archivo        ");
     menu1.setMnemonic('A');
@@ -73,7 +73,7 @@ public class MenuAdministrador extends JMenuBar {
     JMenuItem mntmAcercaDeNosotros = new JMenuItem("Acerca de...");
     mntmAcercaDeNosotros.addActionListener(new ActionListener() {
     	public void actionPerformed(ActionEvent e) {
-    		new InformacionProyecto().setVisible(true);
+    		//new InformacionProyecto().setVisible(true);
     	}
     });
     menu1.add(mntmAcercaDeNosotros);
