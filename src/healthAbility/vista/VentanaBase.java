@@ -8,7 +8,6 @@
 package healthAbility.vista;
 
 import healthAbility.HealthAbility;
-import healthAbility.vista.BgBorder;
 
 import java.awt.Dimension;
 import java.awt.SystemColor;
