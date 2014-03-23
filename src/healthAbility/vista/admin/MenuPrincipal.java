@@ -47,6 +47,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 
 	public MenuPrincipal() 
 	{
+		this.setJMenuBar(new BarraMenu());
         //Salir
 		JPanel regresar = new JPanel();
 		regresar.setBounds(43, 149, 60, 60);
@@ -82,180 +83,219 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		regresar.add(btnRegres);
 		
   	//Opciones del Menu
-		JPanel ingres = new JPanel();
-		ingres.setBounds(170, 214, 97, 115);
-		ingres.setOpaque(false);
+		JPanel usuarios = new JPanel();
+		usuarios.setBounds(170, 214, 97, 115);
+		usuarios.setOpaque(false);
 		try {
-        	ingres.setForeground(SystemColor.controlHighlight);
+        	usuarios.setForeground(SystemColor.controlHighlight);
             try {
                 URL imagen = HealthAbility.class.getResource("vista/imagenes/ingresar.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
-                ingres.setBorder(borde);
+                usuarios.setBorder(borde);
             } catch (Exception e) {
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-		getContentPane().add(ingres);
-		ingres.setLayout(new BorderLayout(0, 0));
+		getContentPane().add(usuarios);
+		usuarios.setLayout(new BorderLayout(0, 0));
 		
-		JButton btnIngresar = new JButton("");
-		btnIngresar.addActionListener(new ActionListener() {
+		JButton btnIngresarUsuarios = new JButton("");
+		btnIngresarUsuarios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 //				agregar = new AgregarUno();
 //      			agregar.setVisible(true); 
 //      			menu.setVisible(false);
 			}
 		});
-		btnIngresar.setOpaque(false);
-		btnIngresar.setContentAreaFilled(false);
-		btnIngresar.setBorderPainted(false);
-		ingres.add(btnIngresar);
+		btnIngresarUsuarios.setOpaque(false);
+		btnIngresarUsuarios.setContentAreaFilled(false);
+		btnIngresarUsuarios.setBorderPainted(false);
+		usuarios.add(btnIngresarUsuarios);
 		
-		JPanel editar = new JPanel();
-		editar.setBounds(467, 214, 97, 115);
-		editar.setOpaque(false);
+		JPanel correos = new JPanel();
+		correos.setBounds(467, 214, 97, 115);
+		correos.setOpaque(false);
 		try {
-        	editar.setForeground(SystemColor.controlHighlight);
+        	correos.setForeground(SystemColor.controlHighlight);
             try {
                 URL imagen = HealthAbility.class.getResource("vista/imagenes/actualizar.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
-                editar.setBorder(borde);
+                correos.setBorder(borde);
             } catch (Exception e) {
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-		getContentPane().add(editar);
-		editar.setLayout(new BorderLayout(0, 0));
+		getContentPane().add(correos);
+		correos.setLayout(new BorderLayout(0, 0));
 		
-		JButton btnEditar = new JButton("");
-		btnEditar.addActionListener(new ActionListener() {
+		JButton btnCorreos = new JButton("");
+		btnCorreos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 //				elegirEditar = new ElegirEditar();
 //      			elegirEditar.setVisible(true); 
 //      			menu.setVisible(false);
 			}
 		});
-		btnEditar.setOpaque(false);
-		btnEditar.setContentAreaFilled(false);
-		btnEditar.setBorderPainted(false);
-		editar.add(btnEditar);
-		
-		JPanel elim = new JPanel();
-		elim.setBounds(791, 214, 97, 115);
-		elim.setOpaque(false);
+		btnCorreos.setOpaque(false);
+		btnCorreos.setContentAreaFilled(false);
+		btnCorreos.setBorderPainted(false);
+		correos.add(btnCorreos);
 		try {
-        	elim.setForeground(SystemColor.controlHighlight);
             try {
                 URL imagen = HealthAbility.class.getResource("vista/imagenes/eliminar.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
-                elim.setBorder(borde);
             } catch (Exception e) {
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-		getContentPane().add(elim);
-		elim.setLayout(new BorderLayout(0, 0));
-		
-		JButton btnEliminar = new JButton("");
-		btnEliminar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				/*elegirVer = new ElegirVer();
-      			elegirVer.setVisible(true); 
-      			menu.setVisible(false);*/
-			}
-		});
-		btnEliminar.setOpaque(false);
-		btnEliminar.setContentAreaFilled(false);
-		btnEliminar.setBorderPainted(false);
-		elim.add(btnEliminar);
-		
-		JPanel descarg = new JPanel();
-		descarg.setBounds(933, 453, 97, 115);
-		descarg.setOpaque(false);
 		try {
-			descarg.setForeground(SystemColor.controlHighlight);
             try {
                 URL imagen = HealthAbility.class.getResource("vista/imagenes/descargar.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
-                descarg.setBorder(borde);
             } catch (Exception e) {
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-		getContentPane().add(descarg);
-		descarg.setLayout(new BorderLayout(0, 0));
 		
-		JButton btnDescargas = new JButton("");
-		btnDescargas.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				/*elegirVer = new ElegirVer();
-      			elegirVer.setVisible(true); 
-      			menu.setVisible(false);*/
-			}
-		});
-		btnDescargas.setOpaque(false);
-		btnDescargas.setContentAreaFilled(false);
-		btnDescargas.setBorderPainted(false);
-		descarg.add(btnDescargas);
-		
-		JPanel fechas = new JPanel();
-		fechas.setBounds(616, 453, 97, 115);
-		fechas.setOpaque(false);
+		JPanel citas = new JPanel();
+		citas.setBounds(616, 453, 97, 115);
+		citas.setOpaque(false);
 		try {
-			fechas.setForeground(SystemColor.controlHighlight);
+			citas.setForeground(SystemColor.controlHighlight);
             try {
                 URL imagen = HealthAbility.class.getResource("vista/imagenes/fechas.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
-                fechas.setBorder(borde);
+                citas.setBorder(borde);
             } catch (Exception e) {
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-		getContentPane().add(fechas);
-		fechas.setLayout(new BorderLayout(0, 0));
+		getContentPane().add(citas);
+		citas.setLayout(new BorderLayout(0, 0));
 		
-		JButton btnFechas = new JButton("");
-		btnFechas.addActionListener(new ActionListener() {
+		JButton btnCitas = new JButton("");
+		btnCitas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				/*elegirVer = new ElegirVer();
       			elegirVer.setVisible(true); 
       			menu.setVisible(false);*/
 			}
 		});
-		btnFechas.setOpaque(false);
-		btnFechas.setContentAreaFilled(false);
-		btnFechas.setBorderPainted(false);
-		fechas.add(btnFechas);
+		btnCitas.setOpaque(false);
+		btnCitas.setContentAreaFilled(false);
+		btnCitas.setBorderPainted(false);
+		citas.add(btnCitas);
 		
-		JPanel cita = new JPanel();
-		cita.setBounds(1063, 214, 97, 115);
-		cita.setOpaque(false);
+		JPanel calificaciones = new JPanel();
+		calificaciones.setBounds(754, 214, 97, 115);
+		calificaciones.setOpaque(false);
 		try {
-			cita.setForeground(SystemColor.controlHighlight);
+			calificaciones.setForeground(SystemColor.controlHighlight);
             try {
                 URL imagen = HealthAbility.class.getResource("vista/imagenes/examen.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
-                cita.setBorder(borde);
+                calificaciones.setBorder(borde);
             } catch (Exception e) {
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-		getContentPane().add(cita);
-		cita.setLayout(new BorderLayout(0, 0));
+		getContentPane().add(calificaciones);
+		calificaciones.setLayout(new BorderLayout(0, 0));
+		
+		JButton btncalificaciones = new JButton("");
+		btncalificaciones.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				/*elegirVer = new ElegirVer();
+      			elegirVer.setVisible(true); 
+      			menu.setVisible(false);*/
+			}
+		});
+		btncalificaciones.setOpaque(false);
+		btncalificaciones.setContentAreaFilled(false);
+		btncalificaciones.setBorderPainted(false);
+		calificaciones.add(btncalificaciones, BorderLayout.CENTER);
+		
+		JPanel clinicas = new JPanel();
+		clinicas.setBounds(303, 447, 97, 115);
+		clinicas.setOpaque(false);
+		try {
+        	clinicas.setForeground(SystemColor.controlHighlight);
+            try {
+                URL imagen = HealthAbility.class.getResource("vista/imagenes/entrevista.png");
+                BufferedImage  img = ImageIO.read(imagen);
+                BgBorder borde = new BgBorder( img );
+                clinicas.setBorder(borde);
+            } catch (Exception e) {
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+		getContentPane().add(clinicas);
+		clinicas.setLayout(new BorderLayout(0, 0));
+		
+		JButton btnClinicas = new JButton("");
+		clinicas.add(btnClinicas);
+		btnClinicas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+//				rubros = new RubrosEntrevista();
+//      			rubros.setVisible(true); 
+//      			menu.setVisible(false);
+			}
+		});
+		btnClinicas.setOpaque(false);
+		btnClinicas.setContentAreaFilled(false);
+		btnClinicas.setBorderPainted(false);
+		
+		JLabel lblUsuario = new JLabel("Usuarios");
+		lblUsuario.setForeground(new Color(0, 0, 128));
+		lblUsuario.setHorizontalAlignment(SwingConstants.CENTER);
+		lblUsuario.setFont(letraTexto2);
+		lblUsuario.setBounds(131, 327, 176, 23);
+		getContentPane().add(lblUsuario);
+		
+		JLabel lblCorreos = new JLabel("Correos");
+		lblCorreos.setForeground(new Color(0, 0, 128));
+		lblCorreos.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCorreos.setFont(letraTexto2);
+		lblCorreos.setBounds(440, 331, 154, 14);
+		getContentPane().add(lblCorreos);
+		
+		JLabel lblCalificaciones = new JLabel("Calificaci\u00F3n Doctor");
+		lblCalificaciones.setForeground(new Color(0, 0, 128));
+		lblCalificaciones.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCalificaciones.setFont(letraTexto2);
+		lblCalificaciones.setBounds(722, 327, 168, 23);
+		getContentPane().add(lblCalificaciones);
+		
+		JLabel lblCitas = new JLabel("Citas");
+		lblCitas.setForeground(new Color(0, 0, 128));
+		lblCitas.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCitas.setFont(letraTexto2);
+		lblCitas.setBounds(581, 573, 168, 23);
+		getContentPane().add(lblCitas);
+		
+		JLabel lblClinicas = new JLabel("Cl\u00EDnicas");
+		lblClinicas.setForeground(new Color(0, 0, 128));
+		lblClinicas.setHorizontalAlignment(SwingConstants.CENTER);
+		lblClinicas.setFont(letraTexto2);
+		lblClinicas.setBounds(260, 573, 199, 23);
+		getContentPane().add(lblClinicas);		
 		
 		JButton btnExamen = new JButton("");
+		btnExamen.setBounds(765, 230, 97, 115);
+		getContentPane().add(btnExamen);
 		btnExamen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 //				editarExamen = new Citas();
@@ -266,87 +306,6 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnExamen.setOpaque(false);
 		btnExamen.setContentAreaFilled(false);
 		btnExamen.setBorderPainted(false);
-		cita.add(btnExamen);
-		
-		JPanel entrev = new JPanel();
-		entrev.setBounds(303, 447, 97, 115);
-		entrev.setOpaque(false);
-		try {
-        	entrev.setForeground(SystemColor.controlHighlight);
-            try {
-                URL imagen = HealthAbility.class.getResource("vista/imagenes/entrevista.png");
-                BufferedImage  img = ImageIO.read(imagen);
-                BgBorder borde = new BgBorder( img );
-                entrev.setBorder(borde);
-            } catch (Exception e) {
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-		getContentPane().add(entrev);
-		entrev.setLayout(new BorderLayout(0, 0));
-		
-		JButton btnEntrev = new JButton("");
-		entrev.add(btnEntrev);
-		btnEntrev.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-//				rubros = new RubrosEntrevista();
-//      			rubros.setVisible(true); 
-//      			menu.setVisible(false);
-			}
-		});
-		btnEntrev.setOpaque(false);
-		btnEntrev.setContentAreaFilled(false);
-		btnEntrev.setBorderPainted(false);
-		
-		JLabel lblIngresarUsuario = new JLabel("Ingresar usuario");
-		lblIngresarUsuario.setForeground(new Color(0, 0, 128));
-		lblIngresarUsuario.setHorizontalAlignment(SwingConstants.CENTER);
-		lblIngresarUsuario.setFont(letraTexto2);
-		lblIngresarUsuario.setBounds(131, 327, 176, 23);
-		getContentPane().add(lblIngresarUsuario);
-		
-		JLabel lblEditarUsuario = new JLabel("Editar usuario");
-		lblEditarUsuario.setForeground(new Color(0, 0, 128));
-		lblEditarUsuario.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEditarUsuario.setFont(letraTexto2);
-		lblEditarUsuario.setBounds(440, 331, 154, 14);
-		getContentPane().add(lblEditarUsuario);
-		
-		JLabel lblEliminarUsuario = new JLabel("Eliminar usuario");
-		lblEliminarUsuario.setForeground(new Color(0, 0, 128));
-		lblEliminarUsuario.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEliminarUsuario.setFont(letraTexto2);
-		lblEliminarUsuario.setBounds(751, 327, 183, 23);
-		getContentPane().add(lblEliminarUsuario);
-		
-		JLabel lblCitas = new JLabel("Citas");
-		lblCitas.setForeground(new Color(0, 0, 128));
-		lblCitas.setHorizontalAlignment(SwingConstants.CENTER);
-		lblCitas.setFont(letraTexto2);
-		lblCitas.setBounds(1041, 327, 140, 23);
-		getContentPane().add(lblCitas);
-		
-		JLabel lblEditarFechas = new JLabel("Editar fechas");
-		lblEditarFechas.setForeground(new Color(0, 0, 128));
-		lblEditarFechas.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEditarFechas.setFont(letraTexto2);
-		lblEditarFechas.setBounds(581, 573, 168, 23);
-		getContentPane().add(lblEditarFechas);
-		
-		JLabel lblDescargarExpediente = new JLabel("Descargar expediente doctor");
-		lblDescargarExpediente.setForeground(new Color(0, 0, 128));
-		lblDescargarExpediente.setHorizontalAlignment(SwingConstants.CENTER);
-		lblDescargarExpediente.setFont(letraTexto2);
-		lblDescargarExpediente.setBounds(883, 573, 204, 19);
-		getContentPane().add(lblDescargarExpediente);
-		
-		JLabel lblRubrosDeEntrevistas = new JLabel("Rubros de entrevistas");
-		lblRubrosDeEntrevistas.setForeground(new Color(0, 0, 128));
-		lblRubrosDeEntrevistas.setHorizontalAlignment(SwingConstants.CENTER);
-		lblRubrosDeEntrevistas.setFont(letraTexto2);
-		lblRubrosDeEntrevistas.setBounds(260, 573, 199, 23);
-		getContentPane().add(lblRubrosDeEntrevistas);		
   	}
       	
       	public void actionPerformed(ActionEvent e)
