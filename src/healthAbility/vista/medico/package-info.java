@@ -3,14 +3,15 @@
  * 2014004856
  * Diego Delgado Cerdas
  * 2013099268
- * Mar 22, 2014
+ * Mar 24, 2014
  */
 /**
- * @author Diego Mar 22, 2014
+ * @author Diego Mar 24, 2014
  *
  */
 package healthAbility.vista.medico;
 /*
- * Contenido del paquete: Desarrollo gráfico del módulo "médico".
+ * Contenido del paquete: Creacion del modulo grafico del doctor.
  * 
  */
+ 

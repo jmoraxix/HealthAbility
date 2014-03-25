@@ -1,11 +1,11 @@
 /**
- * Primer Proyecto POO
- * José David Mora Loría
+ * Jose David Mora Loria
  * 2014004856
  * Diego Delgado Cerdas
  * 2013099268
+ * Mar 24, 2014
  */
-package healthAbility.vista.admin;
+package healthAbility.vista.paciente;
 
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
@@ -28,9 +28,9 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 /**
- * @author jmora 13/03/2014
+ * @author Diego Mar 24, 2014
+ *
  */
-@SuppressWarnings("serial")
 public class MenuPrincipal extends VentanaBase implements ActionListener
 {
 	public static final Dimension tamTotal = HealthAbility.getTamPantalla();

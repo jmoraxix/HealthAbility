@@ -260,68 +260,68 @@ public class Usuarios extends VentanaBase {
 		eliminarAdmin.add(btnEliminarAdmin, BorderLayout.CENTER);
 		
 		
-		JLabel lblAgregar = new JLabel("Agregar");
-		lblAgregar.setForeground(new Color(0, 0, 128));
-		lblAgregar.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAgregar.setFont(letraTexto2);
-		lblAgregar.setBounds(120, 317, 97, 27);
-		getContentPane().add(lblAgregar);
+		JLabel lblAgregarDoctor = new JLabel("Agregar");
+		lblAgregarDoctor.setForeground(new Color(0, 0, 128));
+		lblAgregarDoctor.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAgregarDoctor.setFont(letraTexto2);
+		lblAgregarDoctor.setBounds(120, 317, 97, 27);
+		getContentPane().add(lblAgregarDoctor);
 		
-		JLabel lblModificar = new JLabel("Modificar");
-		lblModificar.setForeground(new Color(0, 0, 128));
-		lblModificar.setHorizontalAlignment(SwingConstants.CENTER);
-		lblModificar.setFont(letraTexto2);
-		lblModificar.setBounds(120, 487, 97, 20);
-		getContentPane().add(lblModificar);
+		JLabel lblModificarDoctor = new JLabel("Modificar");
+		lblModificarDoctor.setForeground(new Color(0, 0, 128));
+		lblModificarDoctor.setHorizontalAlignment(SwingConstants.CENTER);
+		lblModificarDoctor.setFont(letraTexto2);
+		lblModificarDoctor.setBounds(120, 487, 97, 20);
+		getContentPane().add(lblModificarDoctor);
 		
-		JLabel lblEliminar = new JLabel("Eliminar");
-		lblEliminar.setForeground(new Color(0, 0, 128));
-		lblEliminar.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEliminar.setFont(letraTexto2);
-		lblEliminar.setBounds(120, 632, 97, 20);
-		getContentPane().add(lblEliminar);
+		JLabel lblEliminarDoctor = new JLabel("Eliminar");
+		lblEliminarDoctor.setForeground(new Color(0, 0, 128));
+		lblEliminarDoctor.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEliminarDoctor.setFont(letraTexto2);
+		lblEliminarDoctor.setBounds(120, 632, 97, 20);
+		getContentPane().add(lblEliminarDoctor);
 		
-		JLabel lblAgregar_1 = new JLabel("Agregar");
-		lblAgregar_1.setForeground(new Color(0, 0, 128));
-		lblAgregar_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAgregar_1.setFont(letraTexto2);
-		lblAgregar_1.setBounds(437, 317, 97, 27);
-		getContentPane().add(lblAgregar_1);
+		JLabel lblAgregarPaciente = new JLabel("Agregar");
+		lblAgregarPaciente.setForeground(new Color(0, 0, 128));
+		lblAgregarPaciente.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAgregarPaciente.setFont(letraTexto2);
+		lblAgregarPaciente.setBounds(437, 317, 97, 27);
+		getContentPane().add(lblAgregarPaciente);
 		
-		JLabel lblModificar_1 = new JLabel("Modificar");
-		lblModificar_1.setForeground(new Color(0, 0, 128));
-		lblModificar_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblModificar_1.setFont(letraTexto2);
-		lblModificar_1.setBounds(437, 487, 97, 20);
-		getContentPane().add(lblModificar_1);
+		JLabel lblModificarPaciente = new JLabel("Modificar");
+		lblModificarPaciente.setForeground(new Color(0, 0, 128));
+		lblModificarPaciente.setHorizontalAlignment(SwingConstants.CENTER);
+		lblModificarPaciente.setFont(letraTexto2);
+		lblModificarPaciente.setBounds(437, 487, 97, 20);
+		getContentPane().add(lblModificarPaciente);
 		
-		JLabel lblEliminar_1 = new JLabel("Eliminar");
-		lblEliminar_1.setForeground(new Color(0, 0, 128));
-		lblEliminar_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEliminar_1.setFont(letraTexto2);
-		lblEliminar_1.setBounds(437, 634, 97, 17);
-		getContentPane().add(lblEliminar_1);
+		JLabel lblEliminarPaciente = new JLabel("Eliminar");
+		lblEliminarPaciente.setForeground(new Color(0, 0, 128));
+		lblEliminarPaciente.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEliminarPaciente.setFont(letraTexto2);
+		lblEliminarPaciente.setBounds(437, 634, 97, 17);
+		getContentPane().add(lblEliminarPaciente);
 		
-		JLabel lblAgregar_2 = new JLabel("Agregar");
-		lblAgregar_2.setForeground(new Color(0, 0, 128));
-		lblAgregar_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAgregar_2.setFont(letraTexto2);
-		lblAgregar_2.setBounds(749, 317, 97, 27);
-		getContentPane().add(lblAgregar_2);
+		JLabel lblAgregarAdmin = new JLabel("Agregar");
+		lblAgregarAdmin.setForeground(new Color(0, 0, 128));
+		lblAgregarAdmin.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAgregarAdmin.setFont(letraTexto2);
+		lblAgregarAdmin.setBounds(749, 317, 97, 27);
+		getContentPane().add(lblAgregarAdmin);
 		
-		JLabel lblModificar_2 = new JLabel("Modificar");
-		lblModificar_2.setForeground(new Color(0, 0, 128));
-		lblModificar_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblModificar_2.setFont(letraTexto2);
-		lblModificar_2.setBounds(749, 487, 97, 20);
-		getContentPane().add(lblModificar_2);
+		JLabel lblModificarAdmin = new JLabel("Modificar");
+		lblModificarAdmin.setForeground(new Color(0, 0, 128));
+		lblModificarAdmin.setHorizontalAlignment(SwingConstants.CENTER);
+		lblModificarAdmin.setFont(letraTexto2);
+		lblModificarAdmin.setBounds(749, 487, 97, 20);
+		getContentPane().add(lblModificarAdmin);
 		
-		JLabel lblEliminar_2 = new JLabel("Eliminar");
-		lblEliminar_2.setForeground(new Color(0, 0, 128));
-		lblEliminar_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEliminar_2.setFont(letraTexto2);
-		lblEliminar_2.setBounds(749, 634, 97, 17);
-		getContentPane().add(lblEliminar_2);
+		JLabel lblEliminarAdmin = new JLabel("Eliminar");
+		lblEliminarAdmin.setForeground(new Color(0, 0, 128));
+		lblEliminarAdmin.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEliminarAdmin.setFont(letraTexto2);
+		lblEliminarAdmin.setBounds(749, 634, 97, 17);
+		getContentPane().add(lblEliminarAdmin);
 		
 		
 	}
