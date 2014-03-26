@@ -12,7 +12,6 @@ package healthAbility.vista;
  *
  */
 import healthAbility.HealthAbility;
-import healthAbility.vista.BgBorder;
 
 import java.awt.Dimension;
 import java.awt.SystemColor;
@@ -38,7 +37,7 @@ public class VentanaEmergente extends JFrame
 		//Inicializar ventana
 		panel.setForeground(SystemColor.controlHighlight);
         try {
-            URL imagen = HealthAbility.class.getResource("fondo_emergente.png");
+            URL imagen = HealthAbility.class.getResource("vista/imagenes/fondo_emergente.png");
             BufferedImage  img = ImageIO.read(imagen);
             BgBorder borde = new BgBorder( img );
             panel.setBorder(borde);

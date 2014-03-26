@@ -8,7 +8,7 @@
 package healthAbility.vista;
 
 import healthAbility.HealthAbility;
-import healthAbility.vista.admin.MenuPrincipal;
+import healthAbility.datos.ManageXml;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -16,16 +16,13 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.io.File;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
 
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -42,8 +39,6 @@ public class Login extends VentanaBase
 	Dimension tamTotal = HealthAbility.getTamPantalla();
 	private JTextField uss;
 	private JPasswordField contra;
-
-	protected static String SESION_USUARIO;
 
 	public Login() 
 	{
@@ -115,57 +110,46 @@ public class Login extends VentanaBase
 
 	private void VerifSesion()
 	{
-//		Node sesion= buscarUsuario(new String(uss.getText()), new String(contra.getPassword()));
-//		if(sesion != null)
-//		{
-//			SESION_USUARIO = uss.getText();
-		MenuPrincipal menu = HealthAbility.getVentanaMenu();
-		menu = new MenuPrincipal();
-		menu.setVisible(true);  
-		HealthAbility.getVentanaLogin().setVisible(false);
-//		} else
-//		{  
-//			JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
-//		}
+		Element sesion = buscarUsuario(new String(uss.getText()), new String(contra.getPassword()));
+		if(sesion != null)
+		{
+			HealthAbility.setSESION_USUARIO(uss.getText());
+			String tipoUsr = sesion.getElementsByTagName("tipo").item(0).getTextContent();
+			if(tipoUsr.equals("admin")){
+				healthAbility.vista.admin.MenuPrincipal menu = new healthAbility.vista.admin.MenuPrincipal();
+				menu.setVisible(true);  
+			} else if(tipoUsr.equals("medico")){
+				healthAbility.vista.medico.MenuPrincipal menu = new healthAbility.vista.medico.MenuPrincipal();
+				menu.setVisible(true);  
+			} else if(tipoUsr.equals("paciente")){
+				healthAbility.vista.paciente.MenuPrincipal menu = new healthAbility.vista.paciente.MenuPrincipal();
+				menu.setVisible(true);  
+			}
+			HealthAbility.getVentanaLogin().setVisible(false);
+		} else
+		{  
+			JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+		}
 	}
 
-	private Node buscarUsuario(String usr, String pass){
-		Node nodoUsr = null;
-		try {
-			DocumentBuilderFactory dbFactory = DocumentBuilderFactory
-					.newInstance();
-			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			Document doc = dBuilder.parse(new File("../healthAbility/datos/usuario.xml"));
-			doc.getDocumentElement().normalize();
+	private Element buscarUsuario(String usr, String pass){
+		Element nodoUsr = null;
 
-			NodeList listaPersonas = doc.getElementsByTagName("usr");
-			
-			for (int i = 0; i < listaPersonas.getLength(); i ++) {
-				Node persona = listaPersonas.item(i);
+		NodeList listaPersonas = ManageXml.Buscar("usuarios", "usuario");
 
-				if (persona.getNodeType() == Node.ELEMENT_NODE) {
-					Element elemento = (Element) persona;
-	
-					if(getTagValue("usuario", elemento).equals(usr) || getTagValue("password", elemento).equals(pass)){
-						nodoUsr = elemento;
-						break;
-					}
+		for (int i = 0; i < listaPersonas.getLength(); i ++) {
+			Node persona = listaPersonas.item(i);
+
+			if (persona.getNodeType() == Node.ELEMENT_NODE) {
+				Element elemento = (Element) persona;
+
+				if(elemento.getAttribute("usuario").equals(usr) && elemento.getElementsByTagName("password").item(0).getTextContent().equals(pass)){
+					nodoUsr = elemento;
+					break;
 				}
 			}
-			
-		} catch (Exception e) {
-			System.out.println("Error Parse xml: " + e);
 		}
-		
+
 		return nodoUsr;
 	}
-	
-	 private static String getTagValue(String sTag, Element eElement)
-	 {
-		  NodeList nlList= eElement.getElementsByTagName(sTag).item(0).getChildNodes();
-		  Node nValue = (Node) nlList.item(0);
-
-		  return nValue.getNodeValue();
-
-	 }
 } 

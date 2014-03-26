@@ -25,18 +25,19 @@ public class HealthAbility {
 	
 	//Pantallas principales
 	protected static Login login;
-	protected static MenuPrincipal menu;
+	//Pantallas Administrador
+	protected static healthAbility.vista.admin.MenuPrincipal menu_admin;
 	
 	//Pantallas de menu
 		
 	//Pantallas emergentes
 
-	//Medico medicos[] = null ; 
 	private static final Dimension tamPantalla = Toolkit.getDefaultToolkit().getScreenSize();    
 	private final static Font letraTitulo1 = new Font("Georgia", Font.BOLD, 38);
 	private final static Font letraTexto1 = new Font("Georgia", Font.PLAIN, 28);
 	private final static Font letraTexto2 = new Font("Georgia", Font.PLAIN, 22);
-
+	private final static Font letraTexto3 = new Font("Georgia", Font.PLAIN, 18);
+	private static String SESION_USUARIO;
 	
 	public static void main(String[] args) {
 		//LookAndFeel de la aplicaci�n
@@ -69,13 +70,29 @@ public class HealthAbility {
 	public static Font getLetraTexto2() {
 		return letraTexto2;
 	}
+	
+	public static Font getLetraTexto3() {
+		return letraTexto3;
+	}
 
 	public static Login getVentanaLogin() {
 		return login;
 	}
 
-	public static MenuPrincipal getVentanaMenu() {
-		return menu;
+	public static MenuPrincipal getVentanaMenuAdmin() {
+		return menu_admin;
+	}
+
+	public static String getSESION_USUARIO() {
+		return SESION_USUARIO;
+	}
+
+	public static void setSESION_USUARIO(String sESION_USUARIO) {
+		SESION_USUARIO = sESION_USUARIO;
+	}
+
+	public static Login getLogin() {
+		return login;
 	}
 
 }
