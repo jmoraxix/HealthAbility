@@ -12,14 +12,12 @@ package healthAbility.modelo;
  *
  */
 public class Padecimientos {
-	
+
 	/****VARIABLES****/
 	private String nombre;
 	private String tipo;
 	private String descripcion;
-	
-	
-	
+
 	/*****GETTERS AND SETTERS*****/
 	public String getNombre() {
 		return nombre;
@@ -39,6 +37,6 @@ public class Padecimientos {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	
+
 
 }

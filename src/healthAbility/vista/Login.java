@@ -125,7 +125,7 @@ public class Login extends VentanaBase
 				healthAbility.vista.paciente.MenuPrincipal menu = new healthAbility.vista.paciente.MenuPrincipal();
 				menu.setVisible(true);  
 			}
-			HealthAbility.getVentanaLogin().setVisible(false);
+			setVisible(false);
 		} else
 		{  
 			JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);

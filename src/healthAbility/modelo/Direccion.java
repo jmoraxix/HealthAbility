@@ -12,15 +12,15 @@ package healthAbility.modelo;
  *
  */
 public class Direccion {
-	
-	
+
+
 	/****VARIABLES****/
 	private String direccion_general;
 	private String distrito;
 	private String canton;
 	private String provincia;
-	
-	
+
+
 	/*****GETTERS AND SETTERS*****/
 	public String getDireccion_general() {
 		return direccion_general;
@@ -46,5 +46,5 @@ public class Direccion {
 	public void setProvincia(String provincia) {
 		this.provincia = provincia;
 	}
-	
+
 }

@@ -20,25 +20,25 @@ import javax.swing.border.Border;
  */
 public class BgBorder implements Border 
 {
-    private BufferedImage mImagen = null;
-    
-    public BgBorder(BufferedImage pImagen) {
-    mImagen = pImagen;
-    }
+	private BufferedImage mImagen = null;
 
-    public void paintBorder(Component c, Graphics g, int x, int y, int width,int height) 
-    {
-        if (mImagen != null) {
-        g.drawImage(mImagen, 0, 0, width, height, null);
-        }
-    }
+	public BgBorder(BufferedImage pImagen) {
+		mImagen = pImagen;
+	}
 
-    public Insets getBorderInsets(Component c) {
-        return new Insets(0, 0, 0, 0);
-    }
+	public void paintBorder(Component c, Graphics g, int x, int y, int width,int height) 
+	{
+		if (mImagen != null) {
+			g.drawImage(mImagen, 0, 0, width, height, null);
+		}
+	}
 
-    public boolean isBorderOpaque() {
-        return true;
-    }
+	public Insets getBorderInsets(Component c) {
+		return new Insets(0, 0, 0, 0);
+	}
+
+	public boolean isBorderOpaque() {
+		return true;
+	}
 }
 

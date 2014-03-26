@@ -30,11 +30,11 @@ public class ManageXml {
 			doc.getDocumentElement().normalize();
 
 			retorno = doc.getElementsByTagName(tag);
-			
-			} catch (Exception e) {
+
+		} catch (Exception e) {
 			System.out.println("Error Parse xml: " + e);
 		}
-		
+
 		return retorno;
 	}
 

@@ -12,14 +12,14 @@ package healthAbility.modelo;
  *
  */
 public class Review {
-	
+
 	/****VARIABLES****/
 	private int calificacion;
 	private String comentario;
 	private String usuario;
-	
-	
-	
+
+
+
 	/*****GETTERS AND SETTERS*****/
 	public int getCalificacion() {
 		return calificacion;
@@ -39,6 +39,6 @@ public class Review {
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
-	
+
 
 }

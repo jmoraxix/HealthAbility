@@ -12,7 +12,7 @@ package healthAbility.modelo;
  *
  */
 public class Citas {
-	
+
 	/****VARIABLES****/
 	private String estado;
 	private int hora;
@@ -20,7 +20,7 @@ public class Citas {
 	private boolean periodo;
 	private Review calificaciones;
 	private String paciente; 
-	
+
 	/*****GETTERS AND SETTERS*****/
 	public String getEstado() {
 		return estado;
@@ -41,13 +41,13 @@ public class Citas {
 		this.minutos = minutos;
 	}
 	public String getPeriodo() {
-		
+
 		String per;
 		if (periodo)
 			per = "am";
 		else
 			per  = "pm";
-		
+
 		return per;
 	}
 	public void setPeriodo(String per) {
@@ -62,12 +62,12 @@ public class Citas {
 	public void setCalificaciones(Review calificaciones) {
 		this.calificaciones = calificaciones;
 	}
-//	public String getPaciente() {
-//		return paciente;
-//	}
-//	public void setPaciente(String paciente) {
-//		this.paciente = paciente;
-//	}
-	
+	//	public String getPaciente() {
+	//		return paciente;
+	//	}
+	//	public void setPaciente(String paciente) {
+	//		this.paciente = paciente;
+	//	}
+
 
 }

@@ -33,16 +33,16 @@ public class VentanaEmergente extends JFrame
 		setBounds((tamTotal.width/2)-250, (tamTotal.height/2)-175, 500, 350);
 		panel = new JPanel();
 		setContentPane(panel);
-		
+
 		//Inicializar ventana
 		panel.setForeground(SystemColor.controlHighlight);
-        try {
-            URL imagen = HealthAbility.class.getResource("vista/imagenes/fondo_emergente.png");
-            BufferedImage  img = ImageIO.read(imagen);
-            BgBorder borde = new BgBorder( img );
-            panel.setBorder(borde);
-        } catch (Exception e) {
-        }
-        panel.setLayout(null);
+		try {
+			URL imagen = HealthAbility.class.getResource("vista/imagenes/fondo_emergente.png");
+			BufferedImage  img = ImageIO.read(imagen);
+			BgBorder borde = new BgBorder( img );
+			panel.setBorder(borde);
+		} catch (Exception e) {
+		}
+		panel.setLayout(null);
 	}
 }

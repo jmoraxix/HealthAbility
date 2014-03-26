@@ -25,7 +25,7 @@ import javax.swing.JLabel;
 public class SeleccionarClinica extends VentanaEmergente {
 
 	Font letraTexto = HealthAbility.getLetraTexto3();
-	
+
 	/**
 	 * Create the frame.
 	 */
@@ -37,15 +37,15 @@ public class SeleccionarClinica extends VentanaEmergente {
 		lblSeleccioneDoctor.setBounds(42, 63, 224, 26);
 		lblSeleccioneDoctor.setFont(letraTexto);
 		getContentPane().add(lblSeleccioneDoctor);
-		
+
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(73, 106, 193, 32);
 		getContentPane().add(comboBox);
-		
+
 		JButton btnSeguir = new JButton("Seguir");
 		btnSeguir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
+
 			}
 		});
 		btnSeguir.setFont(new Font("Georgia", Font.PLAIN, 14));

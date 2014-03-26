@@ -24,7 +24,7 @@ import javax.swing.JLabel;
  */
 @SuppressWarnings("serial")
 public class SeleccionarMedico extends VentanaEmergente {
-	
+
 	Font letraTexto = HealthAbility.getLetraTexto2();
 	JComboBox<String> comboBox;
 
@@ -34,17 +34,17 @@ public class SeleccionarMedico extends VentanaEmergente {
 	public SeleccionarMedico() {
 		setBounds(100, 100, 450, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		JLabel lblSeleccioneDoctor = new JLabel("Seleccione un m\u00E9dico:");
 		lblSeleccioneDoctor.setBounds(42, 63, 224, 26);
 		lblSeleccioneDoctor.setFont(letraTexto);
 		getContentPane().add(lblSeleccioneDoctor);
-		
+
 		comboBox = new JComboBox<String>();
 		comboBox.setModel(new DefaultComboBoxModel(getMedicos()));
 		comboBox.setBounds(73, 106, 193, 32);
 		getContentPane().add(comboBox);
-		
+
 		JButton btnSeguir = new JButton("Seguir");
 		btnSeguir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {

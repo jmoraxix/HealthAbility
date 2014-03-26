@@ -17,11 +17,11 @@ public class Educacion {
 	private String universidad;
 	private String pais_universidad;
 	private String fecha_conclusion;
-	
-	
-	
+
+
+
 	/*****GETTERS AND SETTERS*****/
-	
+
 	public String getTitulo() {
 		return titulo;
 	}
@@ -46,7 +46,7 @@ public class Educacion {
 	public void setFecha_conclusion(String fecha_conclusion) {
 		this.fecha_conclusion = fecha_conclusion;
 	}
-	
-	
+
+
 
 }

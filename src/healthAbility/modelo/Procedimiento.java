@@ -12,12 +12,12 @@ package healthAbility.modelo;
  *
  */
 public class Procedimiento {
-	
+
 	/****VARIABLES****/
 	private String nombre;
 	private float costo;
-	
-	
+
+
 	/******SETTERS-GETTERS******/
 	public String getNombre() {
 		return nombre;
@@ -31,7 +31,7 @@ public class Procedimiento {
 	public void setCosto(float costo) {
 		this.costo = costo;
 	}
-	
-	
+
+
 
 }

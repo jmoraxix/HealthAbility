@@ -15,7 +15,7 @@ import java.util.Date;
  *
  */
 public class Paciente {
-	
+
 	/****VARIABLES****/
 	private String nombre;
 	private String apellido1;
@@ -25,20 +25,20 @@ public class Paciente {
 	private BufferedImage foto;
 	private Padecimientos[] padecimientos;
 	private Date nacimiento;
-	
-	
+
+
 	/*****CONSTRUCTOR*****/
 
 	public Paciente(String pnombre, String papellido1, String papellido2, 
 			String pcedula, Date pnacimiento ){
-		
+
 		this.nombre = pnombre;
 		this.apellido1 = papellido1;
 		this.apellido2 = papellido2;
 		this.cedula = pcedula;
 		this.nacimiento = pnacimiento;
 	}
-	
+
 	/*****GETTERS AND SETTERS*****/
 	public String getNombre() {
 		return nombre;

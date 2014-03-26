@@ -15,16 +15,16 @@ import java.awt.image.BufferedImage;
  */
 
 public class CentrosMedicos {
-	
+
 	/****VARIABLES****/
 	private String nombre;
 	private Direccion ubicacion;
 	private Citas[] citas;
 	private BufferedImage foto;
-	
-	
+
+
 	/*****GETTERS AND SETTERS*****/
-	
+
 	public Citas[] getCitas() {
 		return citas;
 	}

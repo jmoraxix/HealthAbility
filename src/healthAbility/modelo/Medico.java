@@ -30,71 +30,71 @@ public class Medico {
 	private String[] idiomas;
 	private Educacion[] titulos;
 	private String[] afiliaciones;
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 
 	/*****CONSTRUCTOR*****/
 
 	public Medico(String pnombre, String papellido1, String papellido2, 
 			String pcedula, String pespecialidad ){
-		
+
 		this.nombre = pnombre;
 		this.apellido1 = papellido1;
 		this.apellido2 = papellido2;
 		this.cedula = pcedula;
 		this.especialidad = pespecialidad;
-		
+
 	}
-	
+
 	/*****GETTERS AND SETTERS*****/
-	
+
 	public String getNombre() {
-	       return nombre;
-	   }
+		return nombre;
+	}
 	public void setNombre(String nombre) {
-	       this.nombre = nombre;
-	   }   
-    public String getApellido1() {
-       return apellido1;
-   }
-   public void setApellido1(String apellido1) {
-       this.apellido1 = apellido1;
-   }
-   public String getApellido2() {
-       return apellido2;
-   }
-   public void setApellido2(String apellido2) {
-       this.apellido2 = apellido2;
-   }
-   public String getCedula() {
-       return cedula;
-   }
-   public void setCedula(String cedula) {
-       this.cedula = cedula;
-   }
-   public String getCorreo(){
+		this.nombre = nombre;
+	}   
+	public String getApellido1() {
+		return apellido1;
+	}
+	public void setApellido1(String apellido1) {
+		this.apellido1 = apellido1;
+	}
+	public String getApellido2() {
+		return apellido2;
+	}
+	public void setApellido2(String apellido2) {
+		this.apellido2 = apellido2;
+	}
+	public String getCedula() {
+		return cedula;
+	}
+	public void setCedula(String cedula) {
+		this.cedula = cedula;
+	}
+	public String getCorreo(){
 		return correo;
 	}
-   public void setCorreo(String correo){
+	public void setCorreo(String correo){
 		this.correo = correo;
 	}
-   public String getEspecialidad(){
+	public String getEspecialidad(){
 		return especialidad;
 	}
-   public void setEspecialidad(String especialidad){
+	public void setEspecialidad(String especialidad){
 		this.especialidad = especialidad;
 	}
-   public int getTelefono() {
-       return telefono;
-   }
-   public void setTelefono(int telefono) {
-       this.telefono = telefono;
-   }
-   public Procedimiento[] getProcedimientos() {
+	public int getTelefono() {
+		return telefono;
+	}
+	public void setTelefono(int telefono) {
+		this.telefono = telefono;
+	}
+	public Procedimiento[] getProcedimientos() {
 		return procedimientos;
 	}
 	public void setProcedimientos(Procedimiento[] procedimientos) {
@@ -136,20 +136,4 @@ public class Medico {
 	public void setAfiliaciones(String[] afiliaciones) {
 		this.afiliaciones = afiliaciones;
 	}
-   
-//   /*****TO STRING*****/
-//   @Override
-//   public String toString() {
-//       String mensaje = "";
-//       mensaje += "Nombre: " + getNombre() + "\n";
-//       mensaje += "Apellidos: " + getApellido1() + " " + getApellido2() + "\n";
-//       mensaje += "Cedula: " + getCedula() + "\n";
-//       mensaje +="Correo "+ getCorreo()+"\n";
-//       mensaje += "Especialidad" + getEspecialidad() + "\n";
-//       mensaje += "Tel�fono: " + getTelefono() + "\n";
-//
-//       return mensaje;
-//   }
-//
-
 }
