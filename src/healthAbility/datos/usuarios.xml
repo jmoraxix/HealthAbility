@@ -1,79 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<USUARIO>
-	<usr>
-		<usuario>pac1</usuario>
+<USUARIOS>
+	<usuario usuario="pac1">
 		<cedula>123456789</cedula>
 		<name>Nombre Paciente 1</name>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfiusabh@paciente.com</correo>
-		<foto>C:\Users\JoséDavid\Pictures\onepiece.png</foto>
+		<foto>../vista/imagenes/paciente.png</foto>
 		<password>papayanator</password>
 		<tipo>paciente</tipo>
-	</usr>
-	<usr>
-		<usuario>pac2</usuario>
+	</usuario>
+	<usuario usuario="pac2">
 		<cedula>123455789</cedula>
 		<name>Nombre Paciente 2</name>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfiusabh@paciente.com</correo>
-		<foto>C:\Users\JoséDavid\Pictures\onepiece.png</foto>
+		<foto>../vista/imagenes/paciente.png</foto>
 		<password>papayanator</password>
 		<tipo>paciente</tipo>
-	</usr>
-	<usr>
-		<usuario>pac3</usuario>
+	</usuario>
+	<usuario usuario="pac3">
 		<cedula>123365589</cedula>
 		<name>Nombre Paciente 3</name>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfiusabh@paciente.com</correo>
-		<foto>C:\Users\JoséDavid\Pictures\onepiece.png</foto>
+		<foto>../vista/imagenes/paciente.png</foto>
 		<password>papayanator</password>
 		<tipo>paciente</tipo>
-	</usr>
-	<usr>
-		<usuario>doc1</usuario>
+	</usuario>
+	<usuario usuario="doc1">
 		<cedula>248536842</cedula>
 		<name>Nombre Dr 1</name>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfdoc1@doctor.com</correo>
-		<foto>C:\Users\JoséDavid\Pictures\onepiece.png</foto>
+		<foto>../vista/imagenes/medico.png</foto>
 		<password>papayanator</password>
 		<tipo>medico</tipo>
-	</usr>
-	<usr>
-		<usuario>doc2</usuario>
+	</usuario>
+	<usuario usuario="doc2">
 		<cedula>548613685</cedula>
 		<name>Nombre Dr 2</name>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfdoc2@doctor.com</correo>
-		<foto>C:\Users\JoséDavid\Pictures\onepiece.png</foto>
+		<foto>../vista/imagenes/medico.png</foto>
 		<password>papayanator</password>
 		<tipo>medico</tipo>
-	</usr>
-	<usr>
-		<usuario>doc3</usuario>
+	</usuario>
+	<usuario usuario="doc3">
 		<cedula>484613269</cedula>
 		<name>Nombre Dr 3</name>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfdoc3@doctor.com</correo>
-		<foto>C:\Users\JoséDavid\Pictures\onepiece.png</foto>
+		<foto>../vista/imagenes/medico.png</foto>
 		<password>papayanator</password>
 		<tipo>medico</tipo>
-	</usr>
-	<usr>
-		<usuario>jmora</usuario>
+	</usuario>
+	<usuario usuario="jmora">
 		<password>papayanator</password>
 		<tipo>admin</tipo>
-	</usr>
-	<usr>
-		<usuario>ddelgado</usuario>
+		<foto>../vista/imagenes/admin.png</foto>
+	</usuario>
+	<usuario usuario="ddelgado">
 		<password>papayanator</password>
 		<tipo>admin</tipo>
-	</usr>
-</USUARIO>
+		<foto>../vista/imagenes/admin.png</foto>
+	</usuario>
+</USUARIOS>
