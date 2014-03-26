@@ -2,7 +2,7 @@
 <USUARIOS>
 	<usuario usuario="pac1">
 		<cedula>123456789</cedula>
-		<name>Nombre Paciente 1</name>
+		<nombre>Nombre Paciente 1</nombre>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfiusabh@paciente.com</correo>
@@ -12,7 +12,7 @@
 	</usuario>
 	<usuario usuario="pac2">
 		<cedula>123455789</cedula>
-		<name>Nombre Paciente 2</name>
+		<nombre>Nombre Paciente 2</nombre>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfiusabh@paciente.com</correo>
@@ -22,7 +22,7 @@
 	</usuario>
 	<usuario usuario="pac3">
 		<cedula>123365589</cedula>
-		<name>Nombre Paciente 3</name>
+		<nombre>Nombre Paciente 3</nombre>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfiusabh@paciente.com</correo>
@@ -32,7 +32,7 @@
 	</usuario>
 	<usuario usuario="doc1">
 		<cedula>248536842</cedula>
-		<name>Nombre Dr 1</name>
+		<nombre>Nombre Dr 1</nombre>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfdoc1@doctor.com</correo>
@@ -42,7 +42,7 @@
 	</usuario>
 	<usuario usuario="doc2">
 		<cedula>548613685</cedula>
-		<name>Nombre Dr 2</name>
+		<nombre>Nombre Dr 2</nombre>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfdoc2@doctor.com</correo>
@@ -52,7 +52,7 @@
 	</usuario>
 	<usuario usuario="doc3">
 		<cedula>484613269</cedula>
-		<name>Nombre Dr 3</name>
+		<nombre>Nombre Dr 3</nombre>
 		<apellido1>Apellido</apellido1>
 		<apellido2>Apeliido2</apellido2>
 		<correo>akdfdoc3@doctor.com</correo>

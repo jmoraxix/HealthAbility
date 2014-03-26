@@ -134,7 +134,6 @@ public class Login extends VentanaBase
 
 	private Element buscarUsuario(String usr, String pass){
 		Element nodoUsr = null;
-
 		NodeList listaPersonas = ManageXml.Buscar("usuarios", "usuario");
 
 		for (int i = 0; i < listaPersonas.getLength(); i ++) {
