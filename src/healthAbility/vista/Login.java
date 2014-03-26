@@ -8,6 +8,7 @@
 package healthAbility.vista;
 
 import healthAbility.HealthAbility;
+import healthAbility.vista.admin.MenuPrincipal;
 
 import java.awt.Dimension;
 import java.awt.Font;
@@ -19,7 +20,6 @@ import java.io.File;
 
 import javax.swing.JButton;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.xml.parsers.DocumentBuilder;
@@ -115,18 +115,18 @@ public class Login extends VentanaBase
 
 	private void VerifSesion()
 	{
-		Node sesion= buscarUsuario(new String(uss.getText()), new String(contra.getPassword()));
-		if(sesion != null)
-		{
-			SESION_USUARIO = uss.getText();
-//		MenuPrincipal menu = HealthAbility.getVentanaMenu();
-//		menu = new MenuPrincipal();
-//		menu.setVisible(true);  
-//		HealthAbility.getVentanaLogin().setVisible(false);
-		} else
-		{  
-			JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
-		}
+//		Node sesion= buscarUsuario(new String(uss.getText()), new String(contra.getPassword()));
+//		if(sesion != null)
+//		{
+//			SESION_USUARIO = uss.getText();
+		MenuPrincipal menu = HealthAbility.getVentanaMenu();
+		menu = new MenuPrincipal();
+		menu.setVisible(true);  
+		HealthAbility.getVentanaLogin().setVisible(false);
+//		} else
+//		{  
+//			JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
+//		}
 	}
 
 	private Node buscarUsuario(String usr, String pass){

@@ -48,7 +48,7 @@ public class HealthAbility {
         }
 
 		login = new Login();
-		login.setBounds(0, 0, tamPantalla.width, tamPantalla.height);
+		login.setBounds(0, 0, tamPantalla.width-100, tamPantalla.height-100);
 		login.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		login.setVisible(true);
 

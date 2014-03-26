@@ -45,7 +45,7 @@ public class Usuarios extends VentanaBase {
 		try {
         	agregarDoctor.setForeground(SystemColor.controlHighlight);
             try {
-                URL imagen = HealthAbility.class.getResource("vista/imagenes/agregar.png");
+                URL imagen = HealthAbility.class.getResource("vista/imagenes/agregar_doctor.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
                 agregarDoctor.setBorder(borde);
@@ -69,7 +69,7 @@ public class Usuarios extends VentanaBase {
 		try {
         	modificarDoctor.setForeground(SystemColor.controlHighlight);
             try {
-                URL imagen = HealthAbility.class.getResource("vista/imagenes/actualizar.png");
+                URL imagen = HealthAbility.class.getResource("vista/imagenes/actualizar_doctor.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
                 modificarDoctor.setBorder(borde);
@@ -92,7 +92,7 @@ public class Usuarios extends VentanaBase {
 		try {
         	eliminarDoctor.setForeground(SystemColor.controlHighlight);
             try {
-                URL imagen = HealthAbility.class.getResource("vista/imagenes/eliminar.png");
+                URL imagen = HealthAbility.class.getResource("vista/imagenes/eliminar_doctor.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
                 eliminarDoctor.setBorder(borde);
@@ -118,7 +118,7 @@ public class Usuarios extends VentanaBase {
 		try {
         	agregarPaciente.setForeground(SystemColor.controlHighlight);
             try {
-                URL imagen = HealthAbility.class.getResource("vista/imagenes/agregar.png");
+                URL imagen = HealthAbility.class.getResource("vista/imagenes/agregar_paciente.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
                 agregarPaciente.setBorder(borde);
@@ -143,7 +143,7 @@ public class Usuarios extends VentanaBase {
 		try {
         	modificarPaciente.setForeground(SystemColor.controlHighlight);
             try {
-                URL imagen = HealthAbility.class.getResource("vista/imagenes/actualizar.png");
+                URL imagen = HealthAbility.class.getResource("vista/imagenes/actualizar_paciente.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
                 modificarPaciente.setBorder(borde);
@@ -168,7 +168,7 @@ public class Usuarios extends VentanaBase {
 		try {
         	eliminarPaciente.setForeground(SystemColor.controlHighlight);
             try {
-                URL imagen = HealthAbility.class.getResource("vista/imagenes/eliminar.png");
+                URL imagen = HealthAbility.class.getResource("vista/imagenes/eliminar_paciente.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
                 eliminarPaciente.setBorder(borde);
@@ -192,7 +192,7 @@ public class Usuarios extends VentanaBase {
 		try {
         	agregarAdmin.setForeground(SystemColor.controlHighlight);
             try {
-                URL imagen = HealthAbility.class.getResource("vista/imagenes/agregar.png");
+                URL imagen = HealthAbility.class.getResource("vista/imagenes/agregar_admin.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
                 agregarAdmin.setBorder(borde);
@@ -218,7 +218,7 @@ public class Usuarios extends VentanaBase {
 		try {
         	modificarAdmin.setForeground(SystemColor.controlHighlight);
             try {
-                URL imagen = HealthAbility.class.getResource("vista/imagenes/actualizar.png");
+                URL imagen = HealthAbility.class.getResource("vista/imagenes/actualizar_admin.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
                 modificarAdmin.setBorder(borde);
@@ -242,7 +242,7 @@ public class Usuarios extends VentanaBase {
 		try {
         	eliminarAdmin.setForeground(SystemColor.controlHighlight);
             try {
-                URL imagen = HealthAbility.class.getResource("vista/imagenes/eliminar.png");
+                URL imagen = HealthAbility.class.getResource("vista/imagenes/eliminar_admin.png");
                 BufferedImage  img = ImageIO.read(imagen);
                 BgBorder borde = new BgBorder( img );
                 eliminarAdmin.setBorder(borde);
