@@ -29,8 +29,9 @@ import javax.swing.JRadioButtonMenuItem;
 @SuppressWarnings("serial")
 public class BarraMenu extends JMenuBar {
 	
-	private JMenu menu1, mTema, mEdicion, mUsuario, mFases, mVerFases; 	
-    private JMenuItem mSalir, mUndo, mRedo, mCrearUss, mEliminarUss, mVerEstadis, mFase1, mFase2, mFase3, mFase4;
+	private JMenu menu1, mTema, mUsuarios,  mUsuarioMedico, mCitas; 	
+    private JMenuItem mSalir, mUndo, mRedo, mCrearMedico, mEliminarMedico, mActualizarMedico,
+    mVerEstadis, mFase1, mFase2, mFase3, mFase4,mCitasAgregar, mCitasModificar, mCitasEliminar;
     private JRadioButtonMenuItem mTemaVer, mTemaAzu, mTemaNar;
     
     public final static Font letraTitulo1 = new Font("Georgia", Font.BOLD, 38);
@@ -65,6 +66,7 @@ public class BarraMenu extends JMenuBar {
 //    grupo.add(mTemaNar);
     
     mSalir = new JMenuItem("Salir"); 	
+    mSalir.setMnemonic('S');
     mSalir.addActionListener(new ActionListener() {
         public void actionPerformed(ActionEvent e) {
         	System.exit(0); 
@@ -80,48 +82,84 @@ public class BarraMenu extends JMenuBar {
     menu1.add(mntmAcercaDeNosotros);
     menu1.add(mSalir);   
     
-    mEdicion = new JMenu("Edici\u00F3n          ");
-    mEdicion.setMnemonic('E');
-    this.add(mEdicion);
+    mUsuarios = new JMenu("Usuarios          ");
+    mUsuarios.setMnemonic('U');
+    this.add(mUsuarios);
 //    mUndo = new JMenuItem("Deshacer                         Ctrl+Z");
 //    mEdicion.add(mUndo);
 //    mRedo = new JMenuItem("Rehacer                           Ctrl+Y");
 //    mEdicion.add(mRedo);
-    mUsuario = new JMenu("Usuario");
-    mUsuario.setMnemonic('U');
-    mCrearUss = new JMenuItem("Crear Usuario                         ");
-    mCrearUss.addActionListener(new ActionListener() {
+    
+    
+    /////////////JMENUBAR CREAR-ACTUALIZAR-ELIMINAR ADMIN///////////
+   //////////////////CREAR ACTUALIZAR ELIMINAR DOCTOR/////////////////////
+    
+    mUsuarioMedico = new JMenu("Usuario Médico");
+    mUsuarioMedico.setMnemonic('M');
+    
+    mCrearMedico = new JMenuItem("Crear Médico                         ");
+    mCrearMedico.addActionListener(new ActionListener() {
     	public void actionPerformed(ActionEvent arg0) {
     		//HealthAbility.verifUsuario = new VerifUsuario(new CrearUsuario());
   			//HealthAbility.verifUsuario.setVisible(true); 
     	}
     });
-    mUsuario.add(mCrearUss);
-    mEliminarUss = new JMenuItem("Eliminar Usuario");
-    mEliminarUss.addActionListener(new ActionListener() {
+    mUsuarioMedico.add(mCrearMedico);
+    mCrearMedico.setMnemonic('C');
+    
+    mEliminarMedico = new JMenuItem("Eliminar Médico");
+    mEliminarMedico.setMnemonic('E');
+    mEliminarMedico.addActionListener(new ActionListener() {
     	public void actionPerformed(ActionEvent e) {
     		//HealthAbility.verifUsuario = new VerifUsuario(new EliminarUsuario());
   			//HealthAbility.verifUsuario.setVisible(true); 
     	}
     });
-    mUsuario.add(mEliminarUss);
-    mEdicion.add(mUsuario);
+    mUsuarioMedico.add(mEliminarMedico);
+    mUsuarios.add(mUsuarioMedico);
     
-    mFases = new JMenu("Fases         ");
-    mFases.setMnemonic('F');
-    this.add(mFases);
-    mVerFases = new JMenu("Ver Fases");
-    mVerFases.setMnemonic('V');
-    mFase1 = new JMenuItem("Fase 1");
-    mVerFases.add(mFase1);
-    mFase2 = new JMenuItem("Fase 2");
-    mVerFases.add(mFase2);
-    mFase3 = new JMenuItem("Fase 3");
-    mVerFases.add(mFase3);
-    mFase4 = new JMenuItem("Fase 4");
-    mVerFases.add(mFase4);
-    mFases.add(mVerFases);
-    mVerEstadis = new JMenuItem("Ver Estadisticas");
-    mFases.add(mVerEstadis);
+    mActualizarMedico = new JMenuItem("Actualizar Médico");
+    mActualizarMedico.setMnemonic('A');
+    mActualizarMedico.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		//HealthAbility.verifUsuario = new VerifUsuario(new EliminarUsuario());
+  			//HealthAbility.verifUsuario.setVisible(true); 
+    	}
+    });
+    mUsuarioMedico.add(mActualizarMedico);
+    mUsuarios.add(mUsuarioMedico);
+    
+    
+    
+    
+    ////////JMENUBAR CITAS///////////////
+    mCitas = new JMenu("Citas         ");
+    mCitas.setMnemonic('C');
+    this.add(mCitas);
+    
+    mCitasAgregar = new JMenuItem("Agregar cita");
+    mCitasAgregar.setMnemonic('A');
+    mCitasAgregar.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		
+    	}
+    });
+    mCitasModificar = new JMenuItem("Modificar cita");
+    mCitasModificar.setMnemonic('M');
+    mCitasModificar.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		
+    	}
+    });
+    mCitasEliminar =  new JMenuItem("Eliminar cita");
+    mCitasEliminar.setMnemonic('E');
+    mCitasEliminar.addActionListener(new ActionListener() {
+    	public void actionPerformed(ActionEvent e) {
+    		
+    	}
+    });
+    mCitas.add(mCitasAgregar);
+    mCitas.add(mCitasModificar);
+    mCitas.add(mCitasEliminar);
 	}
 }

@@ -257,7 +257,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnClinicas.setContentAreaFilled(false);
 		btnClinicas.setBorderPainted(false);
 		
-		JLabel lblUsuario = new JLabel("Usuarios");
+		JLabel lblUsuario = new JLabel("M\u00E9dicos");
 		lblUsuario.setForeground(new Color(0, 0, 128));
 		lblUsuario.setHorizontalAlignment(SwingConstants.CENTER);
 		lblUsuario.setFont(letraTexto2);
@@ -271,7 +271,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		lblCorreos.setBounds(440, 331, 154, 14);
 		getContentPane().add(lblCorreos);
 		
-		JLabel lblCalificaciones = new JLabel("Calificaci\u00F3n Doctor");
+		JLabel lblCalificaciones = new JLabel("Calificaciones");
 		lblCalificaciones.setForeground(new Color(0, 0, 128));
 		lblCalificaciones.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCalificaciones.setFont(letraTexto2);

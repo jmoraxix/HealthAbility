@@ -38,6 +38,7 @@ public class UsuarioPaciente extends VentanaBase {
 	public UsuarioPaciente(){
 		//getContentPane().setLayout(null);
 		
+		this.setJMenuBar(new BarraMenu());
 		JPanel agregarPaciente = new JPanel();
 		agregarPaciente.setBounds(120, 200, 97, 115);
 		agregarPaciente.setOpaque(false);

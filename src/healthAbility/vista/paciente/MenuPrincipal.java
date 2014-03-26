@@ -21,6 +21,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.net.URL;
+
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -31,6 +32,7 @@ import javax.swing.SwingConstants;
  * @author Diego Mar 24, 2014
  *
  */
+@SuppressWarnings("serial")
 public class MenuPrincipal extends VentanaBase implements ActionListener
 {
 	public static final Dimension tamTotal = HealthAbility.getTamPantalla();

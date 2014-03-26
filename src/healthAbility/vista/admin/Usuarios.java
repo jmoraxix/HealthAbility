@@ -16,6 +16,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.SystemColor;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.net.URL;
 
@@ -39,7 +41,41 @@ public class Usuarios extends VentanaBase {
 	public Usuarios(){
 		//getContentPane().setLayout(null);
 		
+		
 		this.setJMenuBar(new BarraMenu());
+		//boton de salir
+		JPanel regresar = new JPanel();
+		regresar.setBounds(43, 149, 60, 60);
+		regresar.setOpaque(false);
+		try {
+        	regresar.setForeground(SystemColor.controlHighlight);
+            try {
+                URL imagen = HealthAbility.class.getResource("vista/imagenes/regresar.png");
+                BufferedImage  img = ImageIO.read(imagen);
+                BgBorder borde = new BgBorder( img );
+                regresar.setBorder(borde);
+            } catch (Exception e) {
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+		getContentPane().add(regresar);
+		regresar.setLayout(new BorderLayout(0, 0));
+		getContentPane().add(regresar);
+		JButton btnRegres = new JButton("");
+		btnRegres.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				MenuPrincipal menu = HealthAbility.getVentanaMenu();
+				menu = new MenuPrincipal();
+      			menu.setVisible(true); 
+      			HealthAbility.getVentanaMenu().setVisible(false);
+			}
+		});
+		btnRegres.setOpaque(false);
+		btnRegres.setContentAreaFilled(false);
+		btnRegres.setBorderPainted(false);
+		regresar.add(btnRegres);
+		
 		JPanel agregarDoctor = new JPanel();
 		agregarDoctor.setBounds(120, 200, 97, 115);
 		agregarDoctor.setOpaque(false);
