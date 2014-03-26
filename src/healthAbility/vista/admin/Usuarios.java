@@ -39,6 +39,7 @@ public class Usuarios extends VentanaBase {
 	public Usuarios(){
 		//getContentPane().setLayout(null);
 		
+		this.setJMenuBar(new BarraMenu());
 		JPanel agregarDoctor = new JPanel();
 		agregarDoctor.setBounds(120, 200, 97, 115);
 		agregarDoctor.setOpaque(false);
