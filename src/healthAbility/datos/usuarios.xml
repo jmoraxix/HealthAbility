@@ -39,6 +39,20 @@
 		<foto>../vista/imagenes/medico.png</foto>
 		<password>papayanator</password>
 		<tipo>medico</tipo>
+		<clinicas>
+			<clinica nombre="Clinica 1">
+				<horario>
+					<lunes e=8 s=14/>
+					<martes e=9 s=11/>
+				</horario>
+			</clinica>
+			<clinica nombre="Clinica 2">
+				<horario>
+					<jueves e=10 s=15/>
+					<viernes e=8 s=13/>
+				</horario>
+			</clinica>
+		</clinicas>
 	</usuario>
 	<usuario usuario="doc2">
 		<cedula>548613685</cedula>

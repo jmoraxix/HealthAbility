@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CLINICAS>
+	<usuario usuario="doc1">
+		<clinica nombre="Clinica 1">
+			<horario hora="8" minutos="15" fecha="28/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+			<horario hora="8" minutos="45" fecha="28/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+			<horario hora="9" minutos="15" fecha="28/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+		</clinica>
+		<clinica nombre="Clinica 2">
+			<horario hora="10" minutos="40" fecha="28/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+			<horario hora="11" minutos="00" fecha="28/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+			<horario hora="11" minutos="20" fecha="28/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+		</clinica>
+	</usuario>
+	<usuario usuario="doc2">
+		<clinica nombre="Clinica 3">
+			<horario hora="9" minutos="15" fecha="29/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+			<horario hora="9" minutos="30" fecha="29/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+			<horario hora="9" minutos="45" fecha="29/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+			<horario hora="10" minutos="00" fecha="29/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+		</clinica>
+		<clinica nombre="Clinica 2">
+			<horario hora="14" minutos="00" fecha="28/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+			<horario hora="14" minutos="15" fecha="28/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+			<horario hora="11" minutos="20" fecha="28/03/2014">
+				<estado>Disponible</estado>
+				<review calificado=false>
+				</review>
+			</horario>
+		</clinica>
+	</usuario>
+</CLINICAS>

@@ -10,6 +10,8 @@ package healthAbility.vista.admin;
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
 import healthAbility.vista.Login;
+import healthAbility.vista.SeleccionarClinica;
+import healthAbility.vista.SeleccionarMedico;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
@@ -165,9 +167,13 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		JButton btnCitas = new JButton("");
 		btnCitas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				/*elegirVer = new ElegirVer();
-      			elegirVer.setVisible(true); 
-      			menu.setVisible(false);*/
+				SeleccionarMedico selecMed = new SeleccionarMedico();
+      			selecMed.setVisible(true); 
+      			String med = selecMed.getCodMedico();
+      			SeleccionarClinica selecClin = new SeleccionarClinica(med);
+      			selecClin.setVisible(true);
+//      			Citas[] citas = selecClin.getCitas();
+      			setVisible(false);
 			}
 		});
 		btnCitas.setOpaque(false);

@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import org.w3c.dom.Element;
@@ -40,9 +39,6 @@ public class SeleccionarMedico extends VentanaEmergente {
 	 * Create the frame.
 	 */
 	public SeleccionarMedico() {
-		setBounds(100, 100, 450, 300);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
 		JLabel lblSeleccioneDoctor = new JLabel("Seleccione un m\u00E9dico:");
 		lblSeleccioneDoctor.setBounds(42, 63, 224, 26);
 		lblSeleccioneDoctor.setFont(letraTexto);
@@ -66,9 +62,6 @@ public class SeleccionarMedico extends VentanaEmergente {
 		getContentPane().add(btnSeguir);
 	}
 
-	/**
-	 * @return
-	 */
 	private Object[] getMedicos() {
 		NodeList listaPersonas = ManageXml.Buscar("usuarios", "usuario");
 		ArrayList<String> meds = null;

@@ -7,6 +7,8 @@
  */
 package healthAbility.modelo;
 
+import java.util.Date;
+
 /**
  * @author Diego Mar 20, 2014
  *
@@ -17,9 +19,9 @@ public class Citas {
 	private String estado;
 	private int hora;
 	private int minutos;
-	private boolean periodo;
-	private Review calificaciones;
+	private Review calificacion;
 	private String paciente; 
+	private Date fecha;
 
 	/*****GETTERS AND SETTERS*****/
 	public String getEstado() {
@@ -40,34 +42,23 @@ public class Citas {
 	public void setMinutos(int minutos) {
 		this.minutos = minutos;
 	}
-	public String getPeriodo() {
-
-		String per;
-		if (periodo)
-			per = "am";
-		else
-			per  = "pm";
-
-		return per;
-	}
-	public void setPeriodo(String per) {
-		if(per.equals("am"))
-			this.periodo = true;
-		else
-			this.periodo = false;	
-	}
 	public Review getCalificaciones() {
-		return calificaciones;
+		return calificacion;
 	}
-	public void setCalificaciones(Review calificaciones) {
-		this.calificaciones = calificaciones;
+	public void setCalificaciones(Review calific) {
+		this.calificacion = calific;
 	}
-	//	public String getPaciente() {
-	//		return paciente;
-	//	}
-	//	public void setPaciente(String paciente) {
-	//		this.paciente = paciente;
-	//	}
-
+	public String getPaciente() {
+		return paciente;
+	}
+	public void setPaciente(String paciente) {
+		this.paciente = paciente;
+	}
+	public Date getFecha() {
+		return fecha;
+	}
+	public void setFecha(Date fecha) {
+		this.fecha = fecha;
+	}
 
 }
