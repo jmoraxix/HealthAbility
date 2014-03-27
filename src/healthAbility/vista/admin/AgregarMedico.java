@@ -71,6 +71,7 @@ public class AgregarMedico extends VentanaBase {
 		
 		JLabel lblCedula = new JLabel("C\u00E9dula*:");
 		lblCedula.setBounds(75, 243, 183, 32);
+		lblCedula.setFont(letra1);
 		getContentPane().add(lblCedula);
 		
 		txtCedula = new JTextField();
@@ -80,6 +81,7 @@ public class AgregarMedico extends VentanaBase {
 		
 		JLabel lblCorreo = new JLabel("Correo:");
 		lblCorreo.setBounds(75, 415, 175, 32);
+		lblCorreo.setFont(letra1);
 		getContentPane().add(lblCorreo);
 		
 		txtCorreo = new JTextField();
@@ -88,16 +90,18 @@ public class AgregarMedico extends VentanaBase {
 		txtCorreo.setColumns(10);
 		
 		JLabel lblEspecialidad = new JLabel("Especialidad:");
-		lblEspecialidad.setBounds(75, 515, 183, 37);
+		lblEspecialidad.setBounds(75, 496, 183, 37);
+		lblEspecialidad.setFont(letra1);
 		getContentPane().add(lblEspecialidad);
 		
 		txtEspecialidad = new JTextField();
-		txtEspecialidad.setBounds(268, 517, 245, 32);
+		txtEspecialidad.setBounds(268, 501, 245, 32);
 		getContentPane().add(txtEspecialidad);
 		txtEspecialidad.setColumns(10);
 		
 		JLabel lblTelefono = new JLabel("Telefono:");
-		lblTelefono.setBounds(75, 458, 183, 40);
+		lblTelefono.setBounds(75, 450, 183, 40);
+		lblTelefono.setFont(letra1);
 		getContentPane().add(lblTelefono);
 		
 		textField = new JTextField();
