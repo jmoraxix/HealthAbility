@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JCheckBox;
+import javax.swing.JTextArea;
 
 /**
  * @author JoséDavid 26/03/2014
@@ -30,7 +31,7 @@ public class AgregarMedico extends VentanaBase {
 	private JTextField txtTelefono;
 	private JTextField txtOtroIdioma;
 	private JTextField txtSlogan;
-	private JTextField txtAfiliaciones;
+	private JTextArea txtAfiliaciones;
 	
 	Font letra1 = new Font("Georgia", Font.PLAIN, 22);
 	Font letraTitulo = new Font("Georgia", Font.PLAIN, 28);
@@ -166,7 +167,7 @@ public class AgregarMedico extends VentanaBase {
 		lblAfiliaciones.setBounds(541, 372, 139, 37);
 		getContentPane().add(lblAfiliaciones);
 		
-		txtAfiliaciones = new JTextField();
+		txtAfiliaciones = new JTextArea();
 		txtAfiliaciones.setColumns(10);
 		txtAfiliaciones.setBounds(615, 415, 245, 106);
 		getContentPane().add(txtAfiliaciones);
