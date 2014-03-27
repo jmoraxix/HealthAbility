@@ -23,10 +23,10 @@ import javax.swing.UIManager;
 public class HealthAbility {
 
 	private static final Dimension tamPantalla = Toolkit.getDefaultToolkit().getScreenSize();    
-	private final static Font letraTitulo1 = new Font("Georgia", Font.BOLD, 38);
-	private final static Font letraTexto1 = new Font("Georgia", Font.PLAIN, 28);
-	private final static Font letraTexto2 = new Font("Georgia", Font.PLAIN, 22);
-	private final static Font letraTexto3 = new Font("Georgia", Font.PLAIN, 18);
+	private final static Font letraTitulo1 = new Font("Georgia", Font.BOLD, 34);
+	private final static Font letraTexto1 = new Font("Georgia", Font.PLAIN, 26);
+	private final static Font letraTexto2 = new Font("Georgia", Font.PLAIN, 20);
+	private final static Font letraTexto3 = new Font("Georgia", Font.PLAIN, 16);
 	private static String SESION_USUARIO;
 
 	public static void main(String[] args) {
