@@ -29,7 +29,7 @@ public class VentanaEmergente extends JFrame
 	private JPanel panel;
 
 	public VentanaEmergente() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds((tamTotal.width/2)-250, (tamTotal.height/2)-175, 500, 350);
 		panel = new JPanel();
 		setContentPane(panel);
