@@ -7,12 +7,23 @@
  */
 package healthAbility;
 
+import healthAbility.vista.BgBorder;
 import healthAbility.vista.VentanaEmergente;
+import healthAbility.vista.admin.MenuPrincipal;
 
+import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.SystemColor;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.net.URL;
 
+import javax.imageio.ImageIO;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 /**
@@ -27,7 +38,7 @@ public class InformacionProyecto extends VentanaEmergente
 	public InformacionProyecto() 
 	{
 		setBounds(300, 150, 817, 476);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 
 		JLabel NomProyecto = new JLabel("Health Ability");
 		NomProyecto.setHorizontalAlignment(SwingConstants.CENTER);
@@ -71,7 +82,7 @@ public class InformacionProyecto extends VentanaEmergente
 		lblJosDavidMora.setBounds(0, 299, 450, 42);
 		getContentPane().add(lblJosDavidMora);
 
-		JLabel lblDiegoDelgado = new JLabel("Diego Delgado");
+		JLabel lblDiegoDelgado = new JLabel("Diego Delgado Cerdas");
 		lblDiegoDelgado.setHorizontalAlignment(SwingConstants.CENTER);
 		lblDiegoDelgado.setFont(new Font("Consolas", Font.BOLD, 18));
 		lblDiegoDelgado.setBounds(351, 299, 450, 42);
@@ -82,6 +93,8 @@ public class InformacionProyecto extends VentanaEmergente
 		Anno.setFont(new Font("Consolas", Font.BOLD, 18));
 		Anno.setBounds(161, 340, 450, 42);
 		getContentPane().add(Anno);
+		
+		
 
 		//		JLabel label_1 = new JLabel("2012");
 		//		label_1.setHorizontalAlignment(SwingConstants.CENTER);

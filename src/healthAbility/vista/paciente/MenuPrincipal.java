@@ -238,7 +238,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnClinicas.setContentAreaFilled(false);
 		btnClinicas.setBorderPainted(false);
 
-		JLabel lblUsuario = new JLabel("Usuarios");
+		JLabel lblUsuario = new JLabel("Pacientes");
 		lblUsuario.setForeground(new Color(0, 0, 128));
 		lblUsuario.setHorizontalAlignment(SwingConstants.CENTER);
 		lblUsuario.setFont(letraTexto2);

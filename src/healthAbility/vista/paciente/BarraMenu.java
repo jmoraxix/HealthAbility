@@ -27,8 +27,9 @@ import javax.swing.JMenuItem;
 @SuppressWarnings("serial")
 public class BarraMenu extends JMenuBar {
 
-	private JMenu menu1, mUsuarios, mUsuarioPaciente, mCitas; 	
-	private JMenuItem mSalir, mCrearPaciente, mEliminarPaciente, mActualizarPaciente, mCitasAgregar, mCitasModificar, mCitasEliminar;
+	private JMenu menu1, mUsuarios, mUsuarioPaciente, mCitas, mBusquedas; 	
+	private JMenuItem mSalir, mCrearPaciente, mEliminarPaciente, mActualizarPaciente, mCitasAgregar, mCitasModificar, mCitasEliminar, 
+	mBuscarDoctor, mBuscarPaciente, mBuscarClinicas;
 
 	public final static Font letraTitulo1 = new Font("Georgia", Font.BOLD, 38);
 	public final static Font letraTexto1 = new Font("Georgia", Font.PLAIN, 28);
@@ -128,5 +129,40 @@ public class BarraMenu extends JMenuBar {
 		mCitas.add(mCitasAgregar);
 		mCitas.add(mCitasModificar);
 		mCitas.add(mCitasEliminar);
+		
+		mBusquedas = new JMenu("Búsquedas                         ");
+		mBusquedas.setMnemonic('B');
+		this.add(mBusquedas);
+		
+		
+		mBuscarDoctor = new JMenuItem("Buscar Doctor");
+		mBuscarDoctor.setMnemonic('D');
+		mBusquedas.add(mBuscarDoctor);
+		mBuscarDoctor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
+		
+
+		mBuscarPaciente = new JMenuItem("Buscar Paciente");
+		mBuscarPaciente.setMnemonic('P');
+		mBusquedas.add(mBuscarPaciente);
+		mBuscarPaciente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
+		
+		mBuscarClinicas = new JMenuItem("Buscar Clínica");
+		mBuscarClinicas.setMnemonic('C');
+		mBusquedas.add(mBuscarClinicas);
+		mBuscarClinicas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
+		
+		
 	}
 }

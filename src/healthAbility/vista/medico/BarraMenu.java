@@ -27,8 +27,9 @@ import javax.swing.JMenuItem;
 @SuppressWarnings("serial")
 public class BarraMenu extends JMenuBar {
 
-	private JMenu menu1, mUsuarios,  mUsuarioMedico, mCitas; 	
-	private JMenuItem mSalir, mCrearMedico, mEliminarMedico, mActualizarMedico, mCitasAgregar, mCitasModificar, mCitasEliminar;
+	private JMenu menu1, mUsuarios,  mUsuarioMedico, mCitas, mBusquedas; 	
+	private JMenuItem mSalir, mCrearMedico, mEliminarMedico, mActualizarMedico, mCitasAgregar, mCitasModificar, mCitasEliminar,
+	mBuscarPaciente, mBuscarDoctor, mBuscarClinicas;
 
 	public final static Font letraTitulo1 = new Font("Georgia", Font.BOLD, 38);
 	public final static Font letraTexto1 = new Font("Georgia", Font.PLAIN, 28);
@@ -38,7 +39,7 @@ public class BarraMenu extends JMenuBar {
 
 	public BarraMenu(){
 
-		menu1 = new JMenu("Archivo");
+		menu1 = new JMenu("Archivo                         ");
 		menu1.setMnemonic('A');
 		this.add(menu1);
 
@@ -59,7 +60,7 @@ public class BarraMenu extends JMenuBar {
 		menu1.add(mntmAcercaDeNosotros);
 		menu1.add(mSalir);   
 
-		mUsuarios = new JMenu("Usuarios");
+		mUsuarios = new JMenu("Usuarios                         ");
 		mUsuarios.setMnemonic('U');
 		this.add(mUsuarios);
 
@@ -102,7 +103,7 @@ public class BarraMenu extends JMenuBar {
 		mUsuarios.add(mUsuarioMedico);
 
 		////////JMENUBAR CITAS///////////////
-		mCitas = new JMenu("Citas");
+		mCitas = new JMenu("Citas                         ");
 		mCitas.setMnemonic('C');
 		this.add(mCitas);
 
@@ -130,5 +131,43 @@ public class BarraMenu extends JMenuBar {
 		mCitas.add(mCitasAgregar);
 		mCitas.add(mCitasModificar);
 		mCitas.add(mCitasEliminar);
+		
+		
+		mBusquedas = new JMenu("Búsquedas                         ");
+		mBusquedas.setMnemonic('B');
+		this.add(mBusquedas);
+		
+		
+		mBuscarDoctor = new JMenuItem("Buscar Doctor");
+		mBuscarDoctor.setMnemonic('D');
+		mBusquedas.add(mBuscarDoctor);
+		mBuscarDoctor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
+		
+
+		mBuscarPaciente = new JMenuItem("Buscar Paciente");
+		mBuscarPaciente.setMnemonic('P');
+		mBusquedas.add(mBuscarPaciente);
+		mBuscarPaciente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
+		
+		mBuscarClinicas = new JMenuItem("Buscar Clínica");
+		mBuscarClinicas.setMnemonic('C');
+		mBusquedas.add(mBuscarClinicas);
+		mBuscarClinicas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
 	}
+
+
+
 }
+
