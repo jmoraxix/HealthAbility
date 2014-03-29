@@ -9,11 +9,11 @@ package healthAbility.vista.admin;
 
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
-import healthAbility.vista.Login;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
 import java.awt.Font;
+import java.awt.Graphics2D;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,10 +21,13 @@ import java.awt.image.BufferedImage;
 import java.net.URL;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 
 /**
@@ -40,6 +43,8 @@ public class AgregarPaciente extends VentanaBase {
 	private JTextField txtSegApPaciente;
 	private JTextField txtCedulaPaciente;
 	private JTextField txtCorreoPaciente;
+	private JPanel pnFotoPaciente;
+	private JLabel lblNewLabelPanel;
 	
 	public AgregarPaciente(){
 		
@@ -93,16 +98,20 @@ public class AgregarPaciente extends VentanaBase {
 				}
 				getContentPane().add(guardar);
 				guardar.setLayout(new BorderLayout(0, 0));
-				getContentPane().add(guardar);
+				getContentPane().add(guardar);			
 
 				JButton btnGuardar = new JButton("");
 				btnGuardar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						Login login = new Login();
-						login.setVisible(true); 
-						setVisible(false);
+						//Login login = new Login();
+						//login.setVisible(true); 
+						//setVisible(false);
 					}
 				});
+				btnGuardar.setOpaque(false);
+				btnGuardar.setContentAreaFilled(false);
+				btnGuardar.setBorderPainted(false);
+				guardar.add(btnGuardar, BorderLayout.CENTER);
 		
 		
 		JLabel lblAgregarPaciente = new JLabel("Agregar Paciente");
@@ -162,16 +171,21 @@ public class AgregarPaciente extends VentanaBase {
 		
 		JLabel lblFotoPaciente = new JLabel("Foto:");
 		lblFotoPaciente.setFont(new Font("Georgia", Font.PLAIN, 22));
-		lblFotoPaciente.setBounds(558, 273, 189, 32);
+		lblFotoPaciente.setBounds(558, 273, 102, 32);
 		getContentPane().add(lblFotoPaciente);
 		
 		JButton btnAgregarFotoPaciente = new JButton("Examinar...");
+		btnAgregarFotoPaciente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				buscarFoto();	
+			}
+		});
 		btnAgregarFotoPaciente.setBounds(670, 277, 122, 32);
 		getContentPane().add(btnAgregarFotoPaciente);
 		
-		JPanel pnFotoPaciente = new JPanel();
-		pnFotoPaciente.setBounds(682, 331, 110, 146);
-		getContentPane().add(pnFotoPaciente);
+//		pnFotoPaciente = new JPanel();
+//		pnFotoPaciente.setBounds(682, 331, 110, 146);
+//		getContentPane().add(pnFotoPaciente);
 
 		JLabel lblRegresar = new JLabel("Regresar");
 		lblRegresar.setFont(new Font("Georgia", Font.PLAIN, 22));
@@ -182,5 +196,36 @@ public class AgregarPaciente extends VentanaBase {
 		lblGuardar.setFont(new Font("Georgia", Font.PLAIN, 22));
 		lblGuardar.setBounds(713, 597, 95, 37);
 		getContentPane().add(lblGuardar);
+		
+		lblNewLabelPanel = new JLabel("");
+		lblNewLabelPanel.setBounds(670, 331, 122, 167);
+		getContentPane().add(lblNewLabelPanel);
+		
+		
+	}
+	private void buscarFoto(){
+		JFileChooser chooser = new JFileChooser();
+		FileNameExtensionFilter filter = new FileNameExtensionFilter("JPG & GIF Images", "jpg", "gif");
+		    chooser.setFileFilter(filter);
+		    int returnVal = chooser.showOpenDialog(this);
+		    if(returnVal == JFileChooser.APPROVE_OPTION) {
+		       System.out.println("You chose to open this file: " +
+		            chooser.getSelectedFile().getAbsolutePath());
+		       try {
+		    	   	BufferedImage  img = ImageIO.read(new URL(chooser.getSelectedFile().getAbsolutePath()));
+		    	   
+		    		
+		    	   //	lblNewLabelPanel.setIcon(new ImageIcon(chooser.getSelectedFile().getAbsolutePath()));
+					//pnFotoPaciente.setBorder(borde);
+//					SwingUtilities.updateComponentTreeUI(this); 
+//					this.validateTree();
+				} catch (Exception e) {
+				}
+		       
+		    }
+	
+		
+		
 	}
 }
+

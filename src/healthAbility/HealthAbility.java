@@ -30,10 +30,13 @@ public class HealthAbility {
 	private static String SESION_USUARIO;
 
 	public static void main(String[] args) {
+		System.gc();
+		
 		//LookAndFeel de la aplicaci�n
 		JFrame.setDefaultLookAndFeelDecorated(true);
 		try {
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+
 		}
 		catch (Exception e){
 		}
