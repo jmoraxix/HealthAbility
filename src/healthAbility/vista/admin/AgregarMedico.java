@@ -78,8 +78,8 @@ public class AgregarMedico extends VentanaBase {
 		JButton btnRegres = new JButton("");
 		btnRegres.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Login login = new Login();
-				login.setVisible(true); 
+				Usuarios usuario = new Usuarios();
+				usuario.setVisible(true); 
 				setVisible(false);
 			}
 		});

@@ -67,7 +67,6 @@ public class Usuarios extends VentanaBase {
 		btnRegres.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				MenuPrincipal menu = new MenuPrincipal();
-				menu = new MenuPrincipal();
 				menu.setVisible(true); 
 				setVisible(false);
 			}
@@ -95,6 +94,13 @@ public class Usuarios extends VentanaBase {
 		getContentPane().add(agregarDoctor);
 		agregarDoctor.setLayout(new BorderLayout(0, 0));
 		JButton btnAgregarDoctor = new JButton("");
+		btnAgregarDoctor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				AgregarMedico agregarMedico = new AgregarMedico();
+				agregarMedico.setVisible(true); 
+				setVisible(false);
+			}
+		});
 		btnAgregarDoctor.setOpaque(false);
 		btnAgregarDoctor.setContentAreaFilled(false);
 		btnAgregarDoctor.setBorderPainted(false);
@@ -119,6 +125,13 @@ public class Usuarios extends VentanaBase {
 		getContentPane().add(modificarDoctor);
 		modificarDoctor.setLayout(new BorderLayout(0, 0));
 		JButton btnModificarDoctor = new JButton("");
+		btnModificarDoctor.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ActualizarMedico actualizarMedico = new ActualizarMedico();
+				actualizarMedico.setVisible(true); 
+				setVisible(false);
+			}
+		});
 		btnModificarDoctor.setOpaque(false);
 		btnModificarDoctor.setContentAreaFilled(false);
 		btnModificarDoctor.setBorderPainted(false);
@@ -168,6 +181,13 @@ public class Usuarios extends VentanaBase {
 		getContentPane().add(agregarPaciente);
 		agregarPaciente.setLayout(new BorderLayout(0, 0));
 		JButton btnAgregarPaciente = new JButton("");
+		btnAgregarPaciente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				AgregarPaciente agregarPaciente = new AgregarPaciente();
+				agregarPaciente.setVisible(true); 
+				setVisible(false);
+			}
+		});
 		btnAgregarPaciente.setOpaque(false);
 		btnAgregarPaciente.setContentAreaFilled(false);
 		btnAgregarPaciente.setBorderPainted(false);
@@ -193,6 +213,13 @@ public class Usuarios extends VentanaBase {
 		getContentPane().add(modificarPaciente);
 		modificarPaciente.setLayout(new BorderLayout(0, 0));
 		JButton btnModificarPaciente = new JButton("");
+		btnModificarPaciente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ActualizarPaciente actualizarPaciente = new ActualizarPaciente();
+				actualizarPaciente.setVisible(true); 
+				setVisible(false);
+			}
+		});
 		btnModificarPaciente.setOpaque(false);
 		btnModificarPaciente.setContentAreaFilled(false);
 		btnModificarPaciente.setBorderPainted(false);
