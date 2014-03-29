@@ -7,23 +7,11 @@
  */
 package healthAbility;
 
-import healthAbility.vista.BgBorder;
 import healthAbility.vista.VentanaEmergente;
-import healthAbility.vista.admin.MenuPrincipal;
 
-import java.awt.BorderLayout;
 import java.awt.Font;
-import java.awt.SystemColor;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.image.BufferedImage;
-import java.net.URL;
 
-import javax.imageio.ImageIO;
-import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 /**
@@ -37,8 +25,8 @@ public class InformacionProyecto extends VentanaEmergente
 
 	public InformacionProyecto() 
 	{
-		setBounds(300, 150, 817, 476);
-		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		super(null, null, false);
+		setSize(817, 476);
 
 		JLabel NomProyecto = new JLabel("Health Ability");
 		NomProyecto.setHorizontalAlignment(SwingConstants.CENTER);

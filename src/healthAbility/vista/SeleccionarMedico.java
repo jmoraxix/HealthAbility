@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import org.w3c.dom.Element;
@@ -33,21 +34,24 @@ public class SeleccionarMedico extends VentanaEmergente {
 	Font letraTexto = HealthAbility.getLetraTexto2();
 	JComboBox<String> comboBox;
 
-	private String codMedico = null;
+	private String codMedico = "";
 	
 	/**
 	 * Create the frame.
 	 */
-	public SeleccionarMedico() {
+	public SeleccionarMedico(JFrame frame) {
+		super(frame, "Seleccionar medico", true);
+		setSize(350, 200);
+		
 		JLabel lblSeleccioneDoctor = new JLabel("Seleccione un m\u00E9dico:");
-		lblSeleccioneDoctor.setBounds(42, 63, 224, 26);
+		lblSeleccioneDoctor.setBounds(22, 21, 224, 26);
 		lblSeleccioneDoctor.setFont(letraTexto);
 		getContentPane().add(lblSeleccioneDoctor);
 
 		comboBox = new JComboBox<String>();
-		String[] meds = (String[]) getMedicos();
-		comboBox.setModel(new DefaultComboBoxModel(meds));
-		comboBox.setBounds(73, 106, 193, 32);
+		String[] meds = getMedicos();
+		comboBox.setModel(new DefaultComboBoxModel<String>(meds));
+		comboBox.setBounds(63, 58, 211, 32);
 		getContentPane().add(comboBox);
 
 		JButton btnSeguir = new JButton("Seguir");
@@ -55,16 +59,18 @@ public class SeleccionarMedico extends VentanaEmergente {
 			public void actionPerformed(ActionEvent arg0) {
 				setCodMedico();
 				setVisible(false);
+				dispose(); 
 			}
 		});
 		btnSeguir.setFont(new Font("Georgia", Font.PLAIN, 14));
-		btnSeguir.setBounds(191, 159, 112, 32);
+		btnSeguir.setBounds(212, 101, 112, 32);
 		getContentPane().add(btnSeguir);
+		
 	}
 
-	private Object[] getMedicos() {
+	private String[] getMedicos() {
 		NodeList listaPersonas = ManageXml.Buscar("usuarios", "usuario");
-		ArrayList<String> meds = null;
+		ArrayList<String> meds = new ArrayList<String>();
 
 		for (int i = 0; i < listaPersonas.getLength(); i ++) {
 			Node persona = listaPersonas.item(i);
@@ -76,16 +82,24 @@ public class SeleccionarMedico extends VentanaEmergente {
 					String nom = elemento.getElementsByTagName("nombre").item(0).getTextContent() + " " +
 							elemento.getElementsByTagName("apellido1").item(0).getTextContent() + " " +
 							elemento.getElementsByTagName("apellido2").item(0).getTextContent();
+					if(i<listaPersonas.getLength()-1)
+						nom +=",";
+					
 					meds.add(nom);
 				}
 			}
 		}
-		return meds.toArray();
+		
+		StringBuilder sb = new StringBuilder();
+		for (String s : meds)
+		{
+		    sb.append(s);
+		}
+		return sb.toString().split(",");
 	}
 	
 	private void setCodMedico(){
 		NodeList listaPersonas = ManageXml.Buscar("usuarios", "usuario");
-		String usrMed = null;
 
 		for (int i = 0; i < listaPersonas.getLength(); i ++) {
 			Node persona = listaPersonas.item(i);
@@ -108,6 +122,7 @@ public class SeleccionarMedico extends VentanaEmergente {
 	 * @return codMedico
 	 */
 	public String getCodMedico() {
+		setVisible(true);
 		return codMedico;
 	}
 }

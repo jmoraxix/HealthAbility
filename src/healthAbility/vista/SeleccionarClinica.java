@@ -9,7 +9,6 @@ package healthAbility.vista;
 
 import healthAbility.HealthAbility;
 import healthAbility.datos.ManageXml;
-import healthAbility.modelo.Citas;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -19,6 +18,7 @@ import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 import org.w3c.dom.Element;
@@ -34,75 +34,68 @@ public class SeleccionarClinica extends VentanaEmergente {
 	Font letraTexto = HealthAbility.getLetraTexto2();
 	JComboBox<String> comboBox;
 	
-	private String nomMedico;
-	private Citas[] citas;
+	private String nomMedico, clinica = "";
 
 	/**
 	 * Create the frame.
 	 */
-	public SeleccionarClinica(String nomMedico) {
+	public SeleccionarClinica(JFrame frame, String nomMedico) {
+		super(frame, "Seleccionar clinica", true);
+		setSize(350, 200);
 		
 		this.nomMedico = nomMedico;
 		
-		JLabel lblSeleccioneDoctor = new JLabel("Seleccione un m\u00E9dico:");
-		lblSeleccioneDoctor.setBounds(42, 63, 224, 26);
+		JLabel lblSeleccioneDoctor = new JLabel("Seleccione una clin\u00edca:");
+		lblSeleccioneDoctor.setBounds(22, 21, 224, 26);
 		lblSeleccioneDoctor.setFont(letraTexto);
 		getContentPane().add(lblSeleccioneDoctor);
 
 		comboBox = new JComboBox<String>();
 		String[] clinicas = (String[]) getClinicas();
-		comboBox.setModel(new DefaultComboBoxModel(clinicas));
-		comboBox.setBounds(73, 106, 193, 32);
+		comboBox.setModel(new DefaultComboBoxModel<String>(clinicas));
+		comboBox.setBounds(63, 58, 211, 32);
 		getContentPane().add(comboBox);
 
 		JButton btnSeguir = new JButton("Seguir");
 		btnSeguir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				setCitas();
+				clinica = comboBox.getSelectedItem().toString();
 				setVisible(false);
+				dispose(); 
 			}
 		});
 		btnSeguir.setFont(new Font("Georgia", Font.PLAIN, 14));
-		btnSeguir.setBounds(191, 159, 112, 32);
+		btnSeguir.setBounds(212, 101, 112, 32);
 		getContentPane().add(btnSeguir);
 	}
-	
-	private Object[] getClinicas() {
-		NodeList listaPersonas = ManageXml.Buscar("clinicas", "usuario");
-		ArrayList<String> clinicas = null;
 
-		for (int i = 0; i < listaPersonas.getLength(); i ++) {
-			Node persona = listaPersonas.item(i);
+	private String[] getClinicas() {
+		NodeList listaClinicas = ManageXml.Buscar("usuarios", "usuario", this.nomMedico, "clinicas");
+		ArrayList<String> clinicas = new ArrayList<String>();
 
-			if (persona.getNodeType() == Node.ELEMENT_NODE) {
-				Element elemento = (Element) persona;
+		for (int i = 0; i < listaClinicas.getLength(); i ++) {
+			Node clinic = listaClinicas.item(i);
 
-				if(elemento.getAttribute("usuario").equals(nomMedico)){
-//					Node c = (Node) elemento.getElementsByTagName("nombre");
-//					clinicas.add(nom);
-				}
+			if (clinic.getNodeType() == Node.ELEMENT_NODE) {
+				Element elemento = (Element) clinic;
+				clinicas.add(elemento.getAttribute("nombre") + ",");
 			}
 		}
-		return clinicas.toArray();
+		
+		StringBuilder sb = new StringBuilder();
+		for (String s : clinicas)
+		{
+		    sb.append(s);
+		}
+		return sb.toString().split(",");
 	}
 	
-	private void setCitas(){
-		NodeList listaPersonas = ManageXml.Buscar("usuarios", "usuario");
-		String usrMed = null;
 
-		for (int i = 0; i < listaPersonas.getLength(); i ++) {
-			Node persona = listaPersonas.item(i);
-
-			if (persona.getNodeType() == Node.ELEMENT_NODE) {
-				Element elemento = (Element) persona;
-
-				if(elemento.getElementsByTagName("tipo").item(0).getTextContent().equals("medico")){
-					
-//					if(nom.equals(comboBox.getSelectedItem()))
-//						this.codMedico = elemento.getAttribute("usuario");
-				}
-			}
-		}
+	/**
+	 * @return citas
+	 */
+	public String getClinica() {
+		setVisible(true);
+		return this.clinica;
 	}
-
 }

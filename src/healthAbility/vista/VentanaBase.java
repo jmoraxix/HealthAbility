@@ -37,10 +37,6 @@ public class VentanaBase extends JFrame {
 		//	    Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("vista/imagenes/logo_principal.png"));
 		//	    setIconImage(icon);
 
-		//	    //Menu
-		//        MenuAdministrador barraMenu = new MenuAdministrador();
-		//        setJMenuBar(barraMenu);
-
 		//Inicializar ventana
 		try {
 			InicializarVentana();
@@ -53,13 +49,12 @@ public class VentanaBase extends JFrame {
 	{
 		JPanel principal = new JPanel(); 
 		principal.setForeground(SystemColor.controlHighlight);
-		try {
-			URL imagen = HealthAbility.class.getResource("vista/imagenes/fondo_principal_3.jpg");
-			BufferedImage img = ImageIO.read(imagen);
-			BgBorder borde = new BgBorder( img );
-			principal.setBorder(borde);
-		} catch (Exception e) {
-		}
+		
+		URL imagen = HealthAbility.class.getResource("vista/imagenes/fondo_principal_3.jpg");
+		BufferedImage img = ImageIO.read(imagen);
+		BgBorder borde = new BgBorder( img );
+		principal.setBorder(borde);
+		
 		this.setContentPane(principal);
 		principal.setLayout(null);
 	}

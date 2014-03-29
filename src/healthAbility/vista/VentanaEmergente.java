@@ -13,24 +13,29 @@ package healthAbility.vista;
  */
 import healthAbility.HealthAbility;
 
+import java.awt.Dialog;
 import java.awt.Dimension;
+import java.awt.Frame;
 import java.awt.SystemColor;
 import java.awt.image.BufferedImage;
 import java.net.URL;
 
 import javax.imageio.ImageIO;
-import javax.swing.JFrame;
+import javax.swing.JDialog;
 import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
-public class VentanaEmergente extends JFrame 
+public class VentanaEmergente extends JDialog 
 {
 	Dimension tamTotal = HealthAbility.getTamPantalla();
 	private JPanel panel;
 
-	public VentanaEmergente() {
-		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-		setBounds((tamTotal.width/2)-250, (tamTotal.height/2)-175, 500, 350);
+	public VentanaEmergente(Frame frame, String title, boolean modal) {
+		super(frame, title, modal);
+	    setModalExclusionType(Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
+	    setDefaultCloseOperation(DISPOSE_ON_CLOSE); 
+	    setLocationRelativeTo(frame);
+
 		panel = new JPanel();
 		setContentPane(panel);
 

@@ -167,13 +167,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		JButton btnCitas = new JButton("");
 		btnCitas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				SeleccionarMedico selecMed = new SeleccionarMedico();
-      			selecMed.setVisible(true); 
-      			String med = selecMed.getCodMedico();
-      			SeleccionarClinica selecClin = new SeleccionarClinica(med);
-      			selecClin.setVisible(true);
-//      			Citas[] citas = selecClin.getCitas();
-      			setVisible(false);
+				irACitas();
 			}
 		});
 		btnCitas.setOpaque(false);
@@ -293,9 +287,31 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnExamen.setBorderPainted(false);
 	}
 
-	public void actionPerformed(ActionEvent e)
+	private void irACitas()
 	{
+		SeleccionarMedico selecMed = new SeleccionarMedico(this);
+		String med = "";
+		while(med.equals("")){
+			med = selecMed.getCodMedico();
+		}
+		
+		System.out.println("Salio!");
+		System.out.println(med);
+		
+		SeleccionarClinica selecClin = new SeleccionarClinica(this, med);
+		String clinica = "";
+		while(clinica.equals("")){
+			clinica = selecClin.getClinica();
+		}
+		
+		System.out.println("Salio de nuevo!");
+		System.out.println(clinica);
+		
+		setVisible(false);
+	}
 
+	public void actionPerformed(ActionEvent arg0) {
+		
 	}
 }
 
