@@ -20,6 +20,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -59,9 +60,14 @@ public class SeleccionarClinica extends VentanaEmergente {
 		JButton btnSeguir = new JButton("Seguir");
 		btnSeguir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				clinica = comboBox.getSelectedItem().toString();
-				setVisible(false);
-				dispose(); 
+				if(comboBox.getSelectedIndex() != 0){
+					clinica = comboBox.getSelectedItem().toString();
+					setVisible(false);
+					dispose(); 
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Seleccione una clínica", "Alerta", JOptionPane.ERROR_MESSAGE);
+				}
 			}
 		});
 		btnSeguir.setFont(new Font("Georgia", Font.PLAIN, 14));
@@ -72,6 +78,7 @@ public class SeleccionarClinica extends VentanaEmergente {
 	private String[] getClinicas() {
 		NodeList listaClinicas = ManageXml.Buscar("usuarios", "usuario", this.nomMedico, "clinicas");
 		ArrayList<String> clinicas = new ArrayList<String>();
+		clinicas.add("--Seleccione una clínica--,");
 
 		for (int i = 0; i < listaClinicas.getLength(); i ++) {
 			Node clinic = listaClinicas.item(i);
@@ -87,6 +94,7 @@ public class SeleccionarClinica extends VentanaEmergente {
 		{
 		    sb.append(s);
 		}
+		System.out.println(sb.toString());
 		return sb.toString().split(",");
 	}
 	
