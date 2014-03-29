@@ -1,9 +1,9 @@
 /**
- * Primer Proyecto POO
- * José David Mora Loría
+ * Jose David Mora Loria
  * 2014004856
  * Diego Delgado Cerdas
  * 2013099268
+ * Mar 27, 2014
  */
 package healthAbility.vista.admin;
 
@@ -29,17 +29,20 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
+import java.awt.Choice;
 
 /**
- * @author JoséDavid 26/03/2014
+ * @author Diego Mar 27, 2014
+ *
  */
-public class AgregarMedico extends VentanaBase {
-	private JTextField txtNomMedico;
+public class ActualizarMedico extends VentanaBase {
+	
+	private JTextField txtNombrePaciente;
 	private JTextField txtPrimerApMedico;
-	private JTextField txtSegApMedico;
+	private JTextField txtSegundoApMedico;
 	private JTextField txtCedulaMedico;
 	private JTextField txtCorreoMedico;
-	private JTextField txtEspecialidadMedico;
+	private JTextField txtEspecialidad;
 	private JTextField txtTelefonoMedico;
 	private JTextField txtOtroIdioma;
 	private JTextField txtSlogan;
@@ -52,7 +55,7 @@ public class AgregarMedico extends VentanaBase {
 	/**
 	 * Create the frame.
 	 */
-	public AgregarMedico() {
+	public ActualizarMedico() {
 		
 		this.setJMenuBar(new BarraMenu());
 		//Salir
@@ -89,7 +92,7 @@ public class AgregarMedico extends VentanaBase {
 		regresar.add(btnRegres);
 		
 		JPanel guardar = new JPanel();
-		guardar.setBounds(818, 585, 60, 60);
+		guardar.setBounds(818, 574, 60, 60);
 		guardar.setOpaque(false);
 		try {
 			guardar.setForeground(SystemColor.controlHighlight);
@@ -120,40 +123,40 @@ public class AgregarMedico extends VentanaBase {
 		btnGuardar.setBorderPainted(false);
 		guardar.add(btnGuardar);
 		
-		JLabel lblAgregarMedico = new JLabel("Agregar m\u00E9dico");
-		lblAgregarMedico.setBounds(196, 173, 343, 44);
-		lblAgregarMedico.setFont(letraTitulo);
-		getContentPane().add(lblAgregarMedico);
+		JLabel lblActualizarMedico = new JLabel("Actualizar m\u00E9dico");
+		lblActualizarMedico.setBounds(75, 174, 256, 44);
+		lblActualizarMedico.setFont(letraTitulo);
+		getContentPane().add(lblActualizarMedico);
 		
-		JLabel lblNombreMedico = new JLabel("Nombre*:");
-		lblNombreMedico.setBounds(75, 289, 170, 32);
-		lblNombreMedico.setFont(letra1);
-		getContentPane().add(lblNombreMedico);
+		JLabel lblNombre = new JLabel("Nombre*:");
+		lblNombre.setBounds(75, 289, 170, 32);
+		lblNombre.setFont(letra1);
+		getContentPane().add(lblNombre);
 		
-		txtNomMedico = new JTextField();
-		txtNomMedico.setBounds(268, 286, 245, 32);
-		getContentPane().add(txtNomMedico);
-		txtNomMedico.setColumns(10);
+		txtNombrePaciente = new JTextField();
+		txtNombrePaciente.setBounds(268, 286, 245, 32);
+		getContentPane().add(txtNombrePaciente);
+		txtNombrePaciente.setColumns(10);
 		
-		JLabel lblPrimerApellidoMedico = new JLabel("Primer apellido*:");
-		lblPrimerApellidoMedico.setBounds(75, 332, 175, 32);
-		lblPrimerApellidoMedico.setFont(letra1);
-		getContentPane().add(lblPrimerApellidoMedico);
+		JLabel lblPrimerApellido = new JLabel("Primer apellido*:");
+		lblPrimerApellido.setBounds(75, 332, 175, 32);
+		lblPrimerApellido.setFont(letra1);
+		getContentPane().add(lblPrimerApellido);
 		
 		txtPrimerApMedico = new JTextField();
 		txtPrimerApMedico.setBounds(268, 329, 245, 32);
 		getContentPane().add(txtPrimerApMedico);
 		txtPrimerApMedico.setColumns(10);
 		
-		JLabel lblSegundoApellidoMedico = new JLabel("Segundo apellido*:");
-		lblSegundoApellidoMedico.setBounds(75, 372, 209, 32);
-		lblSegundoApellidoMedico.setFont(letra1);
-		getContentPane().add(lblSegundoApellidoMedico);
+		JLabel lblSegundoApellido = new JLabel("Segundo apellido*:");
+		lblSegundoApellido.setBounds(75, 372, 209, 32);
+		lblSegundoApellido.setFont(letra1);
+		getContentPane().add(lblSegundoApellido);
 		
-		txtSegApMedico = new JTextField();
-		txtSegApMedico.setBounds(268, 372, 245, 32);
-		getContentPane().add(txtSegApMedico);
-		txtSegApMedico.setColumns(10);
+		txtSegundoApMedico = new JTextField();
+		txtSegundoApMedico.setBounds(268, 372, 245, 32);
+		getContentPane().add(txtSegundoApMedico);
+		txtSegundoApMedico.setColumns(10);
 		
 		JLabel lblCedula = new JLabel("C\u00E9dula*:");
 		lblCedula.setBounds(75, 243, 183, 32);
@@ -180,10 +183,10 @@ public class AgregarMedico extends VentanaBase {
 		lblEspecialidad.setFont(letra1);
 		getContentPane().add(lblEspecialidad);
 		
-		txtEspecialidadMedico = new JTextField();
-		txtEspecialidadMedico.setBounds(268, 501, 245, 32);
-		getContentPane().add(txtEspecialidadMedico);
-		txtEspecialidadMedico.setColumns(10);
+		txtEspecialidad = new JTextField();
+		txtEspecialidad.setBounds(268, 501, 245, 32);
+		getContentPane().add(txtEspecialidad);
+		txtEspecialidad.setColumns(10);
 		
 		JLabel lblTelefono = new JLabel("Telefono:");
 		lblTelefono.setBounds(75, 450, 183, 40);
@@ -205,7 +208,7 @@ public class AgregarMedico extends VentanaBase {
 		getContentPane().add(btnAgregarFotoMedico);
 		
 		JPanel panelFotoMedico = new JPanel();
-		panelFotoMedico.setBounds(745, 218, 133, 161);
+		panelFotoMedico.setBounds(768, 218, 110, 146);
 		getContentPane().add(panelFotoMedico);
 		
 		JLabel lblIdiomas = new JLabel("Idiomas:");
@@ -232,22 +235,22 @@ public class AgregarMedico extends VentanaBase {
 		
 		JLabel lblSlogan = new JLabel("Slogan:");
 		lblSlogan.setFont(new Font("Georgia", Font.PLAIN, 22));
-		lblSlogan.setBounds(551, 413, 72, 37);
+		lblSlogan.setBounds(551, 370, 72, 37);
 		getContentPane().add(lblSlogan);
 		
 		txtSlogan = new JTextField();
 		txtSlogan.setColumns(10);
-		txtSlogan.setBounds(633, 419, 245, 32);
+		txtSlogan.setBounds(633, 376, 245, 32);
 		getContentPane().add(txtSlogan);
 		
 		JLabel lblAfiliaciones = new JLabel("Afiliaciones:");
 		lblAfiliaciones.setFont(new Font("Georgia", Font.PLAIN, 22));
-		lblAfiliaciones.setBounds(551, 452, 139, 37);
+		lblAfiliaciones.setBounds(551, 413, 139, 37);
 		getContentPane().add(lblAfiliaciones);
 		
 		txtAfiliaciones = new JTextArea();
 		txtAfiliaciones.setColumns(10);
-		txtAfiliaciones.setBounds(633, 496, 245, 90);
+		txtAfiliaciones.setBounds(633, 463, 245, 90);
 		txtAfiliaciones.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		getContentPane().add(txtAfiliaciones);
 		
@@ -258,7 +261,8 @@ public class AgregarMedico extends VentanaBase {
 		
 		JLabel lblGuardar = new JLabel("Guardar");
 		lblGuardar.setFont(new Font("Georgia", Font.PLAIN, 22));
-		lblGuardar.setBounds(713, 608, 95, 37);
+		lblGuardar.setBounds(713, 597, 95, 37);
 		getContentPane().add(lblGuardar);
 	}
+
 }
