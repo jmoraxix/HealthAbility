@@ -85,6 +85,7 @@ public class SeleccionarClinica extends VentanaEmergente {
 
 			if (clinic.getNodeType() == Node.ELEMENT_NODE) {
 				Element elemento = (Element) clinic;
+				System.out.println(elemento.getAttribute("nombre"));
 				clinicas.add(elemento.getAttribute("nombre") + ",");
 			}
 		}
