@@ -270,21 +270,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		lblClinicas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblClinicas.setFont(letraTexto2);
 		lblClinicas.setBounds(260, 573, 199, 23);
-		getContentPane().add(lblClinicas);		
-
-		JButton btnExamen = new JButton("");
-		btnExamen.setBounds(765, 230, 97, 115);
-		getContentPane().add(btnExamen);
-		btnExamen.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				//				editarExamen = new Citas();
-				//      			editarExamen.setVisible(true); 
-				//      			menu.setVisible(false);
-			}
-		});
-		btnExamen.setOpaque(false);
-		btnExamen.setContentAreaFilled(false);
-		btnExamen.setBorderPainted(false);
+		getContentPane().add(lblClinicas);
 	}
 
 	private void irACitas()
