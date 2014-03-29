@@ -20,6 +20,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -57,9 +58,14 @@ public class SeleccionarMedico extends VentanaEmergente {
 		JButton btnSeguir = new JButton("Seguir");
 		btnSeguir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				setCodMedico();
-				setVisible(false);
-				dispose(); 
+				if(comboBox.getSelectedIndex() != 0){
+					setCodMedico();
+					setVisible(false);
+					dispose(); 
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Seleccione un médico", "Alerta", JOptionPane.ERROR_MESSAGE);
+				}
 			}
 		});
 		btnSeguir.setFont(new Font("Georgia", Font.PLAIN, 14));
@@ -71,7 +77,8 @@ public class SeleccionarMedico extends VentanaEmergente {
 	private String[] getMedicos() {
 		NodeList listaPersonas = ManageXml.Buscar("usuarios", "usuario");
 		ArrayList<String> meds = new ArrayList<String>();
-
+		meds.add("--Seleccione un médico--,");
+		
 		for (int i = 0; i < listaPersonas.getLength(); i ++) {
 			Node persona = listaPersonas.item(i);
 
@@ -95,6 +102,8 @@ public class SeleccionarMedico extends VentanaEmergente {
 		{
 		    sb.append(s);
 		}
+		
+		System.out.println(sb.toString());
 		return sb.toString().split(",");
 	}
 	
