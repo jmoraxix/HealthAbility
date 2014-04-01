@@ -50,7 +50,7 @@ public class Login extends VentanaBase
 		tit2.setFont(new Font("Georgia", Font.PLAIN, 40));
 
 		JLabel lblUsuario = new JLabel("Usuario:");
-		lblUsuario.setBounds(183, 306, 87, 42);
+		lblUsuario.setBounds(147, 306, 87, 42);
 		getContentPane().add(lblUsuario);
 		lblUsuario.setFont(letraTexto2);
 

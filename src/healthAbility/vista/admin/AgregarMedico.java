@@ -28,6 +28,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
 import javax.swing.border.LineBorder;
 
 /**
@@ -43,7 +44,6 @@ public class AgregarMedico extends VentanaBase {
 	private JTextField txtTelefonoMedico;
 	private JTextField txtOtroIdioma;
 	private JTextField txtSlogan;
-	private JTextArea txtAfiliaciones;
 	
 	Font letra1 = new Font("Georgia", Font.PLAIN, 22);
 	Font letraTitulo = new Font("Georgia", Font.PLAIN, 28);
@@ -121,7 +121,7 @@ public class AgregarMedico extends VentanaBase {
 		guardar.add(btnGuardar);
 		
 		JLabel lblAgregarMedico = new JLabel("Agregar m\u00E9dico");
-		lblAgregarMedico.setBounds(196, 173, 343, 44);
+		lblAgregarMedico.setBounds(75, 173, 343, 44);
 		lblAgregarMedico.setFont(letraTitulo);
 		getContentPane().add(lblAgregarMedico);
 		
@@ -245,12 +245,6 @@ public class AgregarMedico extends VentanaBase {
 		lblAfiliaciones.setBounds(551, 452, 139, 37);
 		getContentPane().add(lblAfiliaciones);
 		
-		txtAfiliaciones = new JTextArea();
-		txtAfiliaciones.setColumns(10);
-		txtAfiliaciones.setBounds(633, 496, 245, 90);
-		txtAfiliaciones.setBorder(new LineBorder(Color.LIGHT_GRAY));
-		getContentPane().add(txtAfiliaciones);
-		
 		JLabel lblRegresar = new JLabel("Regresar");
 		lblRegresar.setFont(new Font("Georgia", Font.PLAIN, 22));
 		lblRegresar.setBounds(145, 597, 183, 37);
@@ -260,5 +254,10 @@ public class AgregarMedico extends VentanaBase {
 		lblGuardar.setFont(new Font("Georgia", Font.PLAIN, 22));
 		lblGuardar.setBounds(713, 608, 95, 37);
 		getContentPane().add(lblGuardar);
+		
+		JTextPane txtAfiliaciones = new JTextPane();
+		txtAfiliaciones.setBorder(new LineBorder(Color.LIGHT_GRAY));
+		txtAfiliaciones.setBounds(633, 492, 245, 94);
+		getContentPane().add(txtAfiliaciones);
 	}
 }

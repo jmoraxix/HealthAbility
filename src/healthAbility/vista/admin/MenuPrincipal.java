@@ -147,7 +147,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		correos.add(btnCorreos);
 
 		JPanel citas = new JPanel();
-		citas.setBounds(616, 453, 97, 115);
+		citas.setBounds(467, 453, 97, 115);
 		citas.setOpaque(false);
 		try {
 			citas.setForeground(SystemColor.controlHighlight);
@@ -174,6 +174,52 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnCitas.setContentAreaFilled(false);
 		btnCitas.setBorderPainted(false);
 		citas.add(btnCitas);
+		
+
+
+		
+		
+		
+		JPanel padecimientos = new JPanel();
+		padecimientos.setBounds(754, 453, 97, 115);
+		padecimientos.setOpaque(false);
+		try {
+			padecimientos.setForeground(SystemColor.controlHighlight);
+			try {
+				URL imagen = HealthAbility.class.getResource("vista/imagenes/agregar.png");
+				BufferedImage  img = ImageIO.read(imagen);
+				BgBorder borde = new BgBorder( img );
+				padecimientos.setBorder(borde);
+			} catch (Exception e) {
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		getContentPane().add(padecimientos);
+		padecimientos.setLayout(new BorderLayout(0, 0));
+
+		JButton btnPadecimientos = new JButton("");
+		btnPadecimientos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				RegistroPadecimientos registroPadecimientos = new RegistroPadecimientos();
+				registroPadecimientos.setVisible(true); 
+				setVisible(false);
+				
+			}
+		});
+		btnPadecimientos.setOpaque(false);
+		btnPadecimientos.setContentAreaFilled(false);
+		btnPadecimientos.setBorderPainted(false);
+		padecimientos.add(btnPadecimientos);
+		
+		
+		
+		
+		
+		
+		
+		
 
 		JPanel calificaciones = new JPanel();
 		calificaciones.setBounds(754, 214, 97, 115);
@@ -207,7 +253,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		calificaciones.add(btncalificaciones, BorderLayout.CENTER);
 
 		JPanel clinicas = new JPanel();
-		clinicas.setBounds(303, 447, 97, 115);
+		clinicas.setBounds(170, 453, 97, 115);
 		clinicas.setOpaque(false);
 		try {
 			clinicas.setForeground(SystemColor.controlHighlight);
@@ -228,9 +274,10 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		clinicas.add(btnClinicas);
 		btnClinicas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//				rubros = new RubrosEntrevista();
-				//      			rubros.setVisible(true); 
-				//      			menu.setVisible(false);
+				RegistroClinica registroClinica = new RegistroClinica();
+				registroClinica.setVisible(true); 
+				setVisible(false);
+				
 			}
 		});
 		btnClinicas.setOpaque(false);
@@ -262,15 +309,22 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		lblCitas.setForeground(new Color(0, 0, 128));
 		lblCitas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCitas.setFont(letraTexto2);
-		lblCitas.setBounds(581, 573, 168, 23);
+		lblCitas.setBounds(440, 579, 168, 23);
 		getContentPane().add(lblCitas);
 
 		JLabel lblClinicas = new JLabel("Cl\u00EDnicas");
 		lblClinicas.setForeground(new Color(0, 0, 128));
 		lblClinicas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblClinicas.setFont(letraTexto2);
-		lblClinicas.setBounds(260, 573, 199, 23);
+		lblClinicas.setBounds(131, 573, 199, 23);
 		getContentPane().add(lblClinicas);
+		
+		JLabel lblPadecimientos = new JLabel("Padecimientos");
+		lblPadecimientos.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPadecimientos.setForeground(new Color(0, 0, 128));
+		lblPadecimientos.setFont(new Font("Georgia", Font.PLAIN, 18));
+		lblPadecimientos.setBounds(722, 579, 168, 23);
+		getContentPane().add(lblPadecimientos);
 	}
 
 	private void irACitas()

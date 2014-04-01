@@ -119,7 +119,7 @@ public class ActualizarPaciente extends VentanaBase {
 		btnGuardar.setBorderPainted(false);
 		guardar.add(btnGuardar);
 		
-		JLabel lblActualizarPaciente = new JLabel("Actualizar Paciente");
+		JLabel lblActualizarPaciente = new JLabel("Modificar Paciente");
 		lblActualizarPaciente.setBounds(75, 174, 256, 44);
 		lblActualizarPaciente.setFont(letraTitulo);
 		getContentPane().add(lblActualizarPaciente);

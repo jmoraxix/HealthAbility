@@ -72,10 +72,10 @@ public class BarraMenu extends JMenuBar {
 		mCrearAdmin = new JMenuItem("Crear Administrador                         ");
 		mCrearAdmin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new CrearUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				//////PopUp crear admin////
 			}
 		});
+		
 		mUsuarioAdmin.add(mCrearAdmin);
 		mCrearAdmin.setMnemonic('C');
 
@@ -94,8 +94,7 @@ public class BarraMenu extends JMenuBar {
 		mActualizarAdmin.setMnemonic('A');
 		mActualizarAdmin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new EliminarUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				/////PopUp actualizar admin
 			}
 		});
 		mUsuarioAdmin.add(mActualizarAdmin);
@@ -110,8 +109,9 @@ public class BarraMenu extends JMenuBar {
 		mCrearMedico = new JMenuItem("Crear Médico                         ");
 		mCrearMedico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new CrearUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				AgregarMedico agregarMedico = new AgregarMedico();
+				agregarMedico.setVisible(true); 
+				setVisible(false); 
 			}
 		});
 		mUsuarioMedico.add(mCrearMedico);
@@ -121,8 +121,7 @@ public class BarraMenu extends JMenuBar {
 		mEliminarMedico.setMnemonic('E');
 		mEliminarMedico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new EliminarUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				/////PopUp eliminar Medico.
 			}
 		});
 		mUsuarioMedico.add(mEliminarMedico);
@@ -132,8 +131,9 @@ public class BarraMenu extends JMenuBar {
 		mActualizarMedico.setMnemonic('A');
 		mActualizarMedico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new EliminarUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				ActualizarMedico actualizarMedico = new ActualizarMedico();
+				actualizarMedico.setVisible(true); 
+				setVisible(false);
 			}
 		});
 		mUsuarioMedico.add(mActualizarMedico);
@@ -148,8 +148,9 @@ public class BarraMenu extends JMenuBar {
 		mCrearPaciente = new JMenuItem("Crear Paciente                         ");
 		mCrearPaciente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new CrearUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				AgregarPaciente agregarPaciente = new AgregarPaciente();
+				agregarPaciente.setVisible(true); 
+				setVisible(false);
 			}
 		});
 		mUsuarioPaciente.add(mCrearPaciente);
@@ -159,8 +160,7 @@ public class BarraMenu extends JMenuBar {
 		mEliminarPaciente.setMnemonic('E');
 		mEliminarPaciente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new EliminarUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				///PopUp eliminar paciente
 			}
 		});
 		mUsuarioPaciente.add(mEliminarPaciente);
@@ -170,8 +170,9 @@ public class BarraMenu extends JMenuBar {
 		mActualizarPaciente.setMnemonic('A');
 		mActualizarPaciente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new EliminarUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				ActualizarPaciente actualizarPaciente = new ActualizarPaciente();
+				actualizarPaciente.setVisible(true); 
+				setVisible(false);
 			}
 		});
 		mUsuarioPaciente.add(mActualizarPaciente);
