@@ -167,9 +167,6 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		JButton btnCorreos = new JButton("");
 		btnCorreos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//				elegirEditar = new ElegirEditar();
-				//      			elegirEditar.setVisible(true); 
-				//      			menu.setVisible(false);
 			}
 		});
 		btnCorreos.setOpaque(false);
@@ -198,9 +195,6 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		JButton btnCitas = new JButton("");
 		btnCitas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				/*elegirVer = new ElegirVer();
-      			elegirVer.setVisible(true); 
-      			menu.setVisible(false);*/
 			}
 		});
 		btnCitas.setOpaque(false);
@@ -310,9 +304,6 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		getContentPane().add(btnExamen);
 		btnExamen.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//				editarExamen = new Citas();
-				//      			editarExamen.setVisible(true); 
-				//      			menu.setVisible(false);
 			}
 		});
 		btnExamen.setOpaque(false);
