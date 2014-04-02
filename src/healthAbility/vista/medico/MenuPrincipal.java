@@ -83,39 +83,71 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		regresar.add(btnRegres);
 
 		//Opciones del Menu
-		JPanel usuarios = new JPanel();
-		usuarios.setBounds(170, 214, 97, 115);
-		usuarios.setOpaque(false);
+		JPanel AgregarMedico = new JPanel();
+		AgregarMedico.setBounds(170, 214, 97, 115);
+		AgregarMedico.setOpaque(false);
 		try {
-			usuarios.setForeground(SystemColor.controlHighlight);
+			AgregarMedico.setForeground(SystemColor.controlHighlight);
 			try {
-				URL imagen = HealthAbility.class.getResource("vista/imagenes/ingresar.png");
+				URL imagen = HealthAbility.class.getResource("vista/imagenes/agregar_doctor.png");
 				BufferedImage  img = ImageIO.read(imagen);
 				BgBorder borde = new BgBorder( img );
-				usuarios.setBorder(borde);
+				AgregarMedico.setBorder(borde);
 			} catch (Exception e) {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		getContentPane().add(usuarios);
-		usuarios.setLayout(new BorderLayout(0, 0));
+		getContentPane().add(AgregarMedico);
+		AgregarMedico.setLayout(new BorderLayout(0, 0));
 
-		JButton btnIngresarUsuarios = new JButton("");
-		btnIngresarUsuarios.addActionListener(new ActionListener() {
+		JButton btnIngresarMedico = new JButton("");
+		btnIngresarMedico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//				agregar = new AgregarUno();
-				//      			agregar.setVisible(true); 
-				//      			menu.setVisible(false);
+				AgregarMedico agregarMedico = new AgregarMedico();
+				agregarMedico.setVisible(true);
+				setVisible(false);
 			}
 		});
-		btnIngresarUsuarios.setOpaque(false);
-		btnIngresarUsuarios.setContentAreaFilled(false);
-		btnIngresarUsuarios.setBorderPainted(false);
-		usuarios.add(btnIngresarUsuarios);
+		btnIngresarMedico.setOpaque(false);
+		btnIngresarMedico.setContentAreaFilled(false);
+		btnIngresarMedico.setBorderPainted(false);
+		AgregarMedico.add(btnIngresarMedico);
+		
+		JPanel ActualizarMedico = new JPanel();
+		ActualizarMedico.setBounds(459, 214, 97, 115);
+		ActualizarMedico.setOpaque(false);
+		try {
+			ActualizarMedico.setForeground(SystemColor.controlHighlight);
+			try {
+				URL imagen = HealthAbility.class.getResource("vista/imagenes/actualizar_doctor.png");
+				BufferedImage  img = ImageIO.read(imagen);
+				BgBorder borde = new BgBorder( img );
+				ActualizarMedico.setBorder(borde);
+			} catch (Exception e) {
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		getContentPane().add(ActualizarMedico);
+		ActualizarMedico.setLayout(new BorderLayout(0, 0));
+
+		JButton btnActualizarMedico = new JButton("");
+		btnActualizarMedico.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				ActualizarMedico actualizarMedico = new ActualizarMedico();
+				actualizarMedico.setVisible(true);
+				setVisible(false);
+			}
+		});
+		btnActualizarMedico.setOpaque(false);
+		btnActualizarMedico.setContentAreaFilled(false);
+		btnActualizarMedico.setBorderPainted(false);
+		ActualizarMedico.add(btnActualizarMedico);
+		
 
 		JPanel correos = new JPanel();
-		correos.setBounds(467, 214, 97, 115);
+		correos.setBounds(170, 425, 97, 115);
 		correos.setOpaque(false);
 		try {
 			correos.setForeground(SystemColor.controlHighlight);
@@ -146,7 +178,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		correos.add(btnCorreos);
 
 		JPanel citas = new JPanel();
-		citas.setBounds(616, 453, 97, 115);
+		citas.setBounds(459, 425, 97, 115);
 		citas.setOpaque(false);
 		try {
 			citas.setForeground(SystemColor.controlHighlight);
@@ -177,7 +209,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		citas.add(btnCitas);
 
 		JPanel calificaciones = new JPanel();
-		calificaciones.setBounds(754, 214, 97, 115);
+		calificaciones.setBounds(742, 425, 97, 115);
 		calificaciones.setOpaque(false);
 		try {
 			calificaciones.setForeground(SystemColor.controlHighlight);
@@ -197,9 +229,9 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		JButton btncalificaciones = new JButton("");
 		btncalificaciones.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				/*elegirVer = new ElegirVer();
-      			elegirVer.setVisible(true); 
-      			menu.setVisible(false);*/
+				VerCalificaciones verCalificaciones = new VerCalificaciones();
+				verCalificaciones.setVisible(true);
+				setVisible(false);
 			}
 		});
 		btncalificaciones.setOpaque(false);
@@ -208,7 +240,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		calificaciones.add(btncalificaciones, BorderLayout.CENTER);
 
 		JPanel clinicas = new JPanel();
-		clinicas.setBounds(303, 447, 97, 115);
+		clinicas.setBounds(742, 214, 97, 115);
 		clinicas.setOpaque(false);
 		try {
 			clinicas.setForeground(SystemColor.controlHighlight);
@@ -229,48 +261,48 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		clinicas.add(btnClinicas);
 		btnClinicas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//				rubros = new RubrosEntrevista();
-				//      			rubros.setVisible(true); 
-				//      			menu.setVisible(false);
+			RegistroClinica registroClinica = new RegistroClinica();
+			registroClinica.setVisible(true);
+			setVisible(false);
 			}
 		});
 		btnClinicas.setOpaque(false);
 		btnClinicas.setContentAreaFilled(false);
 		btnClinicas.setBorderPainted(false);
 
-		JLabel lblUsuario = new JLabel("M\u00E9dicos");
-		lblUsuario.setForeground(new Color(0, 0, 128));
-		lblUsuario.setHorizontalAlignment(SwingConstants.CENTER);
-		lblUsuario.setFont(letraTexto2);
-		lblUsuario.setBounds(131, 327, 176, 23);
-		getContentPane().add(lblUsuario);
+		JLabel lblAgregarMedico = new JLabel("Agregar M\u00E9dico");
+		lblAgregarMedico.setForeground(new Color(0, 0, 128));
+		lblAgregarMedico.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAgregarMedico.setFont(letraTexto2);
+		lblAgregarMedico.setBounds(131, 327, 176, 23);
+		getContentPane().add(lblAgregarMedico);
 
 		JLabel lblCorreos = new JLabel("Correos");
 		lblCorreos.setForeground(new Color(0, 0, 128));
 		lblCorreos.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCorreos.setFont(letraTexto2);
-		lblCorreos.setBounds(440, 331, 154, 14);
+		lblCorreos.setBounds(144, 551, 154, 14);
 		getContentPane().add(lblCorreos);
 
 		JLabel lblCalificaciones = new JLabel("Calificaciones");
 		lblCalificaciones.setForeground(new Color(0, 0, 128));
 		lblCalificaciones.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCalificaciones.setFont(letraTexto2);
-		lblCalificaciones.setBounds(722, 327, 168, 23);
+		lblCalificaciones.setBounds(707, 547, 168, 23);
 		getContentPane().add(lblCalificaciones);
 
 		JLabel lblCitas = new JLabel("Citas");
 		lblCitas.setForeground(new Color(0, 0, 128));
 		lblCitas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCitas.setFont(letraTexto2);
-		lblCitas.setBounds(581, 573, 168, 23);
+		lblCitas.setBounds(427, 551, 168, 23);
 		getContentPane().add(lblCitas);
 
 		JLabel lblClinicas = new JLabel("Cl\u00EDnicas");
 		lblClinicas.setForeground(new Color(0, 0, 128));
 		lblClinicas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblClinicas.setFont(letraTexto2);
-		lblClinicas.setBounds(260, 573, 199, 23);
+		lblClinicas.setBounds(689, 334, 199, 23);
 		getContentPane().add(lblClinicas);		
 
 		JButton btnExamen = new JButton("");
@@ -286,6 +318,13 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnExamen.setOpaque(false);
 		btnExamen.setContentAreaFilled(false);
 		btnExamen.setBorderPainted(false);
+		
+		JLabel lblActualizarMedico = new JLabel("Actualizar M\u00E9dico");
+		lblActualizarMedico.setHorizontalAlignment(SwingConstants.CENTER);
+		lblActualizarMedico.setForeground(new Color(0, 0, 128));
+		lblActualizarMedico.setFont(new Font("Georgia", Font.PLAIN, 18));
+		lblActualizarMedico.setBounds(419, 334, 176, 23);
+		getContentPane().add(lblActualizarMedico);
 	}
 
 	public void actionPerformed(ActionEvent e)
