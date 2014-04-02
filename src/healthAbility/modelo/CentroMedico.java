@@ -7,29 +7,32 @@
  */
 package healthAbility.modelo;
 
-import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 /**
  * @author Diego Mar 17, 2014
- *
+ * Definición de la clase CentroMedico
  */
-
-public class CentrosMedicos {
+public class CentroMedico {
 
 	/****VARIABLES****/
 	private String nombre;
 	private Direccion ubicacion;
-	private Citas[] citas;
-	private BufferedImage foto;
+	private ArrayList<Cita> citas;
+	private String foto;
 
-
+	/****MÉTODO CONSTRUCTOR****/
+	public CentroMedico(String nom, Direccion dir){
+		this.nombre = nom;
+		this.ubicacion = dir;
+	}
+	
 	/*****GETTERS AND SETTERS*****/
-
-	public Citas[] getCitas() {
+	public ArrayList<Cita> getCitas() {
 		return citas;
 	}
-	public void setCitas(Citas[] citas) {
-		this.citas = citas;
+	public void agregarCita(Cita cita) {
+		this.citas.add(cita);
 	}
 	public String getNombre() {
 		return nombre;
@@ -37,10 +40,10 @@ public class CentrosMedicos {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public BufferedImage getFoto() {
+	public String getFoto() {
 		return foto;
 	}
-	public void setFoto(BufferedImage foto) {
+	public void setFoto(String foto) {
 		this.foto = foto;
 	}
 	public void setUbicacion(Direccion ubicacion) {
@@ -49,5 +52,4 @@ public class CentrosMedicos {
 	public Direccion getUbicacion() {
 		return ubicacion;
 	}
-
 }

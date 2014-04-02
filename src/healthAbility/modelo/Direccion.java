@@ -9,18 +9,24 @@ package healthAbility.modelo;
 
 /**
  * @author Diego Mar 20, 2014
- *
+ * Definición de la clase Dirección
  */
 public class Direccion {
-
-
+	
 	/****VARIABLES****/
 	private String direccion_general;
 	private String distrito;
 	private String canton;
 	private String provincia;
 
-
+	/****MÉTODO CONSTRUCTOR****/
+	public Direccion(String dir, String dist, String cant, String prov){
+		this.direccion_general = dir;
+		this.distrito = dist;
+		this.canton = cant;
+		this.provincia = prov;
+	}
+	
 	/*****GETTERS AND SETTERS*****/
 	public String getDireccion_general() {
 		return direccion_general;
@@ -46,5 +52,4 @@ public class Direccion {
 	public void setProvincia(String provincia) {
 		this.provincia = provincia;
 	}
-
 }

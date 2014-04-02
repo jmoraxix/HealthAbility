@@ -9,15 +9,22 @@ package healthAbility.modelo;
 
 /**
  * @author Diego Mar 20, 2014
- *
+ * Definición de la clase Padecimiento
  */
-public class Padecimientos {
+public class Padecimiento {
 
 	/****VARIABLES****/
 	private String nombre;
 	private String tipo;
 	private String descripcion;
-
+	
+	/****MÉTODO CONSTRUCTOR****/
+	public Padecimiento(String nom, String tip, String desc){
+		this.nombre = nom;
+		this.tipo = tip;
+		this.descripcion = desc;
+	}
+	
 	/*****GETTERS AND SETTERS*****/
 	public String getNombre() {
 		return nombre;
@@ -37,6 +44,4 @@ public class Padecimientos {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
-
 }

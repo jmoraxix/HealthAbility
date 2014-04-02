@@ -7,13 +7,11 @@
  */
 package healthAbility.modelo;
 
-import java.util.Date;
-
 /**
  * @author Diego Mar 20, 2014
- *
+ * Definición de la clase Cita
  */
-public class Citas {
+public class Cita {
 
 	/****VARIABLES****/
 	private String estado;
@@ -21,7 +19,15 @@ public class Citas {
 	private int minutos;
 	private Review calificacion;
 	private String paciente; 
-	private Date fecha;
+	private String fecha;
+	
+	/****MÉTODO CONSTRUCTOR****/
+	public Cita(int h, int m, String fecha, String pac){
+		this.hora = h;
+		this.minutos = m;
+		this.fecha = fecha;
+		this.paciente = pac;
+	}
 
 	/*****GETTERS AND SETTERS*****/
 	public String getEstado() {
@@ -54,11 +60,10 @@ public class Citas {
 	public void setPaciente(String paciente) {
 		this.paciente = paciente;
 	}
-	public Date getFecha() {
+	public String getFecha() {
 		return fecha;
 	}
-	public void setFecha(Date fecha) {
+	public void setFecha(String fecha) {
 		this.fecha = fecha;
 	}
-
 }

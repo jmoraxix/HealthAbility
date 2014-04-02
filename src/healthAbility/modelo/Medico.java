@@ -7,11 +7,9 @@
  */
 package healthAbility.modelo;
 
-import java.awt.image.BufferedImage;
-
 /**
  * @author Diego
- *
+ * Definición de la clase Médico
  */
 public class Medico {
 
@@ -23,35 +21,24 @@ public class Medico {
 	private String correo;
 	private String especialidad;
 	private int telefono;
-	private BufferedImage foto;
+	private String foto;
 	private String slogan;
-	private CentrosMedicos[] centrosMedicos;
+	private CentroMedico[] centrosMedicos;
 	private Procedimiento[] procedimientos;
 	private String[] idiomas;
 	private Educacion[] titulos;
 	private String[] afiliaciones;
 
-
-
-
-
-
-
-	/*****CONSTRUCTOR*****/
-
-	public Medico(String pnombre, String papellido1, String papellido2, 
-			String pcedula, String pespecialidad ){
-
+	/****MÉTODO CONSTRUCTOR****/
+	public Medico(String pnombre, String papellido1, String papellido2, String pcedula, String pespecialidad){
 		this.nombre = pnombre;
 		this.apellido1 = papellido1;
 		this.apellido2 = papellido2;
 		this.cedula = pcedula;
 		this.especialidad = pespecialidad;
-
 	}
 
-	/*****GETTERS AND SETTERS*****/
-
+	/****GETTERS AND SETTERS****/
 	public String getNombre() {
 		return nombre;
 	}
@@ -100,10 +87,10 @@ public class Medico {
 	public void setProcedimientos(Procedimiento[] procedimientos) {
 		this.procedimientos = procedimientos;
 	}	
-	public BufferedImage getFoto() {
+	public String getFoto() {
 		return foto;
 	}
-	public void setFoto(BufferedImage foto) {
+	public void setFoto(String foto) {
 		this.foto = foto;
 	}
 	public String getSlogan() {
@@ -112,10 +99,10 @@ public class Medico {
 	public void setSlogan(String slogan) {
 		this.slogan = slogan;
 	}
-	public CentrosMedicos[] getCentrosMedicos() {
+	public CentroMedico[] getCentrosMedicos() {
 		return centrosMedicos;
 	}
-	public void setCentrosMedicos(CentrosMedicos[] centrosMedicos) {
+	public void setCentrosMedicos(CentroMedico[] centrosMedicos) {
 		this.centrosMedicos = centrosMedicos;
 	}
 	public String[] getIdiomas() {

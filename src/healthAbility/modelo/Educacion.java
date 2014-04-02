@@ -9,19 +9,25 @@ package healthAbility.modelo;
 
 /**
  * @author Diego Mar 17, 2014
- *
+ * Definición de la clase Educación
  */
 public class Educacion {
+	
 	/****VARIABLES****/
 	private String titulo;
 	private String universidad;
 	private String pais_universidad;
 	private String fecha_conclusion;
 
-
+	/****MÉTODO CONSTRUCTOR****/
+	public Educacion(String titulo, String univ, String pais, String fecha){
+		this.titulo = titulo;
+		this.universidad = univ;
+		this.pais_universidad = pais;
+		this.fecha_conclusion = fecha;
+	}
 
 	/*****GETTERS AND SETTERS*****/
-
 	public String getTitulo() {
 		return titulo;
 	}
@@ -46,7 +52,4 @@ public class Educacion {
 	public void setFecha_conclusion(String fecha_conclusion) {
 		this.fecha_conclusion = fecha_conclusion;
 	}
-
-
-
 }

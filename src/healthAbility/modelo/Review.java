@@ -9,7 +9,7 @@ package healthAbility.modelo;
 
 /**
  * @author Diego Mar 20, 2014
- *
+ * Definición de la clase Review
  */
 public class Review {
 
@@ -18,7 +18,12 @@ public class Review {
 	private String comentario;
 	private String usuario;
 
-
+	/****MÉTODO CONSTRUCTOR****/
+	public Review(int calif, String coment, String usr){
+		this.calificacion = calif;
+		this.comentario = coment;
+		this.usuario = usr;
+	}
 
 	/*****GETTERS AND SETTERS*****/
 	public int getCalificacion() {
@@ -39,6 +44,4 @@ public class Review {
 	public void setUsuario(String usuario) {
 		this.usuario = usuario;
 	}
-
-
 }

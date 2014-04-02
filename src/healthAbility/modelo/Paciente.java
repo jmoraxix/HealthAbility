@@ -7,12 +7,11 @@
  */
 package healthAbility.modelo;
 
-import java.awt.image.BufferedImage;
 import java.util.Date;
 
 /**
  * @author Diego Mar 20, 2014
- *
+ * Definición de la clase Paciente
  */
 public class Paciente {
 
@@ -22,16 +21,12 @@ public class Paciente {
 	private String apellido2;
 	private String cedula;
 	private String correo;
-	private BufferedImage foto;
-	private Padecimientos[] padecimientos;
+	private String foto;
+	private Padecimiento[] padecimientos;
 	private Date nacimiento;
 
-
 	/*****CONSTRUCTOR*****/
-
-	public Paciente(String pnombre, String papellido1, String papellido2, 
-			String pcedula, Date pnacimiento ){
-
+	public Paciente(String pnombre, String papellido1, String papellido2, String pcedula, Date pnacimiento ){
 		this.nombre = pnombre;
 		this.apellido1 = papellido1;
 		this.apellido2 = papellido2;
@@ -58,16 +53,16 @@ public class Paciente {
 	public void setCorreo(String correo) {
 		this.correo = correo;
 	}
-	public BufferedImage getFoto() {
+	public String getFoto() {
 		return foto;
 	}
-	public void setFoto(BufferedImage foto) {
+	public void setFoto(String foto) {
 		this.foto = foto;
 	}
-	public Padecimientos[] getPadecimientos() {
+	public Padecimiento[] getPadecimientos() {
 		return padecimientos;
 	}
-	public void setPadecimientos(Padecimientos[] padecimientos) {
+	public void setPadecimientos(Padecimiento[] padecimientos) {
 		this.padecimientos = padecimientos;
 	}
 	public String getApellido1() {
@@ -88,6 +83,4 @@ public class Paciente {
 	public void setNacimiento(Date nacimiento) {
 		this.nacimiento = nacimiento;
 	}
-
-
 }

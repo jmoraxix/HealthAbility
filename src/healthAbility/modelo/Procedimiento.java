@@ -9,7 +9,7 @@ package healthAbility.modelo;
 
 /**
  * @author Diego Mar 17, 2014
- *
+ * Definición de la clase Procedimiento
  */
 public class Procedimiento {
 
@@ -17,7 +17,12 @@ public class Procedimiento {
 	private String nombre;
 	private float costo;
 
-
+	/****MÉTODO CONSTRUCTOR****/
+	public Procedimiento(String nom, float costo){
+		this.nombre = nom;
+		this.costo = costo;
+	}
+	
 	/******SETTERS-GETTERS******/
 	public String getNombre() {
 		return nombre;
@@ -31,7 +36,4 @@ public class Procedimiento {
 	public void setCosto(float costo) {
 		this.costo = costo;
 	}
-
-
-
 }
