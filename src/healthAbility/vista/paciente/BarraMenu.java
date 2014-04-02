@@ -29,7 +29,7 @@ import javax.swing.JMenuItem;
 public class BarraMenu extends JMenuBar {
 
 	private JMenu menu1, mUsuarios, mUsuarioPaciente, mCitas, mBusquedas; 	
-	private JMenuItem mSalir, mCrearPaciente, mEliminarPaciente, mActualizarPaciente, mCitasAgregar, mCitasModificar, mCitasEliminar, 
+	private JMenuItem mSalir, mCrearPaciente, mEliminarPaciente, mActualizarPaciente, mCitasAgregar, mCitasVer, 
 	mBuscarDoctor, mBuscarPaciente, mBuscarClinicas;
 
 	public final static Font letraTitulo1 = new Font("Georgia", Font.BOLD, 38);
@@ -105,23 +105,16 @@ public class BarraMenu extends JMenuBar {
 
 			}
 		});
-		mCitasModificar = new JMenuItem("Modificar cita");
-		mCitasModificar.setMnemonic('M');
-		mCitasModificar.addActionListener(new ActionListener() {
+		mCitasVer = new JMenuItem("Ver citas");
+		mCitasVer.setMnemonic('V');
+		mCitasVer.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 			}
 		});
-		mCitasEliminar =  new JMenuItem("Eliminar cita");
-		mCitasEliminar.setMnemonic('E');
-		mCitasEliminar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-			}
-		});
+		
 		mCitas.add(mCitasAgregar);
-		mCitas.add(mCitasModificar);
-		mCitas.add(mCitasEliminar);
+		mCitas.add(mCitasVer);
 		
 		mBusquedas = new JMenu("Búsquedas                         ");
 		mBusquedas.setMnemonic('B');

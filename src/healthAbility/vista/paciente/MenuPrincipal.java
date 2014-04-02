@@ -188,7 +188,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		citas.add(btnCitas);
 
 		JPanel calificaciones = new JPanel();
-		calificaciones.setBounds(753, 214, 97, 115);
+		calificaciones.setBounds(170, 425, 97, 115);
 		calificaciones.setOpaque(false);
 		try {
 			calificaciones.setForeground(SystemColor.controlHighlight);
@@ -235,11 +235,11 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		lblAgregarMedico.setBounds(131, 327, 176, 23);
 		getContentPane().add(lblAgregarMedico);
 
-		JLabel lblCalificaciones = new JLabel("Calificaciones");
+		JLabel lblCalificaciones = new JLabel("Calificar");
 		lblCalificaciones.setForeground(new Color(0, 0, 128));
 		lblCalificaciones.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCalificaciones.setFont(letraTexto2);
-		lblCalificaciones.setBounds(711, 340, 168, 23);
+		lblCalificaciones.setBounds(139, 551, 168, 23);
 		getContentPane().add(lblCalificaciones);
 
 		JLabel lblCitas = new JLabel("Citas");
@@ -263,7 +263,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnExamen.setContentAreaFilled(false);
 		btnExamen.setBorderPainted(false);
 		
-		JLabel lblActualizarMedico = new JLabel("Actualizar Paciente");
+		JLabel lblActualizarMedico = new JLabel("Actualizar mis datos");
 		lblActualizarMedico.setHorizontalAlignment(SwingConstants.CENTER);
 		lblActualizarMedico.setForeground(new Color(0, 0, 128));
 		lblActualizarMedico.setFont(new Font("Georgia", Font.PLAIN, 18));
