@@ -34,8 +34,8 @@ public class VentanaBase extends JFrame {
 		setSize(tamTotal.width-200, tamTotal.height-200);
 		setTitle("Health Ability");
 		setExtendedState(MAXIMIZED_BOTH);
-		//	    Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("vista/imagenes/logo_principal.png"));
-		//	    setIconImage(icon);
+//		Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("vista/imagenes/logo_principal_icono.png"));
+//		setIconImage(icon);
 
 		//Inicializar ventana
 		try {
