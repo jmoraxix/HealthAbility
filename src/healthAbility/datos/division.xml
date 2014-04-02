@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DIVISION>
+    <provincia nombre="San José">
+        <canton nombre="San José">
+            <distrito nombre="Carmen"/>
+            <distrito nombre="Merced"/>
+            <distrito nombre="Hospital"/>
+            <distrito nombre="Catedral"/>
+            <distrito nombre="Zapote"/>
+            <distrito nombre="San Francisco de Dos Ríos"/>
+            <distrito nombre="La Uruca"/>
+            <distrito nombre="Mata Redonda"/>
+            <distrito nombre="Pavas"/>
+            <distrito nombre="Hatillo"/>
+            <distrito nombre="San Sebastián"/>
+        </canton>
+        <canton nombre="Escazú">
+            <distrito nombre="Escazú Centro"/>
+            <distrito nombre="San Rafael"/>
+            <distrito nombre="San Antonio"/>
+        </canton>
+        <canton nombre="Desamparados">
+            <distrito nombre="Desamparados"/>
+            <distrito nombre="San Miguel"/>
+            <distrito nombre="San Juan de Dios"/>
+            <distrito nombre="San Rafael Arriba"/>
+            <distrito nombre="San Antonio"/>
+            <distrito nombre="Frailes"/>
+            <distrito nombre="Patarrá"/>
+            <distrito nombre="San Cristóbal"/>
+            <distrito nombre="Rosario"/>
+            <distrito nombre="Damas"/>
+            <distrito nombre="San Rafael Abajo"/>
+            <distrito nombre="Gravilias"/>
+            <distrito nombre="Los Guido"/>
+        </canton>
+        <canton nombre="Puriscal">
+            <distrito nombre="Santiago"/>
+            <distrito nombre="Mercedes Sur"/>
+            <distrito nombre="Barbacoas"/>
+            <distrito nombre="Grifo Alto"/>
+            <distrito nombre="San Rafael"/>
+            <distrito nombre="Candelarita"/>
+            <distrito nombre="Desamparaditos"/>
+            <distrito nombre="San Antonio"/>
+            <distrito nombre="Chires"/>
+        </canton>
+        <canton nombre="Tarrazú">
+            <distrito nombre="San Marcos"/>
+            <distrito nombre="San Lorenzo"/>
+            <distrito nombre="San Carlos"/>
+        </canton>
+        <canton nombre="Aserrí">
+            <distrito nombre="Aserrí"/>
+            <distrito nombre="Tarbaca"/>
+            <distrito nombre="Vuelta de Jorco"/>
+            <distrito nombre="San Gabriel"/>
+            <distrito nombre="Legua"/>
+            <distrito nombre="Monterrey"/>
+            <distrito nombre="Salitrillos"/>
+        </canton>
+        <canton nombre="Mora">
+            <distrito nombre="Colón"/>
+            <distrito nombre="Guayabo"/>
+            <distrito nombre="Tabarcia"/>
+            <distrito nombre="Piedras Negras"/>
+            <distrito nombre="Picagres"/>
+            <distrito nombre="Jaris"/>
+        </canton>
+        <canton nombre="Goicoechea">
+            <distrito nombre="Guadalupe "/>
+            <distrito nombre="San Francisco"/>
+            <distrito nombre="Calle Blancos"/>
+            <distrito nombre="Mata de Plátano"/>
+            <distrito nombre="Ipís"/>
+            <distrito nombre="Rancho Redondo"/>
+            <distrito nombre="Purral"/>
+        </canton>
+        <canton nombre="Santa Ana">
+            <distrito nombre="Santa Ana"/>
+            <distrito nombre="Salitral"/>
+            <distrito nombre="Pozos"/>
+            <distrito nombre="Uruca"/>
+            <distrito nombre="Piedades"/>
+            <distrito nombre="Brasil"/>
+        </canton>
+        <canton nombre="Alajuelita">
+            <distrito nombre="Alajuelita"/>
+            <distrito nombre="San Josecito"/>
+            <distrito nombre="San Antonio"/>
+            <distrito nombre="Concepción"/>
+            <distrito nombre="San Felipe"/>
+        </canton>
+        <canton nombre="Vázquez de Coronado">
+            <distrito nombre="San Isidro"/>
+            <distrito nombre="San Rafael"/>
+            <distrito nombre="Dulce Nombre de Jesús"/>
+            <distrito nombre="Patalillo"/>
+            <distrito nombre="Cascajal"/>
+        </canton>
+        <canton nombre="Acosta">
+            <distrito nombre="San Ignacio"/>
+            <distrito nombre="Guaitil"/>
+            <distrito nombre="Palmichal"/>
+            <distrito nombre="Cangrejal"/>
+            <distrito nombre="Sabanillas"/>
+        </canton>
+        <canton nombre="Tibás">
+            <distrito nombre="San Juan de Tibás"/>
+            <distrito nombre="Cinco Esquinas"/>
+            <distrito nombre="Anselmo Llorente"/>
+            <distrito nombre="León XIII"/>
+            <distrito nombre="Colima"/>
+        </canton>
+        <canton nombre="Moravia">
+            <distrito nombre="San Vicente"/>
+            <distrito nombre="La Trinidad"/>
+            <distrito nombre="San Jerónimo"/>
+        </canton>
+        <canton nombre="Montes de Oca">
+            <distrito nombre="San Pedro"/>
+            <distrito nombre="Sabanilla"/>
+            <distrito nombre="Mercedes"/>
+            <distrito nombre="San Rafael"/>
+        </canton>
+        <canton nombre="Turrubares">
+            <distrito nombre="San Pablo"/>
+            <distrito nombre="San Pedro"/>
+            <distrito nombre="San Juan de Mata"/>
+            <distrito nombre="San Luis"/>
+            <distrito nombre="Carara"/>
+            <distrito nombre=""/>
+        </canton>
+        <canton nombre="Dota">
+            <distrito nombre="Santa María"/>
+            <distrito nombre="Jardín"/>
+            <distrito nombre="Copey"/>
+        </canton>
+        <canton nombre="Curridabat">
+            <distrito nombre="Curridabat"/>
+            <distrito nombre="Granadilla"/>
+            <distrito nombre="Sánchez"/>
+            <distrito nombre="Tirrases"/>
+        </canton>
+        <canton nombre="Pérez Zeledón">
+            <distrito nombre="San Isidro de El General"/>
+            <distrito nombre="El General"/>
+            <distrito nombre="Daniel Flores"/>
+            <distrito nombre="Rivas"/>
+            <distrito nombre="San Pedro"/>
+            <distrito nombre="Platanares"/>
+            <distrito nombre="Pejibaye"/>
+            <distrito nombre="Cajón"/>
+            <distrito nombre="Barú"/>
+            <distrito nombre="Río Nuevo"/>
+            <distrito nombre="Páramo"/>
+        </canton>
+        <canton nombre="León Cortés">
+            <distrito nombre="San Pablo"/>
+            <distrito nombre="San Andrés"/>
+            <distrito nombre="Llano Bonito"/>
+            <distrito nombre="San Isidro"/>
+            <distrito nombre="Santa Cruz"/>
+            <distrito nombre="San Antonio"/>
+        </canton>
+    </provincia>
+</DIVISION>

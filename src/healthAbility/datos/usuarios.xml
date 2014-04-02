@@ -2,120 +2,40 @@
 <USUARIOS>
 	<usuario usuario="pac1">
 		<cedula>123456789</cedula>
-		<nombre>Nombre Paciente 1</nombre>
-		<apellido1>Apellido</apellido1>
-		<apellido2>Apeliido2</apellido2>
-		<correo>akdfiusabh@paciente.com</correo>
-		<foto>../vista/imagenes/paciente.png</foto>
 		<password>papayanator</password>
 		<tipo>paciente</tipo>
 	</usuario>
 	<usuario usuario="pac2">
 		<cedula>123455789</cedula>
-		<nombre>Nombre Paciente 2</nombre>
-		<apellido1>Apellido</apellido1>
-		<apellido2>Apeliido2</apellido2>
-		<correo>akdfiusabh@paciente.com</correo>
-		<foto>../vista/imagenes/paciente.png</foto>
 		<password>papayanator</password>
 		<tipo>paciente</tipo>
 	</usuario>
 	<usuario usuario="pac3">
 		<cedula>123365589</cedula>
-		<nombre>Nombre Paciente 3</nombre>
-		<apellido1>Apellido</apellido1>
-		<apellido2>Apeliido2</apellido2>
-		<correo>akdfiusabh@paciente.com</correo>
-		<foto>../vista/imagenes/paciente.png</foto>
 		<password>papayanator</password>
 		<tipo>paciente</tipo>
 	</usuario>
 	<usuario usuario="doc1">
 		<cedula>248536842</cedula>
-		<nombre>Nombre Dr 1</nombre>
-		<apellido1>Apellido</apellido1>
-		<apellido2>Apeliido2</apellido2>
-		<correo>akdfdoc1@doctor.com</correo>
-		<foto>../vista/imagenes/medico.png</foto>
 		<password>papayanator</password>
 		<tipo>medico</tipo>
-		<clinicas>
-			<clinica nombre="Clinica 1">
-				<horario>
-					<lunes e="8" s="14"/>
-					<martes e="9" s="11"/>
-				</horario>
-				<duracion>30</duracion>
-			</clinica>
-			<clinica nombre="Clinica 2">
-				<horario>
-					<jueves e="10" s="15"/>
-					<viernes e="8" s="13"/>
-				</horario>
-				<duracion>20</duracion>
-			</clinica>
-		</clinicas>
 	</usuario>
 	<usuario usuario="doc2">
 		<cedula>548613685</cedula>
-		<nombre>Nombre Dr 2</nombre>
-		<apellido1>Apellido</apellido1>
-		<apellido2>Apeliido2</apellido2>
-		<correo>akdfdoc2@doctor.com</correo>
-		<foto>../vista/imagenes/medico.png</foto>
 		<password>papayanator</password>
 		<tipo>medico</tipo>
-		<clinicas>
-			<clinica nombre="Clinica 2">
-				<horario>
-					<lunes e="8" s="14"/>
-					<martes e="9" s="11"/>
-				</horario>
-				<duracion>20</duracion>
-			</clinica>
-			<clinica nombre="Clinica 3">
-				<horario>
-					<jueves e="10" s="15"/>
-					<viernes e="8" s="13"/>
-				</horario>
-				<duracion>15</duracion>
-			</clinica>
-		</clinicas>
 	</usuario>
 	<usuario usuario="doc3">
 		<cedula>484613269</cedula>
-		<nombre>Nombre Dr 3</nombre>
-		<apellido1>Apellido</apellido1>
-		<apellido2>Apeliido2</apellido2>
-		<correo>akdfdoc3@doctor.com</correo>
-		<foto>../vista/imagenes/medico.png</foto>
 		<password>papayanator</password>
 		<tipo>medico</tipo>
-		<clinicas>
-			<clinica nombre="Clinica 3">
-				<horario>
-					<lunes e="8" s="14"/>
-					<martes e="9" s="11"/>
-					<miercoles e="9" s="13"/>
-				</horario>
-				<duracion>15</duracion>
-			</clinica>
-			<clinica nombre="Clinica 4">
-				<horario>
-					<viernes e="8" s="13"/>
-				</horario>
-				<duracion>15</duracion>
-			</clinica>
-		</clinicas>
 	</usuario>
 	<usuario usuario="jmora">
 		<password>123</password>
 		<tipo>admin</tipo>
-		<foto>../vista/imagenes/admin.png</foto>
 	</usuario>
 	<usuario usuario="ddelgado">
 		<password>123</password>
 		<tipo>admin</tipo>
-		<foto>../vista/imagenes/admin.png</foto>
 	</usuario>
 </USUARIOS>
