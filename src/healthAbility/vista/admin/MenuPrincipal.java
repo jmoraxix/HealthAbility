@@ -10,8 +10,6 @@ package healthAbility.vista.admin;
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
 import healthAbility.vista.Login;
-import healthAbility.vista.SeleccionarClinica;
-import healthAbility.vista.SeleccionarMedico;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
@@ -171,7 +169,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		JButton btnCitas = new JButton("");
 		btnCitas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				irACitas();
+//				irACitas();
 			}
 		});
 		btnCitas.setOpaque(false);
@@ -316,28 +314,28 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		getContentPane().add(lblPadecimientos);
 	}
 
-	private void irACitas()
-	{
-		SeleccionarMedico selecMed = new SeleccionarMedico(this);
-		String med = "";
-		while(med.equals("")){
-			med = selecMed.getCodMedico();
-		}
-		
-		System.out.println("Salio!");
-		System.out.println(med);
-		
-		SeleccionarClinica selecClin = new SeleccionarClinica(this, med);
-		String clinica = "";
-		while(clinica.equals("")){
-			clinica = selecClin.getClinica();
-		}
-		
-		System.out.println("Salio de nuevo!");
-		System.out.println(clinica);
-		
-		setVisible(false);
-	}
+//	private void irACitas()
+//	{
+//		SeleccionarMedico selecMed = new SeleccionarMedico(this);
+//		String med = "";
+//		while(med.equals("")){
+//			med = selecMed.getCodMedico();
+//		}
+//		
+//		System.out.println("Salio!");
+//		System.out.println(med);
+//		
+//		SeleccionarClinica selecClin = new SeleccionarClinica(this, med);
+//		String clinica = "";
+//		while(clinica.equals("")){
+//			clinica = selecClin.getClinica();
+//		}
+//		
+//		System.out.println("Salio de nuevo!");
+//		System.out.println(clinica);
+//		
+//		setVisible(false);
+//	}
 
 	public void actionPerformed(ActionEvent arg0) {
 		
