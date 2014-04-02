@@ -9,7 +9,6 @@ package healthAbility.vista.admin;
 
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
-import healthAbility.vista.Login;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;

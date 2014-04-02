@@ -25,17 +25,12 @@ import java.text.ParseException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
-import javax.swing.JFileChooser;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.MaskFormatter;
-
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 /**
  * @author Diego Mar 27, 2014
@@ -49,7 +44,7 @@ public class ActualizarPaciente extends VentanaBase {
 	private JTextField txtSegundoApPaciente;
 	private JFormattedTextField txtCedulaPaciente;
 	private JTextField txtCorreoPaciente;
-	private JFormattedTextField txtTelefonoMedico;
+	private JFormattedTextField txtTelefonoPaciente;
 	
 	Font letra1 = new Font("Georgia", Font.PLAIN, 22);
 	Font letraTitulo = new Font("Georgia", Font.PLAIN, 28);
@@ -214,10 +209,10 @@ public class ActualizarPaciente extends VentanaBase {
 			e.printStackTrace();
 		}
 		
-		JFormattedTextField txtTelefonoMedico = new JFormattedTextField(mascaraTelefono);
-		txtTelefonoMedico.setBounds(268, 484, 245, 32);
-		getContentPane().add(txtTelefonoMedico);
-		txtTelefonoMedico.setColumns(10);
+		txtTelefonoPaciente = new JFormattedTextField(mascaraTelefono);
+		txtTelefonoPaciente.setBounds(268, 484, 245, 32);
+		getContentPane().add(txtTelefonoPaciente);
+		txtTelefonoPaciente.setColumns(10);
 		
 		JLabel lblFoto = new JLabel("Foto:");
 		lblFoto.setFont(new Font("Georgia", Font.PLAIN, 22));

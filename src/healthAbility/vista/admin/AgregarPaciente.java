@@ -33,8 +33,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.MaskFormatter;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 
 /**
@@ -246,7 +244,7 @@ public class AgregarPaciente extends VentanaBase {
 			e.printStackTrace();
 		}
 		
-		JFormattedTextField txtTelefonoPaciente = new JFormattedTextField(mascaraTelefono);
+		txtTelefonoPaciente = new JFormattedTextField(mascaraTelefono);
 		txtTelefonoPaciente.setColumns(10);
 		txtTelefonoPaciente.setBounds(268, 484, 245, 32);
 		getContentPane().add(txtTelefonoPaciente);

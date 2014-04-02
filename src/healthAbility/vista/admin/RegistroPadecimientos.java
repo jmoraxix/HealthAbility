@@ -23,12 +23,11 @@ import java.net.URL;
 
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.border.LineBorder;
-import javax.swing.JComboBox;
 
 /**
  * @author Diego Mar 31, 2014

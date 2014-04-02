@@ -9,7 +9,6 @@ package healthAbility.vista.admin;
 
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
-import healthAbility.vista.Login;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
@@ -18,6 +17,8 @@ import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.net.URL;
 import java.text.ParseException;
@@ -33,9 +34,6 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.border.LineBorder;
 import javax.swing.text.MaskFormatter;
-
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 /**
  * @author Diego Mar 27, 2014
  *

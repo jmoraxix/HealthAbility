@@ -221,15 +221,15 @@ public class RegistroClinica extends VentanaBase {
 		label.setBounds(75, 214, 122, 14);
 		getContentPane().add(label);
 		
-		JComboBox comboProvincia = new JComboBox();
+		JComboBox<String> comboProvincia = new JComboBox<String>();
 		comboProvincia.setBounds(268, 410, 245, 32);
 		getContentPane().add(comboProvincia);
 		
-		JComboBox comboCanton = new JComboBox();
+		JComboBox<String> comboCanton = new JComboBox<String>();
 		comboCanton.setBounds(268, 453, 245, 32);
 		getContentPane().add(comboCanton);
 		
-		JComboBox comboDistrito = new JComboBox();
+		JComboBox<String> comboDistrito = new JComboBox<String>();
 		comboDistrito.setBounds(268, 500, 245, 32);
 		getContentPane().add(comboDistrito);
 		

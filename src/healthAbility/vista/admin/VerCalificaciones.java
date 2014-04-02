@@ -9,7 +9,6 @@ package healthAbility.vista.admin;
 
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
-import healthAbility.vista.Login;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
@@ -37,6 +36,7 @@ import javax.swing.border.LineBorder;
  * @author Diego Apr 1, 2014
  *
  */
+@SuppressWarnings("serial")
 public class VerCalificaciones extends VentanaBase {
 	public Font letraTexto1 = new Font("Georgia", Font.PLAIN, 22);
 	public Font letraTexto2 = new Font("Georgia", Font.PLAIN, 18);
@@ -94,7 +94,7 @@ public class VerCalificaciones extends VentanaBase {
 		gbc_lblCalificacion.gridy = 0;
 		panel.add(lblCalificacion, gbc_lblCalificacion);
 		
-		JComboBox comboBoxEspecialidad = new JComboBox();
+		JComboBox<String> comboBoxEspecialidad = new JComboBox<String>();
 		comboBoxEspecialidad.setBounds(595, 170, 144, 26);
 		getContentPane().add(comboBoxEspecialidad);
 		
