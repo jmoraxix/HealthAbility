@@ -42,8 +42,10 @@ public class Login extends VentanaBase
 
 	public Login() 
 	{
+		
 		getContentPane().setLayout(null);
-
+		HealthAbility.setSESION_USUARIO(null);
+		
 		JLabel tit2 = new JLabel("Bienvenido");
 		tit2.setBounds(221, 231, 208, 52);
 		getContentPane().add(tit2);

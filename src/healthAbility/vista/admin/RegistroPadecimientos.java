@@ -45,7 +45,7 @@ public class RegistroPadecimientos extends VentanaBase{
 	 */
 	public RegistroPadecimientos() {
 		
-		this.setJMenuBar(new BarraMenu());
+		this.setJMenuBar(new BarraMenu(this));
 		//Salir
 		JPanel regresar = new JPanel();
 		regresar.setBounds(75, 585, 60, 60);

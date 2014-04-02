@@ -16,6 +16,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -34,12 +35,12 @@ public class BarraMenu extends JMenuBar {
 	public final static Font letraTitulo1 = new Font("Georgia", Font.BOLD, 38);
 	public final static Font letraTexto1 = new Font("Georgia", Font.PLAIN, 28);
 	public final static Font letraTexto2 = new Font("Georgia", Font.PLAIN, 22);
-
+	private JFrame frame;
 	public static final Dimension tamTotal = HealthAbility.getTamPantalla();
 
-	public BarraMenu(){
-
-		menu1 = new JMenu("Archivo");
+	public BarraMenu(final JFrame frame){
+		this.frame = frame;
+		menu1 = new JMenu("Archivo                         ");
 		menu1.setMnemonic('A');
 		this.add(menu1);
 
@@ -60,7 +61,7 @@ public class BarraMenu extends JMenuBar {
 		menu1.add(mntmAcercaDeNosotros);
 		menu1.add(mSalir);   
 
-		mUsuarios = new JMenu("Usuarios");
+		mUsuarios = new JMenu("Usuarios                         ");
 		mUsuarios.setMnemonic('U');
 		this.add(mUsuarios);
 
@@ -101,7 +102,7 @@ public class BarraMenu extends JMenuBar {
 		mUsuarios.add(mUsuarioPaciente);
 
 		////////JMENUBAR CITAS///////////////
-		mCitas = new JMenu("Citas");
+		mCitas = new JMenu("Citas                         ");
 		mCitas.setMnemonic('C');
 		this.add(mCitas);
 

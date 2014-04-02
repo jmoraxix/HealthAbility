@@ -49,7 +49,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 
 	public MenuPrincipal() 
 	{
-		this.setJMenuBar(new BarraMenu());
+		this.setJMenuBar(new BarraMenu(this));
 		//Salir
 		JPanel regresar = new JPanel();
 		regresar.setBounds(43, 149, 60, 60);
@@ -83,7 +83,11 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnRegres.setBorderPainted(false);
 		regresar.add(btnRegres);
 
+		
+		
+		
 		//Opciones del Menu
+///**********Boton Usuarios**********///
 		JPanel usuarios = new JPanel();
 		usuarios.setBounds(170, 214, 97, 115);
 		usuarios.setOpaque(false);
@@ -101,7 +105,6 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		}
 		getContentPane().add(usuarios);
 		usuarios.setLayout(new BorderLayout(0, 0));
-
 		JButton btnUsuarios = new JButton("");
 		btnUsuarios.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -114,7 +117,9 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnUsuarios.setContentAreaFilled(false);
 		btnUsuarios.setBorderPainted(false);
 		usuarios.add(btnUsuarios);
-
+		
+		
+///**********Boton Correos**********///
 		JPanel correos = new JPanel();
 		correos.setBounds(467, 214, 97, 115);
 		correos.setOpaque(false);
@@ -132,13 +137,12 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		}
 		getContentPane().add(correos);
 		correos.setLayout(new BorderLayout(0, 0));
-
 		JButton btnCorreos = new JButton("");
 		btnCorreos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//				elegirEditar = new ElegirEditar();
-				//      			elegirEditar.setVisible(true); 
-				//      			menu.setVisible(false);
+				EnviarCorreo enviarCorreo = new EnviarCorreo();
+				enviarCorreo.setVisible(true);
+				setVisible(false);
 			}
 		});
 		btnCorreos.setOpaque(false);
@@ -146,6 +150,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnCorreos.setBorderPainted(false);
 		correos.add(btnCorreos);
 
+///**********Boton Citas**********///
 		JPanel citas = new JPanel();
 		citas.setBounds(467, 453, 97, 115);
 		citas.setOpaque(false);
@@ -163,7 +168,6 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		}
 		getContentPane().add(citas);
 		citas.setLayout(new BorderLayout(0, 0));
-
 		JButton btnCitas = new JButton("");
 		btnCitas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -175,6 +179,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		btnCitas.setBorderPainted(false);
 		citas.add(btnCitas);
 		
+///**********Boton Padecimientos**********///
 		JPanel padecimientos = new JPanel();
 		padecimientos.setBounds(754, 453, 97, 115);
 		padecimientos.setOpaque(false);
@@ -192,22 +197,20 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		}
 		getContentPane().add(padecimientos);
 		padecimientos.setLayout(new BorderLayout(0, 0));
-
 		JButton btnPadecimientos = new JButton("");
 		btnPadecimientos.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				
 				RegistroPadecimientos registroPadecimientos = new RegistroPadecimientos();
 				registroPadecimientos.setVisible(true); 
-				setVisible(false);
-				
+				setVisible(false);	
 			}
 		});
 		btnPadecimientos.setOpaque(false);
 		btnPadecimientos.setContentAreaFilled(false);
 		btnPadecimientos.setBorderPainted(false);
 		padecimientos.add(btnPadecimientos);
-
+		
+///**********Boton Calificaciones**********///
 		JPanel calificaciones = new JPanel();
 		calificaciones.setBounds(754, 214, 97, 115);
 		calificaciones.setOpaque(false);
@@ -225,20 +228,21 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		}
 		getContentPane().add(calificaciones);
 		calificaciones.setLayout(new BorderLayout(0, 0));
-
 		JButton btncalificaciones = new JButton("");
+		calificaciones.add(btncalificaciones);
 		btncalificaciones.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				/*elegirVer = new ElegirVer();
+					public void actionPerformed(ActionEvent arg0) {
+						/*elegirVer = new ElegirVer();
       			elegirVer.setVisible(true); 
       			menu.setVisible(false);*/
-			}
-		});
-		btncalificaciones.setOpaque(false);
-		btncalificaciones.setContentAreaFilled(false);
-		btncalificaciones.setBorderPainted(false);
-		calificaciones.add(btncalificaciones, BorderLayout.CENTER);
+					}
+				});
+				btncalificaciones.setOpaque(false);
+				btncalificaciones.setContentAreaFilled(false);
+				btncalificaciones.setBorderPainted(false);
 
+				
+///**********Boton CLinicas**********///
 		JPanel clinicas = new JPanel();
 		clinicas.setBounds(170, 453, 97, 115);
 		clinicas.setOpaque(false);
@@ -256,7 +260,6 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		}
 		getContentPane().add(clinicas);
 		clinicas.setLayout(new BorderLayout(0, 0));
-
 		JButton btnClinicas = new JButton("");
 		clinicas.add(btnClinicas);
 		btnClinicas.addActionListener(new ActionListener() {
@@ -264,7 +267,6 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 				RegistroClinica registroClinica = new RegistroClinica();
 				registroClinica.setVisible(true); 
 				setVisible(false);
-				
 			}
 		});
 		btnClinicas.setOpaque(false);
@@ -285,7 +287,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		lblCorreos.setBounds(440, 331, 154, 14);
 		getContentPane().add(lblCorreos);
 
-		JLabel lblCalificaciones = new JLabel("Calificaci\u00F3n Doctor");
+		JLabel lblCalificaciones = new JLabel("Ver Calificaciones");
 		lblCalificaciones.setForeground(new Color(0, 0, 128));
 		lblCalificaciones.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCalificaciones.setFont(letraTexto2);
@@ -296,14 +298,14 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		lblCitas.setForeground(new Color(0, 0, 128));
 		lblCitas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCitas.setFont(letraTexto2);
-		lblCitas.setBounds(440, 579, 168, 23);
+		lblCitas.setBounds(429, 579, 168, 23);
 		getContentPane().add(lblCitas);
 
 		JLabel lblClinicas = new JLabel("Cl\u00EDnicas");
 		lblClinicas.setForeground(new Color(0, 0, 128));
 		lblClinicas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblClinicas.setFont(letraTexto2);
-		lblClinicas.setBounds(131, 573, 199, 23);
+		lblClinicas.setBounds(121, 579, 199, 23);
 		getContentPane().add(lblClinicas);
 		
 		JLabel lblPadecimientos = new JLabel("Padecimientos");

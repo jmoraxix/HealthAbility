@@ -43,7 +43,7 @@ public class Usuarios extends VentanaBase {
 		//getContentPane().setLayout(null);
 
 
-		this.setJMenuBar(new BarraMenu());
+		this.setJMenuBar(new BarraMenu(this));
 		//boton de salir
 		JPanel regresar = new JPanel();
 		regresar.setBounds(43, 149, 60, 60);

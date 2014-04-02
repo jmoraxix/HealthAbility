@@ -15,6 +15,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
@@ -34,11 +35,13 @@ public class BarraMenu extends JMenuBar {
 	public final static Font letraTitulo1 = new Font("Georgia", Font.BOLD, 38);
 	public final static Font letraTexto1 = new Font("Georgia", Font.PLAIN, 28);
 	public final static Font letraTexto2 = new Font("Georgia", Font.PLAIN, 22);
-
+	private JFrame frame;
 	public static final Dimension tamTotal = HealthAbility.getTamPantalla();
 
-	public BarraMenu(){
-
+		
+	public BarraMenu(final JFrame frame){
+		this.frame = frame;
+		
 		menu1 = new JMenu("Archivo                         ");
 		menu1.setMnemonic('A');
 		this.add(menu1);
@@ -111,7 +114,7 @@ public class BarraMenu extends JMenuBar {
 			public void actionPerformed(ActionEvent arg0) {
 				AgregarMedico agregarMedico = new AgregarMedico();
 				agregarMedico.setVisible(true); 
-				setVisible(false); 
+				frame.setVisible(false); 
 			}
 		});
 		mUsuarioMedico.add(mCrearMedico);
@@ -133,7 +136,7 @@ public class BarraMenu extends JMenuBar {
 			public void actionPerformed(ActionEvent e) {
 				ActualizarMedico actualizarMedico = new ActualizarMedico();
 				actualizarMedico.setVisible(true); 
-				setVisible(false);
+				frame.setVisible(false);
 			}
 		});
 		mUsuarioMedico.add(mActualizarMedico);
@@ -150,7 +153,7 @@ public class BarraMenu extends JMenuBar {
 			public void actionPerformed(ActionEvent arg0) {
 				AgregarPaciente agregarPaciente = new AgregarPaciente();
 				agregarPaciente.setVisible(true); 
-				setVisible(false);
+				frame.setVisible(false);
 			}
 		});
 		mUsuarioPaciente.add(mCrearPaciente);
@@ -172,7 +175,7 @@ public class BarraMenu extends JMenuBar {
 			public void actionPerformed(ActionEvent e) {
 				ActualizarPaciente actualizarPaciente = new ActualizarPaciente();
 				actualizarPaciente.setVisible(true); 
-				setVisible(false);
+				frame.setVisible(false);
 			}
 		});
 		mUsuarioPaciente.add(mActualizarPaciente);

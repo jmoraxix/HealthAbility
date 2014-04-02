@@ -41,7 +41,7 @@ public class UsuarioPaciente extends VentanaBase {
 	public UsuarioPaciente(){
 		//getContentPane().setLayout(null);
 
-		this.setJMenuBar(new BarraMenu());
+		this.setJMenuBar(new BarraMenu(this));
 		//Boton Salir
 		JPanel regresar = new JPanel();
 		regresar.setBounds(43, 149, 60, 60);

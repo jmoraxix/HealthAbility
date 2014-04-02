@@ -53,7 +53,7 @@ public class ActualizarPaciente extends VentanaBase {
 	 */
 	public ActualizarPaciente() {
 		
-		this.setJMenuBar(new BarraMenu());
+		this.setJMenuBar(new BarraMenu(this));
 		//Salir
 		JPanel regresar = new JPanel();
 		regresar.setBounds(75, 585, 60, 60);

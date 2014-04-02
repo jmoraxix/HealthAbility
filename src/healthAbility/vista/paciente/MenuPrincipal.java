@@ -48,7 +48,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 
 	public MenuPrincipal() 
 	{
-		this.setJMenuBar(new BarraMenu());
+		this.setJMenuBar(new BarraMenu(this));
 		//Salir
 		JPanel regresar = new JPanel();
 		regresar.setBounds(43, 149, 60, 60);
@@ -120,7 +120,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		try {
 			correos.setForeground(SystemColor.controlHighlight);
 			try {
-				URL imagen = HealthAbility.class.getResource("vista/imagenes/actualizar.png");
+				URL imagen = HealthAbility.class.getResource("vista/imagenes/correo.png");
 				BufferedImage  img = ImageIO.read(imagen);
 				BgBorder borde = new BgBorder( img );
 				correos.setBorder(borde);
@@ -213,7 +213,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		try {
 			clinicas.setForeground(SystemColor.controlHighlight);
 			try {
-				URL imagen = HealthAbility.class.getResource("vista/imagenes/entrevista.png");
+				URL imagen = HealthAbility.class.getResource("vista/imagenes/clinicas.png");
 				BufferedImage  img = ImageIO.read(imagen);
 				BgBorder borde = new BgBorder( img );
 				clinicas.setBorder(borde);

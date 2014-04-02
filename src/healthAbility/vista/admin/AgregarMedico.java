@@ -54,7 +54,7 @@ public class AgregarMedico extends VentanaBase {
 	 */
 	public AgregarMedico() {
 		
-		this.setJMenuBar(new BarraMenu());
+		this.setJMenuBar(new BarraMenu(this));
 		//Salir
 		JPanel regresar = new JPanel();
 		regresar.setBounds(75, 585, 60, 60);
