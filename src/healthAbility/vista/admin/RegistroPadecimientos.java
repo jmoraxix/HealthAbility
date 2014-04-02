@@ -28,13 +28,14 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.border.LineBorder;
+import javax.swing.JComboBox;
 
 /**
  * @author Diego Mar 31, 2014
  *
  */
+@SuppressWarnings("serial")
 public class RegistroPadecimientos extends VentanaBase{
-	private JTextField txtNombreClinica;
 	
 	Font letra1 = new Font("Georgia", Font.PLAIN, 22);
 	Font letraTitulo = new Font("Georgia", Font.PLAIN, 28);
@@ -121,11 +122,6 @@ public class RegistroPadecimientos extends VentanaBase{
 		lblNombreClinica.setFont(letra1);
 		getContentPane().add(lblNombreClinica);
 		
-		txtNombreClinica = new JTextField();
-		txtNombreClinica.setBounds(383, 232, 245, 32);
-		getContentPane().add(txtNombreClinica);
-		txtNombreClinica.setColumns(10);
-		
 		JLabel lblDescripcionPadecimiento = new JLabel("Descripci\u00F3n:");
 		lblDescripcionPadecimiento.setBounds(75, 400, 209, 32);
 		lblDescripcionPadecimiento.setFont(letra1);
@@ -146,14 +142,17 @@ public class RegistroPadecimientos extends VentanaBase{
 		lblNombrePadecimiento.setBounds(75, 329, 265, 32);
 		getContentPane().add(lblNombrePadecimiento);
 		
-		JTextPane txtPaneDireccionGeneral = new JTextPane();
-		txtPaneDireccionGeneral.setBorder(new LineBorder(Color.LIGHT_GRAY));
-		txtPaneDireccionGeneral.setBounds(383, 329, 245, 32);
-		getContentPane().add(txtPaneDireccionGeneral);
-		
 		JTextPane txtPaneDescripcionPadecimiento = new JTextPane();
 		txtPaneDescripcionPadecimiento.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		txtPaneDescripcionPadecimiento.setBounds(300, 413, 328, 160);
 		getContentPane().add(txtPaneDescripcionPadecimiento);
+		
+		JComboBox comboTipoPadecimiento = new JComboBox();
+		comboTipoPadecimiento.setBounds(383, 228, 245, 32);
+		getContentPane().add(comboTipoPadecimiento);
+		
+		JComboBox comboNombrePadecimiento = new JComboBox();
+		comboNombrePadecimiento.setBounds(383, 329, 245, 32);
+		getContentPane().add(comboNombrePadecimiento);
 	}
 }

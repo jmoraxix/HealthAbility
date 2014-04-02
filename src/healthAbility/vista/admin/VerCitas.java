@@ -8,6 +8,7 @@
 package healthAbility.vista.admin;
 
 import healthAbility.HealthAbility;
+import healthAbility.vista.BgBorder;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
@@ -15,7 +16,11 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.SystemColor;
+import java.awt.image.BufferedImage;
+import java.net.URL;
 
+import javax.imageio.ImageIO;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -686,13 +691,30 @@ public class VerCitas extends VentanaBase {
 		JPanel regresar = new JPanel();
 		regresar.setOpaque(false);
 		regresar.setBounds(77, 608, 71, 58);
+		try {
+			regresar.setForeground(SystemColor.controlHighlight);
+			try {
+				URL imagen = HealthAbility.class.getResource("vista/imagenes/regresar.png");
+				BufferedImage  img = ImageIO.read(imagen);
+				BgBorder borde = new BgBorder( img );
+				regresar.setBorder(borde);
+			} catch (Exception e) {
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		getContentPane().add(regresar);
 		regresar.setLayout(new BorderLayout(0, 0));
+		
 		
 		JButton btnRegresar = new JButton("");
 		btnRegresar.setRequestFocusEnabled(false);
 		btnRegresar.setOpaque(false);
 		regresar.add(btnRegresar, BorderLayout.CENTER);
+		btnRegresar.setContentAreaFilled(false);
+		btnRegresar.setBorderPainted(false);
+		
+		
 		
 		JLabel lblRegresar = new JLabel("Regresar");
 		lblRegresar.setFont(letra2);

@@ -74,8 +74,9 @@ public class BarraMenu extends JMenuBar {
 		mCrearMedico = new JMenuItem("Crear Médico");
 		mCrearMedico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new CrearUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				AgregarMedico agregarMedico = new AgregarMedico();
+				agregarMedico.setVisible(true);
+				frame.setVisible(false);
 			}
 		});
 		mUsuarioMedico.add(mCrearMedico);
@@ -96,8 +97,10 @@ public class BarraMenu extends JMenuBar {
 		mActualizarMedico.setMnemonic('A');
 		mActualizarMedico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new EliminarUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				ActualizarMedico actualizarMedico = new ActualizarMedico();
+				actualizarMedico.setVisible(true);
+				frame.setVisible(false);
+				
 			}
 		});
 		mUsuarioMedico.add(mActualizarMedico);

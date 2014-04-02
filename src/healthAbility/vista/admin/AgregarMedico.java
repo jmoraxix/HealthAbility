@@ -20,28 +20,36 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.net.URL;
+import java.text.ParseException;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.border.LineBorder;
+import javax.swing.text.MaskFormatter;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 /**
  * @author JoséDavid 26/03/2014
  */
+@SuppressWarnings("serial")
 public class AgregarMedico extends VentanaBase {
 	private JTextField txtNomMedico;
 	private JTextField txtPrimerApMedico;
 	private JTextField txtSegApMedico;
-	private JTextField txtCedulaMedico;
+	private JFormattedTextField txtCedulaMedico;
 	private JTextField txtCorreoMedico;
 	private JTextField txtEspecialidadMedico;
-	private JTextField txtTelefonoMedico;
+	private JFormattedTextField txtTelefonoMedico;
 	private JTextField txtOtroIdioma;
 	private JTextField txtSlogan;
 	
@@ -110,9 +118,21 @@ public class AgregarMedico extends VentanaBase {
 		JButton btnGuardar = new JButton("");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Login login = new Login();
-				login.setVisible(true); 
-				setVisible(false);
+				
+				if (txtNomMedico.getText().equals("") ||
+					txtCedulaMedico.getText().equals("")||
+					txtPrimerApMedico.getText().equals("")||
+					txtSegApMedico.getText().equals("")) 
+				{
+					Usuarios usuarios = new Usuarios();
+					usuarios.setVisible(true); 
+					setVisible(false);
+					
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Hay un campo requerido vacio!", "Error", JOptionPane.ERROR_MESSAGE);
+				}
+				
 			}
 		});
 		btnGuardar.setOpaque(false);
@@ -131,6 +151,7 @@ public class AgregarMedico extends VentanaBase {
 		getContentPane().add(lblNombreMedico);
 		
 		txtNomMedico = new JTextField();
+		soloLetras(txtNomMedico);
 		txtNomMedico.setBounds(268, 286, 245, 32);
 		getContentPane().add(txtNomMedico);
 		txtNomMedico.setColumns(10);
@@ -141,6 +162,7 @@ public class AgregarMedico extends VentanaBase {
 		getContentPane().add(lblPrimerApellidoMedico);
 		
 		txtPrimerApMedico = new JTextField();
+		soloLetras(txtPrimerApMedico);
 		txtPrimerApMedico.setBounds(268, 329, 245, 32);
 		getContentPane().add(txtPrimerApMedico);
 		txtPrimerApMedico.setColumns(10);
@@ -151,6 +173,7 @@ public class AgregarMedico extends VentanaBase {
 		getContentPane().add(lblSegundoApellidoMedico);
 		
 		txtSegApMedico = new JTextField();
+		soloLetras(txtSegApMedico);
 		txtSegApMedico.setBounds(268, 372, 245, 32);
 		getContentPane().add(txtSegApMedico);
 		txtSegApMedico.setColumns(10);
@@ -160,7 +183,14 @@ public class AgregarMedico extends VentanaBase {
 		lblCedula.setFont(letra1);
 		getContentPane().add(lblCedula);
 		
-		txtCedulaMedico = new JTextField();
+		MaskFormatter mascaraCedula = null;
+		try {
+			mascaraCedula = new MaskFormatter("#-####-####");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		JFormattedTextField txtCedulaMedico = new JFormattedTextField(mascaraCedula);
+		soloNumeros(txtCedulaMedico);
 		txtCedulaMedico.setBounds(268, 243, 245, 32);
 		getContentPane().add(txtCedulaMedico);
 		txtCedulaMedico.setColumns(10);
@@ -181,6 +211,7 @@ public class AgregarMedico extends VentanaBase {
 		getContentPane().add(lblEspecialidad);
 		
 		txtEspecialidadMedico = new JTextField();
+		soloLetras(txtEspecialidadMedico);
 		txtEspecialidadMedico.setBounds(268, 501, 245, 32);
 		getContentPane().add(txtEspecialidadMedico);
 		txtEspecialidadMedico.setColumns(10);
@@ -190,7 +221,14 @@ public class AgregarMedico extends VentanaBase {
 		lblTelefono.setFont(letra1);
 		getContentPane().add(lblTelefono);
 		
-		txtTelefonoMedico = new JTextField();
+		MaskFormatter mascaraTelefono = null;
+		try {
+			mascaraTelefono = new MaskFormatter("####-####");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		txtTelefonoMedico = new JFormattedTextField(mascaraTelefono);
+		soloNumeros(txtCedulaMedico);
 		txtTelefonoMedico.setBounds(268, 458, 245, 32);
 		getContentPane().add(txtTelefonoMedico);
 		txtTelefonoMedico.setColumns(10);
@@ -201,12 +239,8 @@ public class AgregarMedico extends VentanaBase {
 		getContentPane().add(lblFoto);
 		
 		JButton btnAgregarFotoMedico = new JButton("Examinar...");
-		btnAgregarFotoMedico.setBounds(551, 286, 122, 32);
+		btnAgregarFotoMedico.setBounds(623, 247, 122, 32);
 		getContentPane().add(btnAgregarFotoMedico);
-		
-		JPanel panelFotoMedico = new JPanel();
-		panelFotoMedico.setBounds(745, 218, 133, 161);
-		getContentPane().add(panelFotoMedico);
 		
 		JLabel lblIdiomas = new JLabel("Idiomas:");
 		lblIdiomas.setFont(new Font("Georgia", Font.PLAIN, 22));
@@ -214,20 +248,21 @@ public class AgregarMedico extends VentanaBase {
 		getContentPane().add(lblIdiomas);
 		
 		JCheckBox ckBoxEspanol = new JCheckBox("Espa\u00F1ol");
-		ckBoxEspanol.setBounds(268, 555, 63, 32);
+		ckBoxEspanol.setBounds(268, 555, 74, 32);
 		getContentPane().add(ckBoxEspanol);
 		
 		JCheckBox ckBoxIngles = new JCheckBox("Ingl\u00E9s");
-		ckBoxIngles.setBounds(333, 555, 55, 32);
+		ckBoxIngles.setBounds(344, 555, 60, 32);
 		getContentPane().add(ckBoxIngles);
 		
 		JLabel lblOtroIdioma = new JLabel("Otro:");
-		lblOtroIdioma.setBounds(394, 564, 46, 14);
+		lblOtroIdioma.setBounds(405, 564, 31, 14);
 		getContentPane().add(lblOtroIdioma);
 		
 		txtOtroIdioma = new JTextField();
+		soloLetras(txtOtroIdioma);
 		txtOtroIdioma.setColumns(10);
-		txtOtroIdioma.setBounds(418, 559, 95, 25);
+		txtOtroIdioma.setBounds(435, 559, 78, 25);
 		getContentPane().add(txtOtroIdioma);
 		
 		JLabel lblSlogan = new JLabel("Slogan:");
@@ -250,14 +285,49 @@ public class AgregarMedico extends VentanaBase {
 		lblRegresar.setBounds(145, 597, 183, 37);
 		getContentPane().add(lblRegresar);
 		
-		JLabel lblGuardar = new JLabel("Guardar");
-		lblGuardar.setFont(new Font("Georgia", Font.PLAIN, 22));
-		lblGuardar.setBounds(713, 608, 95, 37);
-		getContentPane().add(lblGuardar);
+		JLabel lblContinuar = new JLabel("Continuar");
+		lblContinuar.setFont(new Font("Georgia", Font.PLAIN, 22));
+		lblContinuar.setBounds(705, 597, 106, 37);
+		getContentPane().add(lblContinuar);
 		
 		JTextPane txtAfiliaciones = new JTextPane();
 		txtAfiliaciones.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		txtAfiliaciones.setBounds(633, 492, 245, 94);
 		getContentPane().add(txtAfiliaciones);
+		
+		JLabel lblNewLabel = new JLabel("*Campos obligatorios");
+		lblNewLabel.setForeground(Color.RED);
+		lblNewLabel.setBounds(75, 218, 122, 14);
+		getContentPane().add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("Ver foto");
+		btnNewButton.setEnabled(false);
+		btnNewButton.setBounds(622, 293, 122, 28);
+		getContentPane().add(btnNewButton);
 	}
+	
+	public void soloLetras(JTextField txt){
+		txt.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c= e.getKeyChar();
+				if (Character.isDigit(c)) {
+					e.consume();		
+				}
+			}
+		});
+	}
+	
+	public void soloNumeros(JTextField txt){
+		txt.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c= e.getKeyChar();
+				if (!Character.isDigit(c)) {
+					e.consume();		
+				}
+			}
+		});
+	}
+	
 }

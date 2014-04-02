@@ -9,7 +9,6 @@ package healthAbility.vista.admin;
 
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
-import healthAbility.vista.Login;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
@@ -18,31 +17,39 @@ import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.net.URL;
+import java.text.ParseException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
+import javax.swing.JFileChooser;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.border.LineBorder;
-import java.awt.Choice;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.text.MaskFormatter;
+
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 /**
  * @author Diego Mar 27, 2014
  *
  */
+@SuppressWarnings("serial")
 public class ActualizarPaciente extends VentanaBase {
 	
 	private JTextField txtNombrePaciente;
-	private JTextField txtPrimerApMedico;
-	private JTextField txtSegundoApMedico;
-	private JTextField txtCedulaPaciente;
+	private JTextField txtPrimerApPaciente;
+	private JTextField txtSegundoApPaciente;
+	private JFormattedTextField txtCedulaPaciente;
 	private JTextField txtCorreoPaciente;
-	private JTextField txtTelefonoMedico;
+	private JFormattedTextField txtTelefonoMedico;
 	
 	Font letra1 = new Font("Georgia", Font.PLAIN, 22);
 	Font letraTitulo = new Font("Georgia", Font.PLAIN, 28);
@@ -109,11 +116,21 @@ public class ActualizarPaciente extends VentanaBase {
 		JButton btnGuardar = new JButton("");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Login login = new Login();
-				login.setVisible(true); 
-				setVisible(false);
-			}
-		});
+				if (txtNombrePaciente.getText().equals("") ||
+						txtCedulaPaciente.getText().equals("")||
+						txtPrimerApPaciente.getText().equals("")||
+						txtSegundoApPaciente.getText().equals("")) 
+						{
+						Usuarios usuarios = new Usuarios();
+						usuarios.setVisible(true); 
+						setVisible(false);						
+						}
+						else {
+							JOptionPane.showMessageDialog(null, "Hay un campo requerido vacio!", "Error", JOptionPane.ERROR_MESSAGE);
+						}
+					
+				}
+			});
 		btnGuardar.setOpaque(false);
 		btnGuardar.setContentAreaFilled(false);
 		btnGuardar.setBorderPainted(false);
@@ -125,62 +142,80 @@ public class ActualizarPaciente extends VentanaBase {
 		getContentPane().add(lblActualizarPaciente);
 		
 		JLabel lblNombrePaciente = new JLabel("Nombre*:");
-		lblNombrePaciente.setBounds(75, 289, 170, 32);
+		lblNombrePaciente.setBounds(75, 311, 170, 32);
 		lblNombrePaciente.setFont(letra1);
 		getContentPane().add(lblNombrePaciente);
 		
 		txtNombrePaciente = new JTextField();
-		txtNombrePaciente.setBounds(268, 286, 245, 32);
+		soloLetras(txtNombrePaciente);
+		txtNombrePaciente.setBounds(268, 311, 245, 32);
 		getContentPane().add(txtNombrePaciente);
 		txtNombrePaciente.setColumns(10);
 		
 		JLabel lblPrimerApPaciente = new JLabel("Primer apellido*:");
-		lblPrimerApPaciente.setBounds(75, 332, 175, 32);
+		lblPrimerApPaciente.setBounds(75, 354, 175, 32);
 		lblPrimerApPaciente.setFont(letra1);
 		getContentPane().add(lblPrimerApPaciente);
 		
-		txtPrimerApMedico = new JTextField();
-		txtPrimerApMedico.setBounds(268, 329, 245, 32);
-		getContentPane().add(txtPrimerApMedico);
-		txtPrimerApMedico.setColumns(10);
+		txtPrimerApPaciente = new JTextField();
+		soloLetras(txtPrimerApPaciente);
+		txtPrimerApPaciente.setBounds(268, 354, 245, 32);
+		getContentPane().add(txtPrimerApPaciente);
+		txtPrimerApPaciente.setColumns(10);
 		
 		JLabel lblSegundoApPaciente = new JLabel("Segundo apellido*:");
-		lblSegundoApPaciente.setBounds(75, 372, 209, 32);
+		lblSegundoApPaciente.setBounds(75, 397, 209, 32);
 		lblSegundoApPaciente.setFont(letra1);
 		getContentPane().add(lblSegundoApPaciente);
 		
-		txtSegundoApMedico = new JTextField();
-		txtSegundoApMedico.setBounds(268, 372, 245, 32);
-		getContentPane().add(txtSegundoApMedico);
-		txtSegundoApMedico.setColumns(10);
+		txtSegundoApPaciente = new JTextField();
+		soloLetras(txtSegundoApPaciente);
+		txtSegundoApPaciente.setBounds(268, 397, 245, 32);
+		getContentPane().add(txtSegundoApPaciente);
+		txtSegundoApPaciente.setColumns(10);
 		
 		JLabel lblCedulaPaciente = new JLabel("C\u00E9dula*:");
-		lblCedulaPaciente.setBounds(75, 243, 183, 32);
+		lblCedulaPaciente.setBounds(75, 268, 183, 32);
 		lblCedulaPaciente.setFont(letra1);
 		getContentPane().add(lblCedulaPaciente);
 		
-		txtCedulaPaciente = new JTextField();
-		txtCedulaPaciente.setBounds(268, 243, 245, 32);
+		MaskFormatter mascaraCedula = null;
+		try {
+			mascaraCedula = new MaskFormatter("#-####-####");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		
+		JFormattedTextField txtCedulaPaciente = new JFormattedTextField(mascaraCedula);
+		txtCedulaPaciente.setBounds(268, 268, 245, 32);
 		getContentPane().add(txtCedulaPaciente);
 		txtCedulaPaciente.setColumns(10);
 		
 		JLabel lblCorreo = new JLabel("Correo:");
-		lblCorreo.setBounds(75, 415, 175, 32);
+		lblCorreo.setBounds(75, 440, 175, 32);
 		lblCorreo.setFont(letra1);
 		getContentPane().add(lblCorreo);
 		
 		txtCorreoPaciente = new JTextField();
-		txtCorreoPaciente.setBounds(268, 415, 245, 32);
+		txtCorreoPaciente.setBounds(268, 440, 245, 32);
 		getContentPane().add(txtCorreoPaciente);
 		txtCorreoPaciente.setColumns(10);
 		
 		JLabel lblTelefono = new JLabel("Telefono:");
-		lblTelefono.setBounds(75, 450, 183, 40);
+		lblTelefono.setBounds(75, 476, 183, 40);
 		lblTelefono.setFont(letra1);
 		getContentPane().add(lblTelefono);
 		
-		txtTelefonoMedico = new JTextField();
-		txtTelefonoMedico.setBounds(268, 458, 245, 32);
+		MaskFormatter mascaraTelefono = null;
+		try {
+			mascaraTelefono = new MaskFormatter("####-####");
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		JFormattedTextField txtTelefonoMedico = new JFormattedTextField(mascaraTelefono);
+		txtTelefonoMedico.setBounds(268, 484, 245, 32);
 		getContentPane().add(txtTelefonoMedico);
 		txtTelefonoMedico.setColumns(10);
 		
@@ -193,10 +228,6 @@ public class ActualizarPaciente extends VentanaBase {
 		btnAgregarFotoMedico.setBounds(608, 247, 122, 32);
 		getContentPane().add(btnAgregarFotoMedico);
 		
-		JPanel panelFotoMedico = new JPanel();
-		panelFotoMedico.setBounds(620, 316, 110, 146);
-		getContentPane().add(panelFotoMedico);
-		
 		JLabel lblRegresar = new JLabel("Regresar");
 		lblRegresar.setFont(new Font("Georgia", Font.PLAIN, 22));
 		lblRegresar.setBounds(145, 597, 183, 37);
@@ -206,6 +237,40 @@ public class ActualizarPaciente extends VentanaBase {
 		lblGuardar.setFont(new Font("Georgia", Font.PLAIN, 22));
 		lblGuardar.setBounds(713, 597, 95, 37);
 		getContentPane().add(lblGuardar);
+		
+		JLabel label = new JLabel("*Campos obligatorios");
+		label.setForeground(Color.RED);
+		label.setBounds(75, 218, 122, 14);
+		getContentPane().add(label);
+		
+		JButton btnVerFoto = new JButton("Ver foto");
+		btnVerFoto.setEnabled(false);
+		btnVerFoto.setBounds(608, 299, 122, 28);
+		getContentPane().add(btnVerFoto);
+	}
+	
+	public void soloLetras(JTextField txt){
+		txt.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c= e.getKeyChar();
+				if (Character.isDigit(c)) {
+					e.consume();		
+				}
+			}
+		});
+	}
+	
+	public void soloNumeros(JTextField txt){
+		txt.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+				char c= e.getKeyChar();
+				if (!Character.isDigit(c)) {
+					e.consume();		
+				}
+			}
+		});
 	}
 
 }

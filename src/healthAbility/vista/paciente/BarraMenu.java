@@ -72,30 +72,22 @@ public class BarraMenu extends JMenuBar {
 		mCrearPaciente = new JMenuItem("Crear Paciente                         ");
 		mCrearPaciente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new CrearUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				AgregarPaciente agregarPaciente = new AgregarPaciente();
+				agregarPaciente.setVisible(true);
+				frame.setVisible(false);
 			}
 		});
 		mUsuarioPaciente.add(mCrearPaciente);
 		mCrearPaciente.setMnemonic('C');
-
-		mEliminarPaciente = new JMenuItem("Eliminar Paciente");
-		mEliminarPaciente.setMnemonic('E');
-		mEliminarPaciente.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new EliminarUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
-			}
-		});
-		mUsuarioPaciente.add(mEliminarPaciente);
-		mUsuarios.add(mUsuarioPaciente);
+		
 
 		mActualizarPaciente = new JMenuItem("Actualizar Paciente");
 		mActualizarPaciente.setMnemonic('A');
 		mActualizarPaciente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new EliminarUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
+				ActualizarPaciente actualizarPaciente = new ActualizarPaciente();
+				actualizarPaciente.setVisible(true);
+				frame.setVisible(false);
 			}
 		});
 		mUsuarioPaciente.add(mActualizarPaciente);
