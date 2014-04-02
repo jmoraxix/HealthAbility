@@ -232,9 +232,9 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		calificaciones.add(btncalificaciones);
 		btncalificaciones.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						/*elegirVer = new ElegirVer();
-      			elegirVer.setVisible(true); 
-      			menu.setVisible(false);*/
+					VerCalificaciones verCalificaciones = new VerCalificaciones();
+					verCalificaciones.setVisible(true);
+					setVisible(false);
 					}
 				});
 				btncalificaciones.setOpaque(false);
