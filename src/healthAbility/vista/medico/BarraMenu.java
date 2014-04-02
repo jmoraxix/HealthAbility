@@ -86,8 +86,6 @@ public class BarraMenu extends JMenuBar {
 		mEliminarMedico.setMnemonic('E');
 		mEliminarMedico.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				//HealthAbility.verifUsuario = new VerifUsuario(new EliminarUsuario());
-				//HealthAbility.verifUsuario.setVisible(true); 
 			}
 		});
 		mUsuarioMedico.add(mEliminarMedico);
@@ -111,30 +109,14 @@ public class BarraMenu extends JMenuBar {
 		mCitas.setMnemonic('C');
 		this.add(mCitas);
 
-		mCitasAgregar = new JMenuItem("Agregar cita");
+		mCitasAgregar = new JMenuItem("Ver citas");
 		mCitasAgregar.setMnemonic('A');
 		mCitasAgregar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 			}
 		});
-		mCitasModificar = new JMenuItem("Modificar cita");
-		mCitasModificar.setMnemonic('M');
-		mCitasModificar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-			}
-		});
-		mCitasEliminar =  new JMenuItem("Eliminar cita");
-		mCitasEliminar.setMnemonic('E');
-		mCitasEliminar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-			}
-		});
 		mCitas.add(mCitasAgregar);
-		mCitas.add(mCitasModificar);
-		mCitas.add(mCitasEliminar);
 		
 		
 		mBusquedas = new JMenu("Búsquedas                         ");
