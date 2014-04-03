@@ -137,7 +137,7 @@ public class EnviarCorreo extends VentanaBase /*implements ActionListener*/{
 		
 		
 		JPanel regresar = new JPanel();
-		regresar.setBounds(75, 585, 60, 60);
+		regresar.setBounds(84, 585, 60, 60);
 		regresar.setOpaque(false);
 		try {
 			regresar.setForeground(SystemColor.controlHighlight);
@@ -172,7 +172,7 @@ public class EnviarCorreo extends VentanaBase /*implements ActionListener*/{
 		regresar.add(btnRegres);
 		
 		JPanel guardar = new JPanel();
-		guardar.setBounds(818, 585, 60, 60);
+		guardar.setBounds(787, 585, 60, 60);
 		guardar.setOpaque(false);
 		try {
 			guardar.setForeground(SystemColor.controlHighlight);
@@ -205,6 +205,16 @@ public class EnviarCorreo extends VentanaBase /*implements ActionListener*/{
 		btnGuardar.setContentAreaFilled(false);
 		btnGuardar.setBorderPainted(false);
 		guardar.add(btnGuardar);
+		
+		JLabel lblRegresar = new JLabel("Regresar");
+		lblRegresar.setFont(new Font("Georgia", Font.PLAIN, 22));
+		lblRegresar.setBounds(149, 592, 104, 37);
+		getContentPane().add(lblRegresar);
+		
+		JLabel lblContinuar = new JLabel("Continuar");
+		lblContinuar.setFont(new Font("Georgia", Font.PLAIN, 22));
+		lblContinuar.setBounds(684, 592, 115, 37);
+		getContentPane().add(lblContinuar);
 	}
 	
 	
