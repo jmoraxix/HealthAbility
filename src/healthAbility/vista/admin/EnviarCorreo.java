@@ -28,11 +28,13 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
@@ -45,16 +47,19 @@ import javax.swing.border.LineBorder;
  * @author Diego Apr 1, 2014
  *
  */
-public class EnviarCorreo extends VentanaBase /*implements ActionListener*/{
+@SuppressWarnings("serial")
+public class EnviarCorreo extends VentanaBase implements ActionListener {
 	//Parte de los campos de la pantalla "VentanaCorreo"
-	private JPanel contentPane;
 	private JTextField correoDestino;
 	private JTextField asunto;
 	JButton btnGuardar, btnRegres ;
 	private JTextField correoOrigen;
 	private JTextField contrasena;
-	private JTextField servidor;
 	private JTextArea mensaje;
+
+	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private String server ="smtp.gmail.com", puerto = "587";
+	private JRadioButton rdbtnGmail, rdbtnHotmail, rdbtnYahoo;
 	
 	Font letra1 = new Font("Georgia", Font.PLAIN, 22);
 	Font letraTitulo = new Font("Georgia", Font.PLAIN, 28);
@@ -69,72 +74,58 @@ public class EnviarCorreo extends VentanaBase /*implements ActionListener*/{
 		 */
 		JLabel lblEscribirUnCorreo = new JLabel("Escribir un correo");
 		lblEscribirUnCorreo.setFont(new Font("Tahoma", Font.BOLD, 18));
-		getContentPane().add(lblEscribirUnCorreo, BorderLayout.NORTH);
+		add(lblEscribirUnCorreo, BorderLayout.NORTH);
 		
 		//Destino del correo
 		JLabel lblCorreo = new JLabel("Para:");
-		lblCorreo.setBounds(407, 212, 83, 26);
-		getContentPane().add(lblCorreo);
-		correoDestino = new JTextField("cliente@gmail.com");
+		lblCorreo.setBounds(384, 221, 83, 26);
+		add(lblCorreo);
+		correoDestino = new JTextField("@gmail.com");
 		lblCorreo.setFont(letra1);
-		correoDestino.setBounds(501, 219, 179, 26);
-		getContentPane().add(correoDestino);
+		correoDestino.setBounds(442, 216, 238, 35);
+		add(correoDestino);
 		correoDestino.setColumns(10);
-		
-		
 		
 		//Asunto del correo
 		JLabel lblAsunto = new JLabel("Asunto:");
-		lblAsunto.setBounds(25, 286, 83, 20);
-		getContentPane().add(lblAsunto);
+		lblAsunto.setBounds(44, 314, 83, 20);
+		add(lblAsunto);
 		asunto = new JTextField("Prueba JavaMail");
 		lblAsunto.setFont(letra1);
-		asunto.setBounds(149, 290, 354, 26);
-		getContentPane().add(asunto);
+		asunto.setBounds(149, 315, 354, 26);
+		add(asunto);
 		asunto.setColumns(10);
 		
 		//Mensaje que se enviará
 		JLabel lblMensaje = new JLabel("Mensaje:");
 		lblMensaje.setFont(letra1);
-		lblMensaje.setBounds(24, 321, 134, 26);
-		getContentPane().add(lblMensaje);
+		lblMensaje.setBounds(44, 352, 104, 26);
+		add(lblMensaje);
 		
-		mensaje = new JTextArea("Escriba el mensaje ");
+		mensaje = new JTextArea();
 		mensaje.setBorder(new LineBorder(Color.LIGHT_GRAY));
 		mensaje.setBounds(149, 358, 531, 223);
-		getContentPane().add(mensaje);
+		add(mensaje);
 		
-		JLabel lblOrigen = new JLabel("Origen: ");
+		JLabel lblOrigen = new JLabel("Origen:");
 		lblOrigen.setFont(letra1);
-		lblOrigen.setBounds(24, 171, 104, 26);
-		getContentPane().add(lblOrigen);
+		lblOrigen.setBounds(44, 221, 83, 26);
+		add(lblOrigen);
 		
 		//Remitente del correo
-		correoOrigen = new JTextField("soporte@papayanator.com");
+		correoOrigen = new JTextField("@gmail.com");
 		correoOrigen.setColumns(10);
-		correoOrigen.setBounds(149, 178, 179, 26);
-		getContentPane().add(correoOrigen);
+		correoOrigen.setBounds(125, 216, 235, 35);
+		add(correoOrigen);
+		
 		JLabel lblContraseña = new JLabel("Constrase\u00F1a:");
 		lblContraseña.setFont(letra1);
-		lblContraseña.setBounds(24, 212, 134, 26);
-		getContentPane().add(lblContraseña);
-		contrasena = new JPasswordField("*********");
+		lblContraseña.setBounds(44, 262, 134, 26);
+		add(lblContraseña);
+		contrasena = new JPasswordField();
 		contrasena.setColumns(10);
-		contrasena.setBounds(149, 219, 179, 26);
-		getContentPane().add(contrasena);
-		
-		
-		
-		//Servidor que se utilizará para enviar el correo
-		JLabel labelServidor = new JLabel("Servidor:");
-		labelServidor.setBounds(407, 175, 115, 26);
-		labelServidor.setFont(letra1);
-		getContentPane().add(labelServidor);
-		servidor = new JTextField("smtp.gmail.com");
-		servidor.setColumns(10);
-		servidor.setBounds(501, 178, 179, 26);
-		getContentPane().add(servidor);
-		
+		contrasena.setBounds(181, 262, 179, 26);
+		add(contrasena);
 		
 		JPanel regresar = new JPanel();
 		regresar.setBounds(84, 585, 60, 60);
@@ -151,9 +142,8 @@ public class EnviarCorreo extends VentanaBase /*implements ActionListener*/{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		getContentPane().add(regresar);
 		regresar.setLayout(new BorderLayout(0, 0));
-		getContentPane().add(regresar);
+		add(regresar);
 
 		JButton btnRegres = new JButton("");
 		btnRegres.addActionListener(new ActionListener() {
@@ -186,21 +176,12 @@ public class EnviarCorreo extends VentanaBase /*implements ActionListener*/{
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		getContentPane().add(guardar);
+		add(guardar);
 		guardar.setLayout(new BorderLayout(0, 0));
-		getContentPane().add(guardar);
+		add(guardar);
 
 		JButton btnGuardar = new JButton("");
-		btnGuardar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				int confirmado = JOptionPane.showConfirmDialog(null, "El correo se enviará, ¿desea enviar el mensaje?", null, JOptionPane.YES_NO_OPTION);
-	    		if(JOptionPane.YES_OPTION == confirmado){
-	    		papayanatorSiEnviaCorreos();}
-				MenuPrincipal menuPrincipal = new MenuPrincipal();
-				menuPrincipal.setVisible(true); 
-				setVisible(false);
-			}
-		});
+		btnGuardar.addActionListener(this);
 		btnGuardar.setOpaque(false);
 		btnGuardar.setContentAreaFilled(false);
 		btnGuardar.setBorderPainted(false);
@@ -209,26 +190,50 @@ public class EnviarCorreo extends VentanaBase /*implements ActionListener*/{
 		JLabel lblRegresar = new JLabel("Regresar");
 		lblRegresar.setFont(new Font("Georgia", Font.PLAIN, 22));
 		lblRegresar.setBounds(149, 592, 104, 37);
-		getContentPane().add(lblRegresar);
+		add(lblRegresar);
 		
 		JLabel lblContinuar = new JLabel("Continuar");
 		lblContinuar.setFont(new Font("Georgia", Font.PLAIN, 22));
 		lblContinuar.setBounds(684, 592, 115, 37);
-		getContentPane().add(lblContinuar);
+		add(lblContinuar);
+		
+		JLabel lblServidor = new JLabel("Servidor:");
+		lblServidor.setFont(letra1);
+		lblServidor.setBounds(44, 171, 104, 31);
+		add(lblServidor);
+		
+		rdbtnGmail = new JRadioButton("Gmail");
+		rdbtnGmail.addActionListener(this);
+		buttonGroup.add(rdbtnGmail);
+		rdbtnGmail.setBounds(148, 179, 64, 23);
+		rdbtnGmail.setSelected(true);
+		rdbtnGmail.setOpaque(false);
+		add(rdbtnGmail);
+		
+		rdbtnHotmail = new JRadioButton("Hotmail");
+		rdbtnHotmail.addActionListener(this);
+		buttonGroup.add(rdbtnHotmail);
+		rdbtnHotmail.setBounds(214, 179, 72, 23);
+		rdbtnHotmail.setOpaque(false);
+		add(rdbtnHotmail);
+		
+		rdbtnYahoo = new JRadioButton("Yahoo");
+		rdbtnYahoo.addActionListener(this);
+		buttonGroup.add(rdbtnYahoo);
+		rdbtnYahoo.setBounds(288, 179, 72, 23);
+		rdbtnYahoo.setOpaque(false);
+		add(rdbtnYahoo);
 	}
-	
-	
 
-	
 	//Funcion para enviar el correo
-	private boolean papayanatorSiEnviaCorreos(){
+	private boolean healthAbilitySiEnviaCorreos(){
 		try{
 			
 			//propiedades de la conexion
 			Properties props = new Properties();
-	        props.setProperty("mail.smtp.host",  "smtp.gmail.com");
+	        props.setProperty("mail.smtp.host",  server);
 	        props.setProperty("mail.smtp.starttls.enable", "true");
-	        props.setProperty("mail.smtp.port", "587");
+	        props.setProperty("mail.smtp.port", puerto);
 	        props.setProperty("mail.smtp.auth", "true");
 	        
 	        //preparar sesion
@@ -259,8 +264,8 @@ public class EnviarCorreo extends VentanaBase /*implements ActionListener*/{
 	    
 	    //receptores
 	    message.addRecipients(Message.RecipientType.TO, receptores);        
-        message.setSubject( str_Asunto );        
-        message.setText( str_Mensaje );
+        message.setSubject(str_Asunto);        
+        message.setText(str_Mensaje);
 	    
      // Envio del correo
         Transport t = session.getTransport("smtp");
@@ -270,27 +275,41 @@ public class EnviarCorreo extends VentanaBase /*implements ActionListener*/{
      // Cierre de la conexion.
         t.close();
         return true;
-                 
 		}
 		catch(Exception e){
 			e.printStackTrace();
 			return false;
 		}
-			
-	
 	}
-		
-	/*public void actionPerformed(ActionEvent e) {
-    	if (e.getSource()==btnGuardar){
-    		int confirmado = JOptionPane.showConfirmDialog(null, "¿Seguro que desa cerrar sin enviar el correo?", null, JOptionPane.YES_NO_OPTION);
-    		if(JOptionPane.YES_OPTION == confirmado)
-    		papayanatorSiEnviaCorreos();
-        	this.setVisible(false);
-    	}
-    	if (e.getSource()==btnRegres){
-    		int confirmado = JOptionPane.showConfirmDialog(null, "¿Seguro que desa cerrar sin enviar el correo?", null, JOptionPane.YES_NO_OPTION);
-    		if (JOptionPane.YES_OPTION == confirmado)
-        		this.setVisible(false);
-    	}
-    }*/
+	
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==btnGuardar){
+			int confirmado = JOptionPane.showConfirmDialog(null, "El correo se enviará, ¿desea enviar el mensaje?", null, JOptionPane.YES_NO_OPTION);
+    		if(JOptionPane.YES_OPTION == confirmado){
+    			boolean enviado = healthAbilitySiEnviaCorreos();
+    			if(enviado)
+    				JOptionPane.showMessageDialog(this, "Correo enviado!");
+    			else
+    				JOptionPane.showMessageDialog(this, "Error al enviar el correo.");
+    			MenuPrincipal menuPrincipal = new MenuPrincipal();
+    			menuPrincipal.setVisible(true); 
+    			setVisible(false);
+    		}
+		} else if(rdbtnGmail.isSelected()){
+			server = "smtp.gmail.com";
+			puerto = "587";
+			correoOrigen.setText("@gmail.com");
+			correoDestino.setText("@gmail.com");
+		} else if(rdbtnHotmail.isSelected()){
+			server = "smtp.live.com";
+			puerto = "587";
+			correoOrigen.setText("@hotmail.com");
+			correoDestino.setText("@hotmail.com");
+		} else if(rdbtnYahoo.isSelected()){
+			server = "smtp.mail.yahoo.com";
+			puerto = "465";
+			correoOrigen.setText("@yahoo.com");
+			correoDestino.setText("@yahoo.com");
+		}
+	}
 }
