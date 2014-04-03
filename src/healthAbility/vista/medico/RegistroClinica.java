@@ -9,7 +9,6 @@ package healthAbility.vista.medico;
 
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
-import healthAbility.vista.Login;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
@@ -111,9 +110,9 @@ public class RegistroClinica extends VentanaBase {
 		JButton btnGuardar = new JButton("");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (txtNombreClinica.getText().equals("") ||
-					comboProvincia.getSelectedIndex()!=1||
-					comboDistrito.getSelectedIndex()!=1||
+				if (!txtNombreClinica.getText().equals("") &&
+					comboProvincia.getSelectedIndex()!=1&&
+					comboDistrito.getSelectedIndex()!=1&&
 					comboCanton.getSelectedIndex()!=1) 
 					{
 						MenuPrincipal menuPrincipal = new MenuPrincipal();

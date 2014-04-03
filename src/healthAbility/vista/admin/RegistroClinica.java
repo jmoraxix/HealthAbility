@@ -111,9 +111,9 @@ public class RegistroClinica extends VentanaBase {
 		JButton btnGuardar = new JButton("");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (txtNombreClinica.getText().equals("") ||
-					comboProvincia.getSelectedIndex()!=1||
-					comboDistrito.getSelectedIndex()!=1||
+				if (txtNombreClinica.getText().equals("") &&
+					comboProvincia.getSelectedIndex()!=1&&
+					comboDistrito.getSelectedIndex()!=1&&
 					comboCanton.getSelectedIndex()!=1) 
 					{
 						Usuarios usuarios = new Usuarios();

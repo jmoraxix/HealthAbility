@@ -9,11 +9,10 @@ package healthAbility.vista.paciente;
 
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
-import healthAbility.vista.Login;
+
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
@@ -26,17 +25,13 @@ import java.text.ParseException;
 
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
-import javax.swing.JFileChooser;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.MaskFormatter;
 
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 
 /**
  * @author Diego Mar 27, 2014
@@ -50,10 +45,10 @@ public class ActualizarPaciente extends VentanaBase {
 	private JTextField txtSegundoApPaciente;
 	private JFormattedTextField txtCedulaPaciente;
 	private JTextField txtCorreoPaciente;
-	private JFormattedTextField txtTelefonoMedico;
-	
+	private JTextField txtTelefonoPaciente;
 	Font letra1 = new Font("Georgia", Font.PLAIN, 22);
 	Font letraTitulo = new Font("Georgia", Font.PLAIN, 28);
+	
 	
 
 	/**
@@ -117,10 +112,10 @@ public class ActualizarPaciente extends VentanaBase {
 		JButton btnGuardar = new JButton("");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (txtNombrePaciente.getText().equals("") ||
-						txtCedulaPaciente.getText().equals("")||
-						txtPrimerApPaciente.getText().equals("")||
-						txtSegundoApPaciente.getText().equals("")) 
+				if (!txtNombrePaciente.getText().equals("") &
+					!txtCedulaPaciente.getText().equals("")&
+					!txtPrimerApPaciente.getText().equals("")&
+					!txtSegundoApPaciente.getText().equals("")) 
 						{
 						MenuPrincipal menuPrincipal = new MenuPrincipal();
 						menuPrincipal.setVisible(true); 
@@ -188,7 +183,7 @@ public class ActualizarPaciente extends VentanaBase {
 		}
 		
 		
-		JFormattedTextField txtCedulaPaciente = new JFormattedTextField(mascaraCedula);
+		txtCedulaPaciente = new JFormattedTextField(mascaraCedula);
 		txtCedulaPaciente.setBounds(268, 243, 245, 32);
 		getContentPane().add(txtCedulaPaciente);
 		txtCedulaPaciente.setColumns(10);
@@ -215,7 +210,7 @@ public class ActualizarPaciente extends VentanaBase {
 			e.printStackTrace();
 		}
 			
-		JFormattedTextField txtTelefonoPaciente = new JFormattedTextField(mascaraTelefono);
+		txtTelefonoPaciente = new JFormattedTextField(mascaraTelefono);
 		txtTelefonoPaciente.setBounds(268, 458, 245, 32);
 		getContentPane().add(txtTelefonoPaciente);
 		txtTelefonoPaciente.setColumns(10);
@@ -243,6 +238,8 @@ public class ActualizarPaciente extends VentanaBase {
 		btnVerFoto.setEnabled(false);
 		btnVerFoto.setBounds(608, 298, 122, 28);
 		getContentPane().add(btnVerFoto);
+		
+		
 	}
 	
 	public void soloLetras(JTextField txt){

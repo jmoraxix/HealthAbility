@@ -85,7 +85,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 
 		//Opciones del Menu
 		JPanel AgregarPaciente = new JPanel();
-		AgregarPaciente.setBounds(170, 214, 97, 115);
+		AgregarPaciente.setBounds(259, 214, 97, 115);
 		AgregarPaciente.setOpaque(false);
 		try {
 			AgregarPaciente.setForeground(SystemColor.controlHighlight);
@@ -116,7 +116,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		AgregarPaciente.add(btnIngresarPaciente);
 		
 		JPanel ActualizarPaciente = new JPanel();
-		ActualizarPaciente.setBounds(459, 214, 97, 115);
+		ActualizarPaciente.setBounds(614, 214, 97, 115);
 		ActualizarPaciente.setOpaque(false);
 		try {
 			ActualizarPaciente.setForeground(SystemColor.controlHighlight);
@@ -157,7 +157,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		}
 
 		JPanel citas = new JPanel();
-		citas.setBounds(459, 425, 97, 115);
+		citas.setBounds(614, 425, 97, 115);
 		citas.setOpaque(false);
 		try {
 			citas.setForeground(SystemColor.controlHighlight);
@@ -177,9 +177,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		JButton btnCitas = new JButton("");
 		btnCitas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				/*elegirVer = new ElegirVer();
-      			elegirVer.setVisible(true); 
-      			menu.setVisible(false);*/
+				//ir a citas
 			}
 		});
 		btnCitas.setOpaque(false);
@@ -188,7 +186,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		citas.add(btnCitas);
 
 		JPanel calificaciones = new JPanel();
-		calificaciones.setBounds(170, 425, 97, 115);
+		calificaciones.setBounds(259, 425, 97, 115);
 		calificaciones.setOpaque(false);
 		try {
 			calificaciones.setForeground(SystemColor.controlHighlight);
@@ -232,21 +230,21 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		lblAgregarMedico.setForeground(new Color(0, 0, 128));
 		lblAgregarMedico.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAgregarMedico.setFont(letraTexto2);
-		lblAgregarMedico.setBounds(131, 327, 176, 23);
+		lblAgregarMedico.setBounds(221, 327, 176, 23);
 		getContentPane().add(lblAgregarMedico);
 
 		JLabel lblCalificaciones = new JLabel("Calificar");
 		lblCalificaciones.setForeground(new Color(0, 0, 128));
 		lblCalificaciones.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCalificaciones.setFont(letraTexto2);
-		lblCalificaciones.setBounds(139, 551, 168, 23);
+		lblCalificaciones.setBounds(221, 551, 168, 23);
 		getContentPane().add(lblCalificaciones);
 
 		JLabel lblCitas = new JLabel("Citas");
 		lblCitas.setForeground(new Color(0, 0, 128));
 		lblCitas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblCitas.setFont(letraTexto2);
-		lblCitas.setBounds(427, 551, 168, 23);
+		lblCitas.setBounds(573, 551, 168, 23);
 		getContentPane().add(lblCitas);
 
 		JButton btnExamen = new JButton("");
@@ -267,7 +265,7 @@ public class MenuPrincipal extends VentanaBase implements ActionListener
 		lblActualizarMedico.setHorizontalAlignment(SwingConstants.CENTER);
 		lblActualizarMedico.setForeground(new Color(0, 0, 128));
 		lblActualizarMedico.setFont(new Font("Georgia", Font.PLAIN, 18));
-		lblActualizarMedico.setBounds(419, 334, 176, 23);
+		lblActualizarMedico.setBounds(565, 327, 176, 23);
 		getContentPane().add(lblActualizarMedico);
 	}
 

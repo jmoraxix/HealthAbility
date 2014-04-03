@@ -111,10 +111,10 @@ public class ActualizarPaciente extends VentanaBase {
 		JButton btnGuardar = new JButton("");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				if (txtNombrePaciente.getText().equals("") ||
-						txtCedulaPaciente.getText().equals("")||
-						txtPrimerApPaciente.getText().equals("")||
-						txtSegundoApPaciente.getText().equals("")) 
+				if (!txtNombrePaciente.getText().equals("") &&
+					!txtCedulaPaciente.getText().equals("")&&
+					!txtPrimerApPaciente.getText().equals("")&&
+					!txtSegundoApPaciente.getText().equals("")) 
 						{
 						Usuarios usuarios = new Usuarios();
 						usuarios.setVisible(true); 
@@ -182,7 +182,7 @@ public class ActualizarPaciente extends VentanaBase {
 		}
 		
 		
-		JFormattedTextField txtCedulaPaciente = new JFormattedTextField(mascaraCedula);
+		txtCedulaPaciente = new JFormattedTextField(mascaraCedula);
 		txtCedulaPaciente.setBounds(268, 268, 245, 32);
 		getContentPane().add(txtCedulaPaciente);
 		txtCedulaPaciente.setColumns(10);

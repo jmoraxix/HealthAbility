@@ -12,7 +12,6 @@ import healthAbility.vista.BgBorder;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.Font;
 import java.awt.SystemColor;
 import java.awt.event.ActionEvent;
@@ -33,10 +32,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.text.MaskFormatter;
-
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-
 
 
 
@@ -113,10 +108,10 @@ public class AgregarPaciente extends VentanaBase {
 				JButton btnGuardar = new JButton("");
 				btnGuardar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						if (txtNombrePaciente.getText().equals("") ||
-								txtCedulaPaciente.getText().equals("")||
-								txtPrimerApPaciente.getText().equals("")||
-								txtSegApPaciente.getText().equals("")) 
+						if (!txtNombrePaciente.getText().equals("") &&
+							!txtCedulaPaciente.getText().equals("")&&
+							!txtPrimerApPaciente.getText().equals("")&&
+							!txtSegApPaciente.getText().equals("")) 
 								{
 								MenuPrincipal menuPrincipal = new MenuPrincipal();
 								menuPrincipal.setVisible(true); 
@@ -183,7 +178,7 @@ public class AgregarPaciente extends VentanaBase {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		JFormattedTextField txtCedulaPaciente = new JFormattedTextField(mascaraCedula);
+		txtCedulaPaciente = new JFormattedTextField(mascaraCedula);
 		txtCedulaPaciente.setColumns(10);
 		txtCedulaPaciente.setBounds(268, 273, 245, 32);
 		getContentPane().add(txtCedulaPaciente);
@@ -239,7 +234,7 @@ public class AgregarPaciente extends VentanaBase {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		JFormattedTextField txtTelefonoPaciente = new JFormattedTextField(mascaraTelefono);
+		txtTelefonoPaciente = new JFormattedTextField(mascaraTelefono);
 		txtTelefonoPaciente.setColumns(10);
 		txtTelefonoPaciente.setBounds(268, 484, 245, 32);
 		getContentPane().add(txtTelefonoPaciente);

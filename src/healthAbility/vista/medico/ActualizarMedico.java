@@ -9,7 +9,6 @@ package healthAbility.vista.medico;
 
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
-import healthAbility.vista.Login;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
@@ -29,11 +28,9 @@ import javax.swing.JFormattedTextField;
 import javax.swing.JOptionPane;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.border.LineBorder;
 
-import java.awt.Choice;
 
 import javax.swing.JTextPane;
 import javax.swing.text.MaskFormatter;
@@ -125,10 +122,10 @@ public class ActualizarMedico extends VentanaBase {
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				if (txtNombreMedico.getText().equals("") ||
-					txtCedulaMedico.getText().equals("")||
-					txtPrimerApMedico.getText().equals("")||
-					txtSegundoApMedico.getText().equals("")) 
+				if (!txtNombreMedico.getText().equals("") &&
+					!txtCedulaMedico.getText().equals("")&&
+					!txtPrimerApMedico.getText().equals("")&&
+					!txtSegundoApMedico.getText().equals("")) 
 					{
 						MenuPrincipal menuPrincipal = new MenuPrincipal();
 						menuPrincipal.setVisible(true); 
@@ -194,7 +191,7 @@ public class ActualizarMedico extends VentanaBase {
 			e.printStackTrace();
 		}
 		
-		JFormattedTextField txtCedulaMedico = new JFormattedTextField(mascaraCedula);
+		txtCedulaMedico = new JFormattedTextField(mascaraCedula);
 		soloNumeros(txtCedulaMedico);
 		txtCedulaMedico.setBounds(268, 243, 245, 32);
 		getContentPane().add(txtCedulaMedico);

@@ -117,10 +117,10 @@ public class ActualizarMedico extends VentanaBase {
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
-				if (txtNombreMedico.getText().equals("") ||
-					txtCedulaMedico.getText().equals("")||
-					txtPrimerApMedico.getText().equals("")||
-					txtSegundoApMedico.getText().equals("")) 
+				if (!txtNombreMedico.getText().equals("")&&
+					!txtCedulaMedico.getText().equals("")&&
+					!txtPrimerApMedico.getText().equals("")&&
+					!txtSegundoApMedico.getText().equals("")) 
 					{
 					Usuarios usuarios = new Usuarios();
 					usuarios.setVisible(true); 
@@ -186,7 +186,7 @@ public class ActualizarMedico extends VentanaBase {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		JFormattedTextField txtCedulaMedico = new JFormattedTextField(mascaraCedula);
+		txtCedulaMedico = new JFormattedTextField(mascaraCedula);
 		soloNumeros(txtCedulaMedico);
 		txtCedulaMedico.setBounds(268, 243, 245, 32);
 		getContentPane().add(txtCedulaMedico);

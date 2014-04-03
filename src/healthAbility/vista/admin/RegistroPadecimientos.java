@@ -116,7 +116,7 @@ public class RegistroPadecimientos extends VentanaBase{
 		lblRegistroPadecimientos.setFont(letraTitulo);
 		getContentPane().add(lblRegistroPadecimientos);
 		
-		JLabel lblNombreClinica = new JLabel("Tipo de Padecimiento*:");
+		JLabel lblNombreClinica = new JLabel("Tipo de Padecimiento:");
 		lblNombreClinica.setBounds(75, 228, 238, 32);
 		lblNombreClinica.setFont(letra1);
 		getContentPane().add(lblNombreClinica);

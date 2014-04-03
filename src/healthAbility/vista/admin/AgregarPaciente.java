@@ -108,10 +108,10 @@ public class AgregarPaciente extends VentanaBase {
 				JButton btnGuardar = new JButton("");
 				btnGuardar.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						if (txtNombrePaciente.getText().equals("") ||
-							txtCedulaPaciente.getText().equals("")||
-							txtPrimerApPaciente.getText().equals("")||
-							txtSegApPaciente.getText().equals("")) 
+						if (!txtNombrePaciente.getText().equals("")&&
+							!txtCedulaPaciente.getText().equals("")&&
+							!txtPrimerApPaciente.getText().equals("")&&
+							!txtSegApPaciente.getText().equals("")) 
 							{
 							Usuarios usuarios = new Usuarios();
 							usuarios.setVisible(true); 
@@ -179,7 +179,7 @@ public class AgregarPaciente extends VentanaBase {
 			e.printStackTrace();
 		}
 		
-		JFormattedTextField txtCedulaPaciente = new JFormattedTextField(mascaraCedula);
+		txtCedulaPaciente = new JFormattedTextField(mascaraCedula);
 		txtCedulaPaciente.setColumns(10);
 		txtCedulaPaciente.setBounds(268, 273, 245, 32);
 		getContentPane().add(txtCedulaPaciente);
@@ -208,10 +208,6 @@ public class AgregarPaciente extends VentanaBase {
 		btnAgregarFotoPaciente.setBounds(670, 277, 122, 32);
 		getContentPane().add(btnAgregarFotoPaciente);
 		
-//		pnFotoPaciente = new JPanel();
-//		pnFotoPaciente.setBounds(682, 331, 110, 146);
-//		getContentPane().add(pnFotoPaciente);
-
 		JLabel lblRegresar = new JLabel("Regresar");
 		lblRegresar.setFont(new Font("Georgia", Font.PLAIN, 22));
 		lblRegresar.setBounds(145, 597, 183, 37);

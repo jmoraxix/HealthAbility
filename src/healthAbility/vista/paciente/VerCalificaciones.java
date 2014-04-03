@@ -9,7 +9,6 @@ package healthAbility.vista.paciente;
 
 import healthAbility.HealthAbility;
 import healthAbility.vista.BgBorder;
-import healthAbility.vista.Login;
 import healthAbility.vista.VentanaBase;
 
 import java.awt.BorderLayout;
@@ -37,6 +36,7 @@ import javax.swing.border.LineBorder;
  * @author Diego Apr 1, 2014
  *
  */
+@SuppressWarnings("serial")
 public class VerCalificaciones extends VentanaBase {
 	public Font letraTexto1 = new Font("Georgia", Font.PLAIN, 22);
 	public Font letraTexto2 = new Font("Georgia", Font.PLAIN, 18);
@@ -133,48 +133,21 @@ public class VerCalificaciones extends VentanaBase {
 		btnRegres.setContentAreaFilled(false);
 		btnRegres.setBorderPainted(false);
 		regresar.add(btnRegres);
-		
-		JPanel guardar = new JPanel();
-		guardar.setBounds(817, 605, 60, 60);
-		guardar.setOpaque(false);
 		try {
-			guardar.setForeground(SystemColor.controlHighlight);
 			try {
 				URL imagen = HealthAbility.class.getResource("vista/imagenes/check.png");
 				BufferedImage  img = ImageIO.read(imagen);
 				BgBorder borde = new BgBorder( img );
-				guardar.setBorder(borde);
 			} catch (Exception e) {
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		getContentPane().add(guardar);
-		guardar.setLayout(new BorderLayout(0, 0));
-		getContentPane().add(guardar);
-
-		JButton btnGuardar = new JButton("");
-		btnGuardar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				MenuPrincipal menuPrincipal = new MenuPrincipal();
-				menuPrincipal.setVisible(true); 
-				setVisible(false);
-			}
-		});
-		btnGuardar.setOpaque(false);
-		btnGuardar.setContentAreaFilled(false);
-		btnGuardar.setBorderPainted(false);
-		guardar.add(btnGuardar);
 		
 		JLabel lblRegresar = new JLabel("Regresar");
 		lblRegresar.setFont(new Font("Georgia", Font.PLAIN, 22));
 		lblRegresar.setBounds(145, 627, 157, 26);
 		getContentPane().add(lblRegresar);
-		
-		JLabel lblGuardar = new JLabel("Guardar");
-		lblGuardar.setFont(new Font("Georgia", Font.PLAIN, 22));
-		lblGuardar.setBounds(697, 627, 101, 26);
-		getContentPane().add(lblGuardar);
 		
 	}
 }

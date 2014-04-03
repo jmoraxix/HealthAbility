@@ -115,11 +115,12 @@ public class AgregarMedico extends VentanaBase {
 		JButton btnGuardar = new JButton("");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				String ced = txtCedulaMedico.getText();
 				
-				if (txtNomMedico.getText().equals("") ||
-					txtCedulaMedico.getText().equals("")||
-					txtPrimerApMedico.getText().equals("")||
-					txtSegApMedico.getText().equals("")) 
+				if (!txtNomMedico.getText().equals("") &&
+					!ced.equals("") &&
+					!txtPrimerApMedico.getText().equals("")&&
+					!txtSegApMedico.getText().equals("")) 
 				{
 					Usuarios usuarios = new Usuarios();
 					usuarios.setVisible(true); 
@@ -186,7 +187,7 @@ public class AgregarMedico extends VentanaBase {
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
-		JFormattedTextField txtCedulaMedico = new JFormattedTextField(mascaraCedula);
+		txtCedulaMedico = new JFormattedTextField(mascaraCedula);
 		soloNumeros(txtCedulaMedico);
 		txtCedulaMedico.setBounds(268, 243, 245, 32);
 		getContentPane().add(txtCedulaMedico);
